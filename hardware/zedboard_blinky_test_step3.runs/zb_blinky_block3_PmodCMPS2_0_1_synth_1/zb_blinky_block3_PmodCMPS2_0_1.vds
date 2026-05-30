@@ -1,0 +1,640 @@
+#-----------------------------------------------------------
+# Vivado v2025.2 (64-bit)
+# SW Build 6299465 on Fri Nov 14 12:34:56 MST 2025
+# IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+# SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+# Start of session at: Thu May 28 00:01:20 2026
+# Process ID         : 2201158
+# Current directory  : /home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.runs/zb_blinky_block3_PmodCMPS2_0_1_synth_1
+# Command line       : vivado -log zb_blinky_block3_PmodCMPS2_0_1.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source zb_blinky_block3_PmodCMPS2_0_1.tcl
+# Log file           : /home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.runs/zb_blinky_block3_PmodCMPS2_0_1_synth_1/zb_blinky_block3_PmodCMPS2_0_1.vds
+# Journal file       : /home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.runs/zb_blinky_block3_PmodCMPS2_0_1_synth_1/vivado.jou
+# Running On         : jkelleylaptop
+# Platform           : Linuxmint
+# Operating System   : Linux Mint 22.3
+# Processor Detail   : 11th Gen Intel(R) Core(TM) i7-11800H @ 2.30GHz
+# CPU Frequency      : 3964.125 MHz
+# CPU Physical cores : 8
+# CPU Logical cores  : 16
+# Host memory        : 16453 MB
+# Swap memory        : 2147 MB
+# Total Virtual      : 18600 MB
+# Available Virtual  : 6369 MB
+#-----------------------------------------------------------
+source zb_blinky_block3_PmodCMPS2_0_1.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step2/ip_repo'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/jkelley/Documents/Xilinx/ip/vivado-library'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx/2025.2/data/ip'.
+Command: synth_design -top zb_blinky_block3_PmodCMPS2_0_1 -part xc7z020clg484-1 -incremental_mode off -mode out_of_context
+Starting synth_design
+WARNING: [IP_Flow 19-3571] IP 'zb_blinky_block3_PmodCMPS2_0_1' is restricted:
+* IP definition 'PmodCMPS2_v1_0 (1.0)' relies on the following subcore(s) that were not found in the IP Catalog: xilinx.com:ip:axi_iic:2.0
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Device 21-403] Loading part xc7z020clg484-1
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 7 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 2201793
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2268.020 ; gain = 482.875 ; free physical = 1736 ; free virtual = 4803
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'zb_blinky_block3_PmodCMPS2_0_1' [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/ip/zb_blinky_block3_PmodCMPS2_0_1/synth/zb_blinky_block3_PmodCMPS2_0_1.v:53]
+INFO: [Synth 8-6157] synthesizing module 'PmodCMPS2' [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/ipshared/8b00/src/PmodCMPS2.v:12]
+INFO: [Synth 8-638] synthesizing module 'PmodCMPS2_axi_iic_0_0' [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/ip/zb_blinky_block3_PmodCMPS2_0_1/src/PmodCMPS2_axi_iic_0_0/synth/PmodCMPS2_axi_iic_0_0.vhd:91]
+	Parameter C_FAMILY bound to: zynq - type: string 
+	Parameter C_S_AXI_ADDR_WIDTH bound to: 9 - type: integer 
+	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_IIC_FREQ bound to: 100000 - type: integer 
+	Parameter C_TEN_BIT_ADR bound to: 0 - type: integer 
+	Parameter C_GPO_WIDTH bound to: 2 - type: integer 
+	Parameter C_S_AXI_ACLK_FREQ_HZ bound to: 100000000 - type: integer 
+	Parameter C_SCL_INERTIAL_DELAY bound to: 0 - type: integer 
+	Parameter C_SDA_INERTIAL_DELAY bound to: 0 - type: integer 
+	Parameter C_SDA_LEVEL bound to: 1 - type: integer 
+	Parameter C_SMBUS_PMBUS_HOST bound to: 0 - type: integer 
+	Parameter C_DISABLE_SETUP_VIOLATION_CHECK bound to: 0 - type: integer 
+	Parameter C_STATIC_TIMING_REG_WIDTH bound to: 0 - type: integer 
+	Parameter C_TIMING_REG_WIDTH bound to: 32 - type: integer 
+	Parameter C_DEFAULT_VALUE bound to: 8'b00000000 
+INFO: [Synth 8-3491] module 'axi_iic' declared at '/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/ip/zb_blinky_block3_PmodCMPS2_0_1/src/PmodCMPS2_axi_iic_0_0/hdl/axi_iic_v2_1_vh_rfs.vhd:6788' bound to instance 'U0' of component 'axi_iic' [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/ip/zb_blinky_block3_PmodCMPS2_0_1/src/PmodCMPS2_axi_iic_0_0/synth/PmodCMPS2_axi_iic_0_0.vhd:190]
+INFO: [Synth 8-638] synthesizing module 'axi_iic' [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/ip/zb_blinky_block3_PmodCMPS2_0_1/src/PmodCMPS2_axi_iic_0_0/hdl/axi_iic_v2_1_vh_rfs.vhd:6862]
+INFO: [Synth 8-638] synthesizing module 'iic' [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/ip/zb_blinky_block3_PmodCMPS2_0_1/src/PmodCMPS2_axi_iic_0_0/hdl/axi_iic_v2_1_vh_rfs.vhd:6163]
+INFO: [Synth 8-638] synthesizing module 'axi_ipif_ssp1' [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/ip/zb_blinky_block3_PmodCMPS2_0_1/src/PmodCMPS2_axi_iic_0_0/hdl/axi_iic_v2_1_vh_rfs.vhd:5627]
+INFO: [Synth 8-638] synthesizing module 'axi_lite_ipif' [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/ip/zb_blinky_block3_PmodCMPS2_0_1/src/PmodCMPS2_axi_iic_0_0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:2948]
+INFO: [Synth 8-638] synthesizing module 'slave_attachment' [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/ip/zb_blinky_block3_PmodCMPS2_0_1/src/PmodCMPS2_axi_iic_0_0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:2341]
+INFO: [Synth 8-638] synthesizing module 'address_decoder' [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/ip/zb_blinky_block3_PmodCMPS2_0_1/src/PmodCMPS2_axi_iic_0_0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1775]
+INFO: [Synth 8-638] synthesizing module 'pselect_f' [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/ip/zb_blinky_block3_PmodCMPS2_0_1/src/PmodCMPS2_axi_iic_0_0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f' (0#1) [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/ip/zb_blinky_block3_PmodCMPS2_0_1/src/PmodCMPS2_axi_iic_0_0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized0' [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/ip/zb_blinky_block3_PmodCMPS2_0_1/src/PmodCMPS2_axi_iic_0_0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized0' (0#1) [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/ip/zb_blinky_block3_PmodCMPS2_0_1/src/PmodCMPS2_axi_iic_0_0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized1' [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/ip/zb_blinky_block3_PmodCMPS2_0_1/src/PmodCMPS2_axi_iic_0_0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized1' (0#1) [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/ip/zb_blinky_block3_PmodCMPS2_0_1/src/PmodCMPS2_axi_iic_0_0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized2' [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/ip/zb_blinky_block3_PmodCMPS2_0_1/src/PmodCMPS2_axi_iic_0_0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized2' (0#1) [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/ip/zb_blinky_block3_PmodCMPS2_0_1/src/PmodCMPS2_axi_iic_0_0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized3' [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/ip/zb_blinky_block3_PmodCMPS2_0_1/src/PmodCMPS2_axi_iic_0_0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized3' (0#1) [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/ip/zb_blinky_block3_PmodCMPS2_0_1/src/PmodCMPS2_axi_iic_0_0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized4' [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/ip/zb_blinky_block3_PmodCMPS2_0_1/src/PmodCMPS2_axi_iic_0_0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized4' (0#1) [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/ip/zb_blinky_block3_PmodCMPS2_0_1/src/PmodCMPS2_axi_iic_0_0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized5' [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/ip/zb_blinky_block3_PmodCMPS2_0_1/src/PmodCMPS2_axi_iic_0_0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized5' (0#1) [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/ip/zb_blinky_block3_PmodCMPS2_0_1/src/PmodCMPS2_axi_iic_0_0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized6' [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/ip/zb_blinky_block3_PmodCMPS2_0_1/src/PmodCMPS2_axi_iic_0_0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized6' (0#1) [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/ip/zb_blinky_block3_PmodCMPS2_0_1/src/PmodCMPS2_axi_iic_0_0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized7' [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/ip/zb_blinky_block3_PmodCMPS2_0_1/src/PmodCMPS2_axi_iic_0_0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized7' (0#1) [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/ip/zb_blinky_block3_PmodCMPS2_0_1/src/PmodCMPS2_axi_iic_0_0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized8' [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/ip/zb_blinky_block3_PmodCMPS2_0_1/src/PmodCMPS2_axi_iic_0_0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized8' (0#1) [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/ip/zb_blinky_block3_PmodCMPS2_0_1/src/PmodCMPS2_axi_iic_0_0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized9' [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/ip/zb_blinky_block3_PmodCMPS2_0_1/src/PmodCMPS2_axi_iic_0_0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized9' (0#1) [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/ip/zb_blinky_block3_PmodCMPS2_0_1/src/PmodCMPS2_axi_iic_0_0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized10' [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/ip/zb_blinky_block3_PmodCMPS2_0_1/src/PmodCMPS2_axi_iic_0_0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized10' (0#1) [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/ip/zb_blinky_block3_PmodCMPS2_0_1/src/PmodCMPS2_axi_iic_0_0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized11' [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/ip/zb_blinky_block3_PmodCMPS2_0_1/src/PmodCMPS2_axi_iic_0_0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized11' (0#1) [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/ip/zb_blinky_block3_PmodCMPS2_0_1/src/PmodCMPS2_axi_iic_0_0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized12' [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/ip/zb_blinky_block3_PmodCMPS2_0_1/src/PmodCMPS2_axi_iic_0_0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized12' (0#1) [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/ip/zb_blinky_block3_PmodCMPS2_0_1/src/PmodCMPS2_axi_iic_0_0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized13' [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/ip/zb_blinky_block3_PmodCMPS2_0_1/src/PmodCMPS2_axi_iic_0_0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized13' (0#1) [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/ip/zb_blinky_block3_PmodCMPS2_0_1/src/PmodCMPS2_axi_iic_0_0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized14' [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/ip/zb_blinky_block3_PmodCMPS2_0_1/src/PmodCMPS2_axi_iic_0_0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized14' (0#1) [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/ip/zb_blinky_block3_PmodCMPS2_0_1/src/PmodCMPS2_axi_iic_0_0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized15' [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/ip/zb_blinky_block3_PmodCMPS2_0_1/src/PmodCMPS2_axi_iic_0_0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized15' (0#1) [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/ip/zb_blinky_block3_PmodCMPS2_0_1/src/PmodCMPS2_axi_iic_0_0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized16' [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/ip/zb_blinky_block3_PmodCMPS2_0_1/src/PmodCMPS2_axi_iic_0_0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized16' (0#1) [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/ip/zb_blinky_block3_PmodCMPS2_0_1/src/PmodCMPS2_axi_iic_0_0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized17' [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/ip/zb_blinky_block3_PmodCMPS2_0_1/src/PmodCMPS2_axi_iic_0_0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized17' (0#1) [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/ip/zb_blinky_block3_PmodCMPS2_0_1/src/PmodCMPS2_axi_iic_0_0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized18' [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/ip/zb_blinky_block3_PmodCMPS2_0_1/src/PmodCMPS2_axi_iic_0_0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized18' (0#1) [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/ip/zb_blinky_block3_PmodCMPS2_0_1/src/PmodCMPS2_axi_iic_0_0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized19' [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/ip/zb_blinky_block3_PmodCMPS2_0_1/src/PmodCMPS2_axi_iic_0_0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized19' (0#1) [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/ip/zb_blinky_block3_PmodCMPS2_0_1/src/PmodCMPS2_axi_iic_0_0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized20' [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/ip/zb_blinky_block3_PmodCMPS2_0_1/src/PmodCMPS2_axi_iic_0_0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized20' (0#1) [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/ip/zb_blinky_block3_PmodCMPS2_0_1/src/PmodCMPS2_axi_iic_0_0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized21' [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/ip/zb_blinky_block3_PmodCMPS2_0_1/src/PmodCMPS2_axi_iic_0_0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized21' (0#1) [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/ip/zb_blinky_block3_PmodCMPS2_0_1/src/PmodCMPS2_axi_iic_0_0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized22' [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/ip/zb_blinky_block3_PmodCMPS2_0_1/src/PmodCMPS2_axi_iic_0_0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized22' (0#1) [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/ip/zb_blinky_block3_PmodCMPS2_0_1/src/PmodCMPS2_axi_iic_0_0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized23' [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/ip/zb_blinky_block3_PmodCMPS2_0_1/src/PmodCMPS2_axi_iic_0_0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized23' (0#1) [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/ip/zb_blinky_block3_PmodCMPS2_0_1/src/PmodCMPS2_axi_iic_0_0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized24' [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/ip/zb_blinky_block3_PmodCMPS2_0_1/src/PmodCMPS2_axi_iic_0_0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized24' (0#1) [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/ip/zb_blinky_block3_PmodCMPS2_0_1/src/PmodCMPS2_axi_iic_0_0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized25' [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/ip/zb_blinky_block3_PmodCMPS2_0_1/src/PmodCMPS2_axi_iic_0_0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized25' (0#1) [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/ip/zb_blinky_block3_PmodCMPS2_0_1/src/PmodCMPS2_axi_iic_0_0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized26' [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/ip/zb_blinky_block3_PmodCMPS2_0_1/src/PmodCMPS2_axi_iic_0_0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized26' (0#1) [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/ip/zb_blinky_block3_PmodCMPS2_0_1/src/PmodCMPS2_axi_iic_0_0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized27' [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/ip/zb_blinky_block3_PmodCMPS2_0_1/src/PmodCMPS2_axi_iic_0_0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized27' (0#1) [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/ip/zb_blinky_block3_PmodCMPS2_0_1/src/PmodCMPS2_axi_iic_0_0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized28' [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/ip/zb_blinky_block3_PmodCMPS2_0_1/src/PmodCMPS2_axi_iic_0_0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized28' (0#1) [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/ip/zb_blinky_block3_PmodCMPS2_0_1/src/PmodCMPS2_axi_iic_0_0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized29' [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/ip/zb_blinky_block3_PmodCMPS2_0_1/src/PmodCMPS2_axi_iic_0_0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized29' (0#1) [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/ip/zb_blinky_block3_PmodCMPS2_0_1/src/PmodCMPS2_axi_iic_0_0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized30' [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/ip/zb_blinky_block3_PmodCMPS2_0_1/src/PmodCMPS2_axi_iic_0_0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized30' (0#1) [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/ip/zb_blinky_block3_PmodCMPS2_0_1/src/PmodCMPS2_axi_iic_0_0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized31' [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/ip/zb_blinky_block3_PmodCMPS2_0_1/src/PmodCMPS2_axi_iic_0_0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized31' (0#1) [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/ip/zb_blinky_block3_PmodCMPS2_0_1/src/PmodCMPS2_axi_iic_0_0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized32' [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/ip/zb_blinky_block3_PmodCMPS2_0_1/src/PmodCMPS2_axi_iic_0_0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized32' (0#1) [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/ip/zb_blinky_block3_PmodCMPS2_0_1/src/PmodCMPS2_axi_iic_0_0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized33' [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/ip/zb_blinky_block3_PmodCMPS2_0_1/src/PmodCMPS2_axi_iic_0_0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized33' (0#1) [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/ip/zb_blinky_block3_PmodCMPS2_0_1/src/PmodCMPS2_axi_iic_0_0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized34' [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/ip/zb_blinky_block3_PmodCMPS2_0_1/src/PmodCMPS2_axi_iic_0_0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized34' (0#1) [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/ip/zb_blinky_block3_PmodCMPS2_0_1/src/PmodCMPS2_axi_iic_0_0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized35' [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/ip/zb_blinky_block3_PmodCMPS2_0_1/src/PmodCMPS2_axi_iic_0_0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized35' (0#1) [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/ip/zb_blinky_block3_PmodCMPS2_0_1/src/PmodCMPS2_axi_iic_0_0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'address_decoder' (0#1) [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/ip/zb_blinky_block3_PmodCMPS2_0_1/src/PmodCMPS2_axi_iic_0_0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1775]
+INFO: [Synth 8-226] default block is never used [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/ip/zb_blinky_block3_PmodCMPS2_0_1/src/PmodCMPS2_axi_iic_0_0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:2550]
+INFO: [Synth 8-256] done synthesizing module 'slave_attachment' (0#1) [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/ip/zb_blinky_block3_PmodCMPS2_0_1/src/PmodCMPS2_axi_iic_0_0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:2341]
+INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif' (0#1) [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/ip/zb_blinky_block3_PmodCMPS2_0_1/src/PmodCMPS2_axi_iic_0_0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:2948]
+INFO: [Synth 8-638] synthesizing module 'interrupt_control' [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/ip/zb_blinky_block3_PmodCMPS2_0_1/src/PmodCMPS2_axi_iic_0_0/hdl/interrupt_control_v3_1_vh_rfs.vhd:257]
+INFO: [Synth 8-256] done synthesizing module 'interrupt_control' (0#1) [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/ip/zb_blinky_block3_PmodCMPS2_0_1/src/PmodCMPS2_axi_iic_0_0/hdl/interrupt_control_v3_1_vh_rfs.vhd:257]
+INFO: [Synth 8-638] synthesizing module 'soft_reset' [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/ip/zb_blinky_block3_PmodCMPS2_0_1/src/PmodCMPS2_axi_iic_0_0/hdl/axi_iic_v2_1_vh_rfs.vhd:109]
+INFO: [Synth 8-113] binding component instance 'RST_FLOPS' to cell 'FDRSE' [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/ip/zb_blinky_block3_PmodCMPS2_0_1/src/PmodCMPS2_axi_iic_0_0/hdl/axi_iic_v2_1_vh_rfs.vhd:241]
+INFO: [Synth 8-113] binding component instance 'RST_FLOPS' to cell 'FDRSE' [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/ip/zb_blinky_block3_PmodCMPS2_0_1/src/PmodCMPS2_axi_iic_0_0/hdl/axi_iic_v2_1_vh_rfs.vhd:241]
+INFO: [Synth 8-113] binding component instance 'RST_FLOPS' to cell 'FDRSE' [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/ip/zb_blinky_block3_PmodCMPS2_0_1/src/PmodCMPS2_axi_iic_0_0/hdl/axi_iic_v2_1_vh_rfs.vhd:241]
+INFO: [Synth 8-113] binding component instance 'RST_FLOPS' to cell 'FDRSE' [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/ip/zb_blinky_block3_PmodCMPS2_0_1/src/PmodCMPS2_axi_iic_0_0/hdl/axi_iic_v2_1_vh_rfs.vhd:241]
+INFO: [Synth 8-113] binding component instance 'FF_WRACK' to cell 'FDRSE' [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/ip/zb_blinky_block3_PmodCMPS2_0_1/src/PmodCMPS2_axi_iic_0_0/hdl/axi_iic_v2_1_vh_rfs.vhd:264]
+INFO: [Synth 8-256] done synthesizing module 'soft_reset' (0#1) [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/ip/zb_blinky_block3_PmodCMPS2_0_1/src/PmodCMPS2_axi_iic_0_0/hdl/axi_iic_v2_1_vh_rfs.vhd:109]
+INFO: [Synth 8-256] done synthesizing module 'axi_ipif_ssp1' (0#1) [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/ip/zb_blinky_block3_PmodCMPS2_0_1/src/PmodCMPS2_axi_iic_0_0/hdl/axi_iic_v2_1_vh_rfs.vhd:5627]
+INFO: [Synth 8-638] synthesizing module 'reg_interface' [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/ip/zb_blinky_block3_PmodCMPS2_0_1/src/PmodCMPS2_axi_iic_0_0/hdl/axi_iic_v2_1_vh_rfs.vhd:1623]
+INFO: [Synth 8-256] done synthesizing module 'reg_interface' (0#1) [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/ip/zb_blinky_block3_PmodCMPS2_0_1/src/PmodCMPS2_axi_iic_0_0/hdl/axi_iic_v2_1_vh_rfs.vhd:1623]
+INFO: [Synth 8-638] synthesizing module 'filter' [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/ip/zb_blinky_block3_PmodCMPS2_0_1/src/PmodCMPS2_axi_iic_0_0/hdl/axi_iic_v2_1_vh_rfs.vhd:4945]
+INFO: [Synth 8-638] synthesizing module 'debounce' [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/ip/zb_blinky_block3_PmodCMPS2_0_1/src/PmodCMPS2_axi_iic_0_0/hdl/axi_iic_v2_1_vh_rfs.vhd:1256]
+	Parameter DEST_SYNC_FF bound to: 4 - type: integer 
+	Parameter INIT_SYNC_FF bound to: 0 - type: integer 
+	Parameter SIM_ASSERT_CHK bound to: 0 - type: integer 
+	Parameter SRC_INPUT_REG bound to: 0 - type: integer 
+INFO: [Synth 8-3491] module 'xpm_cdc_single' declared at '/opt/Xilinx/2025.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:152' bound to instance 'INPUT_DOUBLE_REGS' of component 'xpm_cdc_single' [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/ip/zb_blinky_block3_PmodCMPS2_0_1/src/PmodCMPS2_axi_iic_0_0/hdl/axi_iic_v2_1_vh_rfs.vhd:1281]
+INFO: [Synth 8-6157] synthesizing module 'xpm_cdc_single' [/opt/Xilinx/2025.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:152]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_cdc_single' (0#1) [/opt/Xilinx/2025.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:152]
+INFO: [Synth 8-256] done synthesizing module 'debounce' (0#1) [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/ip/zb_blinky_block3_PmodCMPS2_0_1/src/PmodCMPS2_axi_iic_0_0/hdl/axi_iic_v2_1_vh_rfs.vhd:1256]
+INFO: [Synth 8-256] done synthesizing module 'filter' (0#1) [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/ip/zb_blinky_block3_PmodCMPS2_0_1/src/PmodCMPS2_axi_iic_0_0/hdl/axi_iic_v2_1_vh_rfs.vhd:4945]
+INFO: [Synth 8-638] synthesizing module 'iic_control' [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/ip/zb_blinky_block3_PmodCMPS2_0_1/src/PmodCMPS2_axi_iic_0_0/hdl/axi_iic_v2_1_vh_rfs.vhd:2860]
+INFO: [Synth 8-638] synthesizing module 'upcnt_n' [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/ip/zb_blinky_block3_PmodCMPS2_0_1/src/PmodCMPS2_axi_iic_0_0/hdl/axi_iic_v2_1_vh_rfs.vhd:671]
+INFO: [Synth 8-256] done synthesizing module 'upcnt_n' (0#1) [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/ip/zb_blinky_block3_PmodCMPS2_0_1/src/PmodCMPS2_axi_iic_0_0/hdl/axi_iic_v2_1_vh_rfs.vhd:671]
+INFO: [Synth 8-638] synthesizing module 'shift8' [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/ip/zb_blinky_block3_PmodCMPS2_0_1/src/PmodCMPS2_axi_iic_0_0/hdl/axi_iic_v2_1_vh_rfs.vhd:831]
+INFO: [Synth 8-256] done synthesizing module 'shift8' (0#1) [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/ip/zb_blinky_block3_PmodCMPS2_0_1/src/PmodCMPS2_axi_iic_0_0/hdl/axi_iic_v2_1_vh_rfs.vhd:831]
+INFO: [Synth 8-638] synthesizing module 'upcnt_n__parameterized0' [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/ip/zb_blinky_block3_PmodCMPS2_0_1/src/PmodCMPS2_axi_iic_0_0/hdl/axi_iic_v2_1_vh_rfs.vhd:671]
+INFO: [Synth 8-256] done synthesizing module 'upcnt_n__parameterized0' (0#1) [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/ip/zb_blinky_block3_PmodCMPS2_0_1/src/PmodCMPS2_axi_iic_0_0/hdl/axi_iic_v2_1_vh_rfs.vhd:671]
+INFO: [Synth 8-256] done synthesizing module 'iic_control' (0#1) [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/ip/zb_blinky_block3_PmodCMPS2_0_1/src/PmodCMPS2_axi_iic_0_0/hdl/axi_iic_v2_1_vh_rfs.vhd:2860]
+INFO: [Synth 8-638] synthesizing module 'SRL_FIFO' [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/ip/zb_blinky_block3_PmodCMPS2_0_1/src/PmodCMPS2_axi_iic_0_0/hdl/axi_iic_v2_1_vh_rfs.vhd:377]
+INFO: [Synth 8-3491] module 'FDR' declared at '/opt/Xilinx/2025.2/Vivado/scripts/rt/data/unisim_comp.v:49383' bound to instance 'Data_Exists_DFF' of component 'FDR' [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/ip/zb_blinky_block3_PmodCMPS2_0_1/src/PmodCMPS2_axi_iic_0_0/hdl/axi_iic_v2_1_vh_rfs.vhd:471]
+INFO: [Synth 8-6157] synthesizing module 'FDR' [/opt/Xilinx/2025.2/Vivado/scripts/rt/data/unisim_comp.v:49383]
+INFO: [Synth 8-6155] done synthesizing module 'FDR' (0#1) [/opt/Xilinx/2025.2/Vivado/scripts/rt/data/unisim_comp.v:49383]
+INFO: [Synth 8-3491] module 'MUXCY_L' declared at '/opt/Xilinx/2025.2/Vivado/scripts/rt/data/unisim_comp.v:104872' bound to instance 'MUXCY_L_I' of component 'MUXCY_L' [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/ip/zb_blinky_block3_PmodCMPS2_0_1/src/PmodCMPS2_axi_iic_0_0/hdl/axi_iic_v2_1_vh_rfs.vhd:488]
+INFO: [Synth 8-6157] synthesizing module 'MUXCY_L' [/opt/Xilinx/2025.2/Vivado/scripts/rt/data/unisim_comp.v:104872]
+INFO: [Synth 8-6155] done synthesizing module 'MUXCY_L' (0#1) [/opt/Xilinx/2025.2/Vivado/scripts/rt/data/unisim_comp.v:104872]
+INFO: [Synth 8-3491] module 'XORCY' declared at '/opt/Xilinx/2025.2/Vivado/scripts/rt/data/unisim_comp.v:171315' bound to instance 'XORCY_I' of component 'XORCY' [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/ip/zb_blinky_block3_PmodCMPS2_0_1/src/PmodCMPS2_axi_iic_0_0/hdl/axi_iic_v2_1_vh_rfs.vhd:495]
+INFO: [Synth 8-6157] synthesizing module 'XORCY' [/opt/Xilinx/2025.2/Vivado/scripts/rt/data/unisim_comp.v:171315]
+INFO: [Synth 8-6155] done synthesizing module 'XORCY' (0#1) [/opt/Xilinx/2025.2/Vivado/scripts/rt/data/unisim_comp.v:171315]
+INFO: [Synth 8-3491] module 'FDRE' declared at '/opt/Xilinx/2025.2/Vivado/scripts/rt/data/unisim_comp.v:49396' bound to instance 'FDRE_I' of component 'FDRE' [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/ip/zb_blinky_block3_PmodCMPS2_0_1/src/PmodCMPS2_axi_iic_0_0/hdl/axi_iic_v2_1_vh_rfs.vhd:501]
+INFO: [Synth 8-6157] synthesizing module 'FDRE' [/opt/Xilinx/2025.2/Vivado/scripts/rt/data/unisim_comp.v:49396]
+INFO: [Synth 8-6155] done synthesizing module 'FDRE' (0#1) [/opt/Xilinx/2025.2/Vivado/scripts/rt/data/unisim_comp.v:49396]
+INFO: [Synth 8-3491] module 'MUXCY_L' declared at '/opt/Xilinx/2025.2/Vivado/scripts/rt/data/unisim_comp.v:104872' bound to instance 'MUXCY_L_I' of component 'MUXCY_L' [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/ip/zb_blinky_block3_PmodCMPS2_0_1/src/PmodCMPS2_axi_iic_0_0/hdl/axi_iic_v2_1_vh_rfs.vhd:488]
+INFO: [Synth 8-3491] module 'XORCY' declared at '/opt/Xilinx/2025.2/Vivado/scripts/rt/data/unisim_comp.v:171315' bound to instance 'XORCY_I' of component 'XORCY' [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/ip/zb_blinky_block3_PmodCMPS2_0_1/src/PmodCMPS2_axi_iic_0_0/hdl/axi_iic_v2_1_vh_rfs.vhd:495]
+INFO: [Synth 8-3491] module 'FDRE' declared at '/opt/Xilinx/2025.2/Vivado/scripts/rt/data/unisim_comp.v:49396' bound to instance 'FDRE_I' of component 'FDRE' [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/ip/zb_blinky_block3_PmodCMPS2_0_1/src/PmodCMPS2_axi_iic_0_0/hdl/axi_iic_v2_1_vh_rfs.vhd:501]
+INFO: [Synth 8-3491] module 'MUXCY_L' declared at '/opt/Xilinx/2025.2/Vivado/scripts/rt/data/unisim_comp.v:104872' bound to instance 'MUXCY_L_I' of component 'MUXCY_L' [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/ip/zb_blinky_block3_PmodCMPS2_0_1/src/PmodCMPS2_axi_iic_0_0/hdl/axi_iic_v2_1_vh_rfs.vhd:488]
+INFO: [Synth 8-3491] module 'XORCY' declared at '/opt/Xilinx/2025.2/Vivado/scripts/rt/data/unisim_comp.v:171315' bound to instance 'XORCY_I' of component 'XORCY' [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/ip/zb_blinky_block3_PmodCMPS2_0_1/src/PmodCMPS2_axi_iic_0_0/hdl/axi_iic_v2_1_vh_rfs.vhd:495]
+INFO: [Synth 8-3491] module 'FDRE' declared at '/opt/Xilinx/2025.2/Vivado/scripts/rt/data/unisim_comp.v:49396' bound to instance 'FDRE_I' of component 'FDRE' [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/ip/zb_blinky_block3_PmodCMPS2_0_1/src/PmodCMPS2_axi_iic_0_0/hdl/axi_iic_v2_1_vh_rfs.vhd:501]
+INFO: [Synth 8-3491] module 'MUXCY_L' declared at '/opt/Xilinx/2025.2/Vivado/scripts/rt/data/unisim_comp.v:104872' bound to instance 'MUXCY_L_I' of component 'MUXCY_L' [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/ip/zb_blinky_block3_PmodCMPS2_0_1/src/PmodCMPS2_axi_iic_0_0/hdl/axi_iic_v2_1_vh_rfs.vhd:488]
+INFO: [Synth 8-3491] module 'XORCY' declared at '/opt/Xilinx/2025.2/Vivado/scripts/rt/data/unisim_comp.v:171315' bound to instance 'XORCY_I' of component 'XORCY' [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/ip/zb_blinky_block3_PmodCMPS2_0_1/src/PmodCMPS2_axi_iic_0_0/hdl/axi_iic_v2_1_vh_rfs.vhd:495]
+INFO: [Synth 8-3491] module 'FDRE' declared at '/opt/Xilinx/2025.2/Vivado/scripts/rt/data/unisim_comp.v:49396' bound to instance 'FDRE_I' of component 'FDRE' [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/ip/zb_blinky_block3_PmodCMPS2_0_1/src/PmodCMPS2_axi_iic_0_0/hdl/axi_iic_v2_1_vh_rfs.vhd:501]
+INFO: [Synth 8-3491] module 'SRL16E' declared at '/opt/Xilinx/2025.2/Vivado/scripts/rt/data/unisim_comp.v:165334' bound to instance 'SRL16E_I' of component 'SRL16E' [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/ip/zb_blinky_block3_PmodCMPS2_0_1/src/PmodCMPS2_axi_iic_0_0/hdl/axi_iic_v2_1_vh_rfs.vhd:512]
+INFO: [Synth 8-6157] synthesizing module 'SRL16E' [/opt/Xilinx/2025.2/Vivado/scripts/rt/data/unisim_comp.v:165334]
+INFO: [Synth 8-6155] done synthesizing module 'SRL16E' (0#1) [/opt/Xilinx/2025.2/Vivado/scripts/rt/data/unisim_comp.v:165334]
+INFO: [Synth 8-3491] module 'SRL16E' declared at '/opt/Xilinx/2025.2/Vivado/scripts/rt/data/unisim_comp.v:165334' bound to instance 'SRL16E_I' of component 'SRL16E' [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/ip/zb_blinky_block3_PmodCMPS2_0_1/src/PmodCMPS2_axi_iic_0_0/hdl/axi_iic_v2_1_vh_rfs.vhd:512]
+INFO: [Synth 8-3491] module 'SRL16E' declared at '/opt/Xilinx/2025.2/Vivado/scripts/rt/data/unisim_comp.v:165334' bound to instance 'SRL16E_I' of component 'SRL16E' [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/ip/zb_blinky_block3_PmodCMPS2_0_1/src/PmodCMPS2_axi_iic_0_0/hdl/axi_iic_v2_1_vh_rfs.vhd:512]
+INFO: [Synth 8-3491] module 'SRL16E' declared at '/opt/Xilinx/2025.2/Vivado/scripts/rt/data/unisim_comp.v:165334' bound to instance 'SRL16E_I' of component 'SRL16E' [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/ip/zb_blinky_block3_PmodCMPS2_0_1/src/PmodCMPS2_axi_iic_0_0/hdl/axi_iic_v2_1_vh_rfs.vhd:512]
+INFO: [Synth 8-3491] module 'SRL16E' declared at '/opt/Xilinx/2025.2/Vivado/scripts/rt/data/unisim_comp.v:165334' bound to instance 'SRL16E_I' of component 'SRL16E' [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/ip/zb_blinky_block3_PmodCMPS2_0_1/src/PmodCMPS2_axi_iic_0_0/hdl/axi_iic_v2_1_vh_rfs.vhd:512]
+INFO: [Synth 8-3491] module 'SRL16E' declared at '/opt/Xilinx/2025.2/Vivado/scripts/rt/data/unisim_comp.v:165334' bound to instance 'SRL16E_I' of component 'SRL16E' [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/ip/zb_blinky_block3_PmodCMPS2_0_1/src/PmodCMPS2_axi_iic_0_0/hdl/axi_iic_v2_1_vh_rfs.vhd:512]
+INFO: [Synth 8-3491] module 'SRL16E' declared at '/opt/Xilinx/2025.2/Vivado/scripts/rt/data/unisim_comp.v:165334' bound to instance 'SRL16E_I' of component 'SRL16E' [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/ip/zb_blinky_block3_PmodCMPS2_0_1/src/PmodCMPS2_axi_iic_0_0/hdl/axi_iic_v2_1_vh_rfs.vhd:512]
+INFO: [Synth 8-3491] module 'SRL16E' declared at '/opt/Xilinx/2025.2/Vivado/scripts/rt/data/unisim_comp.v:165334' bound to instance 'SRL16E_I' of component 'SRL16E' [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/ip/zb_blinky_block3_PmodCMPS2_0_1/src/PmodCMPS2_axi_iic_0_0/hdl/axi_iic_v2_1_vh_rfs.vhd:512]
+INFO: [Synth 8-256] done synthesizing module 'SRL_FIFO' (0#1) [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/ip/zb_blinky_block3_PmodCMPS2_0_1/src/PmodCMPS2_axi_iic_0_0/hdl/axi_iic_v2_1_vh_rfs.vhd:377]
+INFO: [Synth 8-638] synthesizing module 'dynamic_master' [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/ip/zb_blinky_block3_PmodCMPS2_0_1/src/PmodCMPS2_axi_iic_0_0/hdl/axi_iic_v2_1_vh_rfs.vhd:5167]
+INFO: [Synth 8-256] done synthesizing module 'dynamic_master' (0#1) [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/ip/zb_blinky_block3_PmodCMPS2_0_1/src/PmodCMPS2_axi_iic_0_0/hdl/axi_iic_v2_1_vh_rfs.vhd:5167]
+INFO: [Synth 8-638] synthesizing module 'SRL_FIFO__parameterized0' [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/ip/zb_blinky_block3_PmodCMPS2_0_1/src/PmodCMPS2_axi_iic_0_0/hdl/axi_iic_v2_1_vh_rfs.vhd:377]
+INFO: [Synth 8-3491] module 'FDR' declared at '/opt/Xilinx/2025.2/Vivado/scripts/rt/data/unisim_comp.v:49383' bound to instance 'Data_Exists_DFF' of component 'FDR' [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/ip/zb_blinky_block3_PmodCMPS2_0_1/src/PmodCMPS2_axi_iic_0_0/hdl/axi_iic_v2_1_vh_rfs.vhd:471]
+INFO: [Synth 8-3491] module 'MUXCY_L' declared at '/opt/Xilinx/2025.2/Vivado/scripts/rt/data/unisim_comp.v:104872' bound to instance 'MUXCY_L_I' of component 'MUXCY_L' [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/ip/zb_blinky_block3_PmodCMPS2_0_1/src/PmodCMPS2_axi_iic_0_0/hdl/axi_iic_v2_1_vh_rfs.vhd:488]
+INFO: [Synth 8-3491] module 'XORCY' declared at '/opt/Xilinx/2025.2/Vivado/scripts/rt/data/unisim_comp.v:171315' bound to instance 'XORCY_I' of component 'XORCY' [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/ip/zb_blinky_block3_PmodCMPS2_0_1/src/PmodCMPS2_axi_iic_0_0/hdl/axi_iic_v2_1_vh_rfs.vhd:495]
+INFO: [Synth 8-3491] module 'FDRE' declared at '/opt/Xilinx/2025.2/Vivado/scripts/rt/data/unisim_comp.v:49396' bound to instance 'FDRE_I' of component 'FDRE' [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/ip/zb_blinky_block3_PmodCMPS2_0_1/src/PmodCMPS2_axi_iic_0_0/hdl/axi_iic_v2_1_vh_rfs.vhd:501]
+INFO: [Synth 8-3491] module 'MUXCY_L' declared at '/opt/Xilinx/2025.2/Vivado/scripts/rt/data/unisim_comp.v:104872' bound to instance 'MUXCY_L_I' of component 'MUXCY_L' [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/ip/zb_blinky_block3_PmodCMPS2_0_1/src/PmodCMPS2_axi_iic_0_0/hdl/axi_iic_v2_1_vh_rfs.vhd:488]
+INFO: [Synth 8-3491] module 'XORCY' declared at '/opt/Xilinx/2025.2/Vivado/scripts/rt/data/unisim_comp.v:171315' bound to instance 'XORCY_I' of component 'XORCY' [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/ip/zb_blinky_block3_PmodCMPS2_0_1/src/PmodCMPS2_axi_iic_0_0/hdl/axi_iic_v2_1_vh_rfs.vhd:495]
+INFO: [Synth 8-3491] module 'FDRE' declared at '/opt/Xilinx/2025.2/Vivado/scripts/rt/data/unisim_comp.v:49396' bound to instance 'FDRE_I' of component 'FDRE' [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/ip/zb_blinky_block3_PmodCMPS2_0_1/src/PmodCMPS2_axi_iic_0_0/hdl/axi_iic_v2_1_vh_rfs.vhd:501]
+INFO: [Synth 8-3491] module 'MUXCY_L' declared at '/opt/Xilinx/2025.2/Vivado/scripts/rt/data/unisim_comp.v:104872' bound to instance 'MUXCY_L_I' of component 'MUXCY_L' [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/ip/zb_blinky_block3_PmodCMPS2_0_1/src/PmodCMPS2_axi_iic_0_0/hdl/axi_iic_v2_1_vh_rfs.vhd:488]
+INFO: [Synth 8-3491] module 'XORCY' declared at '/opt/Xilinx/2025.2/Vivado/scripts/rt/data/unisim_comp.v:171315' bound to instance 'XORCY_I' of component 'XORCY' [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/ip/zb_blinky_block3_PmodCMPS2_0_1/src/PmodCMPS2_axi_iic_0_0/hdl/axi_iic_v2_1_vh_rfs.vhd:495]
+INFO: [Synth 8-3491] module 'FDRE' declared at '/opt/Xilinx/2025.2/Vivado/scripts/rt/data/unisim_comp.v:49396' bound to instance 'FDRE_I' of component 'FDRE' [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/ip/zb_blinky_block3_PmodCMPS2_0_1/src/PmodCMPS2_axi_iic_0_0/hdl/axi_iic_v2_1_vh_rfs.vhd:501]
+INFO: [Synth 8-3491] module 'MUXCY_L' declared at '/opt/Xilinx/2025.2/Vivado/scripts/rt/data/unisim_comp.v:104872' bound to instance 'MUXCY_L_I' of component 'MUXCY_L' [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/ip/zb_blinky_block3_PmodCMPS2_0_1/src/PmodCMPS2_axi_iic_0_0/hdl/axi_iic_v2_1_vh_rfs.vhd:488]
+INFO: [Synth 8-3491] module 'XORCY' declared at '/opt/Xilinx/2025.2/Vivado/scripts/rt/data/unisim_comp.v:171315' bound to instance 'XORCY_I' of component 'XORCY' [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/ip/zb_blinky_block3_PmodCMPS2_0_1/src/PmodCMPS2_axi_iic_0_0/hdl/axi_iic_v2_1_vh_rfs.vhd:495]
+INFO: [Synth 8-3491] module 'FDRE' declared at '/opt/Xilinx/2025.2/Vivado/scripts/rt/data/unisim_comp.v:49396' bound to instance 'FDRE_I' of component 'FDRE' [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/ip/zb_blinky_block3_PmodCMPS2_0_1/src/PmodCMPS2_axi_iic_0_0/hdl/axi_iic_v2_1_vh_rfs.vhd:501]
+INFO: [Synth 8-3491] module 'SRL16E' declared at '/opt/Xilinx/2025.2/Vivado/scripts/rt/data/unisim_comp.v:165334' bound to instance 'SRL16E_I' of component 'SRL16E' [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/ip/zb_blinky_block3_PmodCMPS2_0_1/src/PmodCMPS2_axi_iic_0_0/hdl/axi_iic_v2_1_vh_rfs.vhd:512]
+INFO: [Synth 8-3491] module 'SRL16E' declared at '/opt/Xilinx/2025.2/Vivado/scripts/rt/data/unisim_comp.v:165334' bound to instance 'SRL16E_I' of component 'SRL16E' [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/ip/zb_blinky_block3_PmodCMPS2_0_1/src/PmodCMPS2_axi_iic_0_0/hdl/axi_iic_v2_1_vh_rfs.vhd:512]
+INFO: [Synth 8-256] done synthesizing module 'SRL_FIFO__parameterized0' (0#1) [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/ip/zb_blinky_block3_PmodCMPS2_0_1/src/PmodCMPS2_axi_iic_0_0/hdl/axi_iic_v2_1_vh_rfs.vhd:377]
+INFO: [Synth 8-256] done synthesizing module 'iic' (0#1) [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/ip/zb_blinky_block3_PmodCMPS2_0_1/src/PmodCMPS2_axi_iic_0_0/hdl/axi_iic_v2_1_vh_rfs.vhd:6163]
+INFO: [Synth 8-256] done synthesizing module 'axi_iic' (0#1) [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/ip/zb_blinky_block3_PmodCMPS2_0_1/src/PmodCMPS2_axi_iic_0_0/hdl/axi_iic_v2_1_vh_rfs.vhd:6862]
+INFO: [Synth 8-256] done synthesizing module 'PmodCMPS2_axi_iic_0_0' (0#1) [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/ip/zb_blinky_block3_PmodCMPS2_0_1/src/PmodCMPS2_axi_iic_0_0/synth/PmodCMPS2_axi_iic_0_0.vhd:91]
+INFO: [Synth 8-6157] synthesizing module 'PmodCMPS2_pmod_bridge_0_0' [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/ip/zb_blinky_block3_PmodCMPS2_0_1/src/PmodCMPS2_pmod_bridge_0_0/synth/PmodCMPS2_pmod_bridge_0_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'pmod_concat' [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/ip/zb_blinky_block3_PmodCMPS2_0_1/src/PmodCMPS2_pmod_bridge_0_0/src/pmod_concat.v:12]
+INFO: [Synth 8-6155] done synthesizing module 'pmod_concat' (0#1) [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/ip/zb_blinky_block3_PmodCMPS2_0_1/src/PmodCMPS2_pmod_bridge_0_0/src/pmod_concat.v:12]
+INFO: [Synth 8-6155] done synthesizing module 'PmodCMPS2_pmod_bridge_0_0' (0#1) [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/ip/zb_blinky_block3_PmodCMPS2_0_1/src/PmodCMPS2_pmod_bridge_0_0/synth/PmodCMPS2_pmod_bridge_0_0.v:53]
+WARNING: [Synth 8-7071] port 'in_top_i2c_gpio_bus_I' of module 'PmodCMPS2_pmod_bridge_0_0' is unconnected for instance 'pmod_bridge_0' [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/ipshared/8b00/src/PmodCMPS2.v:227]
+WARNING: [Synth 8-7023] instance 'pmod_bridge_0' of module 'PmodCMPS2_pmod_bridge_0_0' has 33 connections declared, but only 32 given [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/ipshared/8b00/src/PmodCMPS2.v:227]
+INFO: [Synth 8-6157] synthesizing module 'PmodCMPS2_xlconstant_0_0' [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/ip/zb_blinky_block3_PmodCMPS2_0_1/src/PmodCMPS2_xlconstant_0_0/synth/PmodCMPS2_xlconstant_0_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'xlconstant_v1_1_10_xlconstant' [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/ip/zb_blinky_block3_PmodCMPS2_0_1/src/PmodCMPS2_xlconstant_0_0/hdl/xlconstant_v1_1_vl_rfs.v:68]
+INFO: [Synth 8-6155] done synthesizing module 'xlconstant_v1_1_10_xlconstant' (0#1) [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/ip/zb_blinky_block3_PmodCMPS2_0_1/src/PmodCMPS2_xlconstant_0_0/hdl/xlconstant_v1_1_vl_rfs.v:68]
+INFO: [Synth 8-6155] done synthesizing module 'PmodCMPS2_xlconstant_0_0' (0#1) [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/ip/zb_blinky_block3_PmodCMPS2_0_1/src/PmodCMPS2_xlconstant_0_0/synth/PmodCMPS2_xlconstant_0_0.v:53]
+INFO: [Synth 8-6155] done synthesizing module 'PmodCMPS2' (0#1) [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/ipshared/8b00/src/PmodCMPS2.v:12]
+INFO: [Synth 8-6155] done synthesizing module 'zb_blinky_block3_PmodCMPS2_0_1' (0#1) [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/ip/zb_blinky_block3_PmodCMPS2_0_1/synth/zb_blinky_block3_PmodCMPS2_0_1.v:53]
+INFO: [Synth 8-6014] Unused sequential element ro_a_reg was removed.  [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/ip/zb_blinky_block3_PmodCMPS2_0_1/src/PmodCMPS2_axi_iic_0_0/hdl/axi_iic_v2_1_vh_rfs.vhd:2219]
+INFO: [Synth 8-6014] Unused sequential element sda_cout_reg_d1_reg was removed.  [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/ip/zb_blinky_block3_PmodCMPS2_0_1/src/PmodCMPS2_axi_iic_0_0/hdl/axi_iic_v2_1_vh_rfs.vhd:3610]
+INFO: [Synth 8-6014] Unused sequential element gen_stop_and_scl_hi_reg was removed.  [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/ip/zb_blinky_block3_PmodCMPS2_0_1/src/PmodCMPS2_axi_iic_0_0/hdl/axi_iic_v2_1_vh_rfs.vhd:3831]
+INFO: [Synth 8-6014] Unused sequential element dynamic_MSMS_d_reg was removed.  [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/ip/zb_blinky_block3_PmodCMPS2_0_1/src/PmodCMPS2_axi_iic_0_0/hdl/axi_iic_v2_1_vh_rfs.vhd:5228]
+WARNING: [Synth 8-3848] Net in_top_bus_I in module/entity pmod_concat does not have driver. [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/ip/zb_blinky_block3_PmodCMPS2_0_1/src/PmodCMPS2_pmod_bridge_0_0/src/pmod_concat.v:84]
+WARNING: [Synth 8-3848] Net in_top_uart_gpio_bus_I in module/entity pmod_concat does not have driver. [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/ip/zb_blinky_block3_PmodCMPS2_0_1/src/PmodCMPS2_pmod_bridge_0_0/src/pmod_concat.v:87]
+WARNING: [Synth 8-3848] Net in_bottom_bus_I in module/entity pmod_concat does not have driver. [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/ip/zb_blinky_block3_PmodCMPS2_0_1/src/PmodCMPS2_pmod_bridge_0_0/src/pmod_concat.v:94]
+WARNING: [Synth 8-3848] Net in_bottom_uart_gpio_bus_I in module/entity pmod_concat does not have driver. [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/ip/zb_blinky_block3_PmodCMPS2_0_1/src/PmodCMPS2_pmod_bridge_0_0/src/pmod_concat.v:97]
+WARNING: [Synth 8-3848] Net in_bottom_i2c_gpio_bus_I in module/entity pmod_concat does not have driver. [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/ip/zb_blinky_block3_PmodCMPS2_0_1/src/PmodCMPS2_pmod_bridge_0_0/src/pmod_concat.v:100]
+WARNING: [Synth 8-3848] Net in0_I in module/entity pmod_concat does not have driver. [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/ip/zb_blinky_block3_PmodCMPS2_0_1/src/PmodCMPS2_pmod_bridge_0_0/src/pmod_concat.v:104]
+WARNING: [Synth 8-3848] Net in1_I in module/entity pmod_concat does not have driver. [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/ip/zb_blinky_block3_PmodCMPS2_0_1/src/PmodCMPS2_pmod_bridge_0_0/src/pmod_concat.v:105]
+INFO: [Synth 8-7129] Port in_top_bus_I[3] in module pmod_concat is either unconnected or has no load
+INFO: [Synth 8-7129] Port in_top_bus_I[2] in module pmod_concat is either unconnected or has no load
+INFO: [Synth 8-7129] Port in_top_bus_I[1] in module pmod_concat is either unconnected or has no load
+INFO: [Synth 8-7129] Port in_top_bus_I[0] in module pmod_concat is either unconnected or has no load
+INFO: [Synth 8-7129] Port in_top_uart_gpio_bus_I[1] in module pmod_concat is either unconnected or has no load
+INFO: [Synth 8-7129] Port in_top_uart_gpio_bus_I[0] in module pmod_concat is either unconnected or has no load
+INFO: [Synth 8-7129] Port in_bottom_bus_I[3] in module pmod_concat is either unconnected or has no load
+INFO: [Synth 8-7129] Port in_bottom_bus_I[2] in module pmod_concat is either unconnected or has no load
+INFO: [Synth 8-7129] Port in_bottom_bus_I[1] in module pmod_concat is either unconnected or has no load
+INFO: [Synth 8-7129] Port in_bottom_bus_I[0] in module pmod_concat is either unconnected or has no load
+INFO: [Synth 8-7129] Port in_bottom_uart_gpio_bus_I[1] in module pmod_concat is either unconnected or has no load
+INFO: [Synth 8-7129] Port in_bottom_uart_gpio_bus_I[0] in module pmod_concat is either unconnected or has no load
+INFO: [Synth 8-7129] Port in_bottom_i2c_gpio_bus_I[1] in module pmod_concat is either unconnected or has no load
+INFO: [Synth 8-7129] Port in_bottom_i2c_gpio_bus_I[0] in module pmod_concat is either unconnected or has no load
+INFO: [Synth 8-7129] Port in0_I in module pmod_concat is either unconnected or has no load
+INFO: [Synth 8-7129] Port in1_I in module pmod_concat is either unconnected or has no load
+INFO: [Synth 8-7129] Port in_top_bus_O[3] in module pmod_concat is either unconnected or has no load
+INFO: [Synth 8-7129] Port in_top_bus_O[2] in module pmod_concat is either unconnected or has no load
+INFO: [Synth 8-7129] Port in_top_bus_O[1] in module pmod_concat is either unconnected or has no load
+INFO: [Synth 8-7129] Port in_top_bus_O[0] in module pmod_concat is either unconnected or has no load
+INFO: [Synth 8-7129] Port in_top_bus_T[3] in module pmod_concat is either unconnected or has no load
+INFO: [Synth 8-7129] Port in_top_bus_T[2] in module pmod_concat is either unconnected or has no load
+INFO: [Synth 8-7129] Port in_top_bus_T[1] in module pmod_concat is either unconnected or has no load
+INFO: [Synth 8-7129] Port in_top_bus_T[0] in module pmod_concat is either unconnected or has no load
+INFO: [Synth 8-7129] Port in_top_uart_gpio_bus_O[1] in module pmod_concat is either unconnected or has no load
+INFO: [Synth 8-7129] Port in_top_uart_gpio_bus_O[0] in module pmod_concat is either unconnected or has no load
+INFO: [Synth 8-7129] Port in_top_uart_gpio_bus_T[1] in module pmod_concat is either unconnected or has no load
+INFO: [Synth 8-7129] Port in_top_uart_gpio_bus_T[0] in module pmod_concat is either unconnected or has no load
+INFO: [Synth 8-7129] Port in_bottom_bus_O[3] in module pmod_concat is either unconnected or has no load
+INFO: [Synth 8-7129] Port in_bottom_bus_O[2] in module pmod_concat is either unconnected or has no load
+INFO: [Synth 8-7129] Port in_bottom_bus_O[1] in module pmod_concat is either unconnected or has no load
+INFO: [Synth 8-7129] Port in_bottom_bus_O[0] in module pmod_concat is either unconnected or has no load
+INFO: [Synth 8-7129] Port in_bottom_bus_T[3] in module pmod_concat is either unconnected or has no load
+INFO: [Synth 8-7129] Port in_bottom_bus_T[2] in module pmod_concat is either unconnected or has no load
+INFO: [Synth 8-7129] Port in_bottom_bus_T[1] in module pmod_concat is either unconnected or has no load
+INFO: [Synth 8-7129] Port in_bottom_bus_T[0] in module pmod_concat is either unconnected or has no load
+INFO: [Synth 8-7129] Port in_bottom_uart_gpio_bus_O[1] in module pmod_concat is either unconnected or has no load
+INFO: [Synth 8-7129] Port in_bottom_uart_gpio_bus_O[0] in module pmod_concat is either unconnected or has no load
+INFO: [Synth 8-7129] Port in_bottom_uart_gpio_bus_T[1] in module pmod_concat is either unconnected or has no load
+INFO: [Synth 8-7129] Port in_bottom_uart_gpio_bus_T[0] in module pmod_concat is either unconnected or has no load
+INFO: [Synth 8-7129] Port in_bottom_i2c_gpio_bus_O[1] in module pmod_concat is either unconnected or has no load
+INFO: [Synth 8-7129] Port in_bottom_i2c_gpio_bus_O[0] in module pmod_concat is either unconnected or has no load
+INFO: [Synth 8-7129] Port in_bottom_i2c_gpio_bus_T[1] in module pmod_concat is either unconnected or has no load
+INFO: [Synth 8-7129] Port in_bottom_i2c_gpio_bus_T[0] in module pmod_concat is either unconnected or has no load
+INFO: [Synth 8-7129] Port in0_O in module pmod_concat is either unconnected or has no load
+INFO: [Synth 8-7129] Port in1_O in module pmod_concat is either unconnected or has no load
+INFO: [Synth 8-7129] Port in0_T in module pmod_concat is either unconnected or has no load
+INFO: [Synth 8-7129] Port in1_T in module pmod_concat is either unconnected or has no load
+INFO: [Synth 8-7129] Port Cr[0] in module dynamic_master is either unconnected or has no load
+INFO: [Synth 8-7129] Port Cr[1] in module dynamic_master is either unconnected or has no load
+INFO: [Synth 8-7129] Port Cr[2] in module dynamic_master is either unconnected or has no load
+INFO: [Synth 8-7129] Port Cr[4] in module dynamic_master is either unconnected or has no load
+INFO: [Synth 8-7129] Port Cr[6] in module dynamic_master is either unconnected or has no load
+INFO: [Synth 8-7129] Port Cr[7] in module dynamic_master is either unconnected or has no load
+INFO: [Synth 8-7129] Port Adr[0] in module iic_control is either unconnected or has no load
+INFO: [Synth 8-7129] Port Ten_adr[7] in module iic_control is either unconnected or has no load
+INFO: [Synth 8-7129] Port Ten_adr[6] in module iic_control is either unconnected or has no load
+INFO: [Synth 8-7129] Port Ten_adr[5] in module iic_control is either unconnected or has no load
+INFO: [Synth 8-7129] Port src_clk in module xpm_cdc_single is either unconnected or has no load
+INFO: [Synth 8-7129] Port Rst in module debounce is either unconnected or has no load
+INFO: [Synth 8-7129] Port Stable in module debounce is either unconnected or has no load
+INFO: [Synth 8-7129] Port Bus2IIC_Addr[0] in module reg_interface is either unconnected or has no load
+INFO: [Synth 8-7129] Port Bus2IIC_Data[0] in module reg_interface is either unconnected or has no load
+INFO: [Synth 8-7129] Port Bus2IIC_Data[1] in module reg_interface is either unconnected or has no load
+INFO: [Synth 8-7129] Port Bus2IIC_Data[2] in module reg_interface is either unconnected or has no load
+INFO: [Synth 8-7129] Port Bus2IIC_Data[3] in module reg_interface is either unconnected or has no load
+INFO: [Synth 8-7129] Port Bus2IIC_Data[4] in module reg_interface is either unconnected or has no load
+INFO: [Synth 8-7129] Port Bus2IIC_Data[5] in module reg_interface is either unconnected or has no load
+INFO: [Synth 8-7129] Port Bus2IIC_Data[6] in module reg_interface is either unconnected or has no load
+INFO: [Synth 8-7129] Port Bus2IIC_Data[7] in module reg_interface is either unconnected or has no load
+INFO: [Synth 8-7129] Port Bus2IIC_Data[8] in module reg_interface is either unconnected or has no load
+INFO: [Synth 8-7129] Port Bus2IIC_Data[9] in module reg_interface is either unconnected or has no load
+INFO: [Synth 8-7129] Port Bus2IIC_Data[10] in module reg_interface is either unconnected or has no load
+INFO: [Synth 8-7129] Port Bus2IIC_Data[11] in module reg_interface is either unconnected or has no load
+INFO: [Synth 8-7129] Port Bus2IIC_Data[12] in module reg_interface is either unconnected or has no load
+INFO: [Synth 8-7129] Port Bus2IIC_Data[13] in module reg_interface is either unconnected or has no load
+INFO: [Synth 8-7129] Port Bus2IIC_Data[14] in module reg_interface is either unconnected or has no load
+INFO: [Synth 8-7129] Port Bus2IIC_Data[15] in module reg_interface is either unconnected or has no load
+INFO: [Synth 8-7129] Port Bus2IIC_Data[16] in module reg_interface is either unconnected or has no load
+INFO: [Synth 8-7129] Port Bus2IIC_Data[17] in module reg_interface is either unconnected or has no load
+INFO: [Synth 8-7129] Port Bus2IIC_Data[18] in module reg_interface is either unconnected or has no load
+INFO: [Synth 8-7129] Port Bus2IIC_Data[19] in module reg_interface is either unconnected or has no load
+INFO: [Synth 8-7129] Port Bus2IIC_Data[20] in module reg_interface is either unconnected or has no load
+INFO: [Synth 8-7129] Port Bus2IIC_Data[21] in module reg_interface is either unconnected or has no load
+INFO: [Synth 8-7129] Port Bus2IIC_WrCE[1] in module reg_interface is either unconnected or has no load
+INFO: [Synth 8-7129] Port Bus2IIC_WrCE[3] in module reg_interface is either unconnected or has no load
+INFO: [Synth 8-7129] Port Bus2IIC_WrCE[5] in module reg_interface is either unconnected or has no load
+INFO: [Synth 8-7129] Port Bus2IIC_WrCE[6] in module reg_interface is either unconnected or has no load
+INFO: [Synth 8-7129] Port Bus2IIC_WrCE[7] in module reg_interface is either unconnected or has no load
+INFO: [Synth 8-7129] Port Data_i2c[0] in module reg_interface is either unconnected or has no load
+INFO: [Synth 8-7129] Port Data_i2c[1] in module reg_interface is either unconnected or has no load
+INFO: [Synth 8-7129] Port Data_i2c[2] in module reg_interface is either unconnected or has no load
+INFO: [Synth 8-7129] Port Data_i2c[3] in module reg_interface is either unconnected or has no load
+INFO: [Synth 8-7129] Port Data_i2c[4] in module reg_interface is either unconnected or has no load
+INFO: [Synth 8-7129] Port Data_i2c[5] in module reg_interface is either unconnected or has no load
+INFO: [Synth 8-7129] Port Data_i2c[6] in module reg_interface is either unconnected or has no load
+INFO: [Synth 8-7129] Port Data_i2c[7] in module reg_interface is either unconnected or has no load
+INFO: [Synth 8-7129] Port reg_empty in module reg_interface is either unconnected or has no load
+INFO: [Synth 8-7129] Port Bus2IP_Data[0] in module soft_reset is either unconnected or has no load
+INFO: [Synth 8-7129] Port Bus2IP_Data[1] in module soft_reset is either unconnected or has no load
+INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2375.988 ; gain = 590.844 ; free physical = 1486 ; free virtual = 4510
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 2381.926 ; gain = 596.781 ; free physical = 1481 ; free virtual = 4505
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 2381.926 ; gain = 596.781 ; free physical = 1475 ; free virtual = 4499
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2384.895 ; gain = 0.000 ; free physical = 1459 ; free virtual = 4483
+INFO: [Netlist 29-17] Analyzing 32 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/ip/zb_blinky_block3_PmodCMPS2_0_1/src/PmodCMPS2_ooc.xdc] for cell 'inst'
+Finished Parsing XDC File [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/ip/zb_blinky_block3_PmodCMPS2_0_1/src/PmodCMPS2_ooc.xdc] for cell 'inst'
+Parsing XDC File [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/ip/zb_blinky_block3_PmodCMPS2_0_1/src/PmodCMPS2_pmod_bridge_0_0/PmodCMPS2_pmod_bridge_0_0_board.xdc] for cell 'inst/pmod_bridge_0/inst'
+Finished Parsing XDC File [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/ip/zb_blinky_block3_PmodCMPS2_0_1/src/PmodCMPS2_pmod_bridge_0_0/PmodCMPS2_pmod_bridge_0_0_board.xdc] for cell 'inst/pmod_bridge_0/inst'
+Parsing XDC File [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/ip/zb_blinky_block3_PmodCMPS2_0_1/src/PmodCMPS2_axi_iic_0_0/PmodCMPS2_axi_iic_0_0_board.xdc] for cell 'inst/axi_iic_0/U0'
+Finished Parsing XDC File [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/ip/zb_blinky_block3_PmodCMPS2_0_1/src/PmodCMPS2_axi_iic_0_0/PmodCMPS2_axi_iic_0_0_board.xdc] for cell 'inst/axi_iic_0/U0'
+Parsing XDC File [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/ip/zb_blinky_block3_PmodCMPS2_0_1/zb_blinky_block3_PmodCMPS2_0_1_board.xdc] for cell 'inst'
+Finished Parsing XDC File [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/ip/zb_blinky_block3_PmodCMPS2_0_1/zb_blinky_block3_PmodCMPS2_0_1_board.xdc] for cell 'inst'
+Parsing XDC File [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.runs/zb_blinky_block3_PmodCMPS2_0_1_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.runs/zb_blinky_block3_PmodCMPS2_0_1_synth_1/dont_touch.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.runs/zb_blinky_block3_PmodCMPS2_0_1_synth_1/dont_touch.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/zb_blinky_block3_PmodCMPS2_0_1_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/zb_blinky_block3_PmodCMPS2_0_1_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/opt/Xilinx/2025.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/zb_blinky_block3_PmodCMPS2_0_1_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/zb_blinky_block3_PmodCMPS2_0_1_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+INFO: [Project 1-1714] 2 XPM XDC files have been applied to the design.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2493.664 ; gain = 0.000 ; free physical = 1275 ; free virtual = 4299
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 20 instances were transformed.
+  FDR => FDRE: 3 instances
+  FDRSE => FDRSE (FDRE, LUT4, VCC): 5 instances
+  MUXCY_L => MUXCY: 12 instances
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.02 . Memory (MB): peak = 2493.699 ; gain = 0.000 ; free physical = 1275 ; free virtual = 4299
+INFO: [Designutils 20-5008] Incremental synthesis strategy off
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 2493.699 ; gain = 708.555 ; free physical = 1677 ; free virtual = 4701
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg484-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 2501.668 ; gain = 716.523 ; free physical = 1677 ; free virtual = 4701
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 2501.668 ; gain = 716.523 ; free physical = 1677 ; free virtual = 4701
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'slave_attachment'
+INFO: [Synth 8-802] inferred FSM for state register 'scl_state_reg' in module 'iic_control'
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'iic_control'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                 iSTATE2 |                             0001 |                               00
+                  iSTATE |                             0010 |                               01
+                 iSTATE0 |                             0100 |                               10
+                 iSTATE1 |                             1000 |                               11
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'one-hot' in module 'slave_attachment'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    idle |                              000 |                              000
+                  header |                              101 |                              001
+              ack_header |                              110 |                              010
+                rcv_data |                              100 |                              011
+                ack_data |                              011 |                              100
+               xmit_data |                              010 |                              101
+                wait_ack |                              001 |                              110
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'iic_control'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                scl_idle |                       0000000001 |                             0000
+              start_wait |                       0000000010 |                             0001
+                   start |                       0000000100 |                             0010
+              start_edge |                       0000001000 |                             0011
+            scl_low_edge |                       0000010000 |                             0100
+                 scl_low |                       0000100000 |                             0101
+           scl_high_edge |                       0001000000 |                             0110
+                scl_high |                       0010000000 |                             0111
+               stop_edge |                       0100000000 |                             1000
+               stop_wait |                       1000000000 |                             1001
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'scl_state_reg' using encoding 'one-hot' in module 'iic_control'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 2501.668 ; gain = 716.523 ; free physical = 1686 ; free virtual = 4712
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   10 Bit       Adders := 2     
+	   2 Input    8 Bit       Adders := 1     
+	   2 Input    4 Bit       Adders := 2     
++---XORs : 
+	   2 Input      1 Bit         XORs := 20    
++---Registers : 
+	               32 Bit    Registers := 1     
+	               10 Bit    Registers := 10    
+	                9 Bit    Registers := 2     
+	                8 Bit    Registers := 8     
+	                7 Bit    Registers := 1     
+	                4 Bit    Registers := 5     
+	                2 Bit    Registers := 4     
+	                1 Bit    Registers := 142   
++---Muxes : 
+	   2 Input   32 Bit        Muxes := 5     
+	   2 Input   10 Bit        Muxes := 15    
+	  10 Input   10 Bit        Muxes := 1     
+	   2 Input    9 Bit        Muxes := 1     
+	   3 Input    9 Bit        Muxes := 1     
+	   2 Input    8 Bit        Muxes := 4     
+	   4 Input    4 Bit        Muxes := 1     
+	   2 Input    4 Bit        Muxes := 6     
+	  21 Input    3 Bit        Muxes := 1     
+	   2 Input    2 Bit        Muxes := 4     
+	   3 Input    2 Bit        Muxes := 1     
+	   4 Input    2 Bit        Muxes := 1     
+	   2 Input    1 Bit        Muxes := 105   
+	   4 Input    1 Bit        Muxes := 3     
+	   7 Input    1 Bit        Muxes := 3     
+	   3 Input    1 Bit        Muxes := 1     
+	  10 Input    1 Bit        Muxes := 10    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 2501.668 ; gain = 716.523 ; free physical = 1707 ; free virtual = 4732
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 2553.668 ; gain = 768.523 ; free physical = 1714 ; free virtual = 4740
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 2601.715 ; gain = 816.570 ; free physical = 1682 ; free virtual = 4707
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:17 ; elapsed = 00:00:17 . Memory (MB): peak = 2601.715 ; gain = 816.570 ; free physical = 1686 ; free virtual = 4711
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 2760.527 ; gain = 975.383 ; free physical = 1571 ; free virtual = 4597
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 2760.527 ; gain = 975.383 ; free physical = 1571 ; free virtual = 4597
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 2760.527 ; gain = 975.383 ; free physical = 1571 ; free virtual = 4597
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 2760.527 ; gain = 975.383 ; free physical = 1570 ; free virtual = 4596
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 2760.527 ; gain = 975.383 ; free physical = 1570 ; free virtual = 4596
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 2760.527 ; gain = 975.383 ; free physical = 1570 ; free virtual = 4596
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+--------+------+
+|      |Cell    |Count |
++------+--------+------+
+|1     |CARRY4  |    10|
+|2     |LUT1    |     7|
+|3     |LUT2    |    56|
+|4     |LUT3    |    51|
+|5     |LUT4    |    74|
+|6     |LUT5    |    67|
+|7     |LUT6    |   197|
+|8     |MUXCY_L |     9|
+|9     |MUXF7   |     5|
+|10    |SRL16E  |    18|
+|11    |XORCY   |    12|
+|12    |FDR     |     3|
+|13    |FDRE    |   322|
+|14    |FDSE    |    50|
++------+--------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 2760.527 ; gain = 975.383 ; free physical = 1570 ; free virtual = 4596
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:18 ; elapsed = 00:00:18 . Memory (MB): peak = 2760.527 ; gain = 863.609 ; free physical = 1570 ; free virtual = 4596
+Synthesis Optimization Complete : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 2760.535 ; gain = 975.383 ; free physical = 1570 ; free virtual = 4596
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 2760.535 ; gain = 0.000 ; free physical = 1669 ; free virtual = 4695
+INFO: [Netlist 29-17] Analyzing 39 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2816.555 ; gain = 0.000 ; free physical = 1745 ; free virtual = 4771
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 6 instances were transformed.
+  (MUXCY,XORCY) => CARRY4: 3 instances
+  FDR => FDRE: 3 instances
+
+Synth Design complete | Checksum: 5caad515
+INFO: [Common 17-83] Releasing license: Synthesis
+315 Infos, 10 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:24 ; elapsed = 00:00:22 . Memory (MB): peak = 2816.590 ; gain = 1195.273 ; free physical = 1743 ; free virtual = 4769
+INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 1890.064; main = 1890.064; forked = 280.653
+INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 3496.918; main = 2816.559; forked = 995.246
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2840.566 ; gain = 0.000 ; free physical = 1761 ; free virtual = 4787
+INFO: [Common 17-1381] The checkpoint '/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.runs/zb_blinky_block3_PmodCMPS2_0_1_synth_1/zb_blinky_block3_PmodCMPS2_0_1.dcp' has been generated.
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP zb_blinky_block3_PmodCMPS2_0_1, cache-ID = fc27627ef1653550
+INFO: [Coretcl 2-1174] Renamed 28 cell refs.
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2840.566 ; gain = 0.000 ; free physical = 1763 ; free virtual = 4790
+INFO: [Common 17-1381] The checkpoint '/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.runs/zb_blinky_block3_PmodCMPS2_0_1_synth_1/zb_blinky_block3_PmodCMPS2_0_1.dcp' has been generated.
+INFO: [Vivado 12-24828] Executing command : report_utilization -file zb_blinky_block3_PmodCMPS2_0_1_utilization_synth.rpt -pb zb_blinky_block3_PmodCMPS2_0_1_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Thu May 28 00:01:47 2026...

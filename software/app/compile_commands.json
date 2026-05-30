@@ -1,0 +1,7 @@
+[
+{
+  "directory": "/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/software/app/build",
+  "command": "/opt/Xilinx/2025.2/Vitis/gnu/aarch32/lin/gcc-arm-none-eabi/bin/arm-none-eabi-gcc -I/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/software/app/src -isystem /home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/software/platform/export/platform/sw/standalone_ps7_cortexa9_0/include -isystem /opt/Xilinx/2025.2/gnu/aarch32/lin/gcc-arm-none-eabi/x86_64-oesdk-linux/usr/lib/arm-xilinx-eabi/gcc/arm-xilinx-eabi/13.3.0/include -isystem /opt/Xilinx/2025.2/gnu/aarch32/lin/gcc-arm-none-eabi/x86_64-oesdk-linux/usr/lib/arm-xilinx-eabi/gcc/arm-xilinx-eabi/13.3.0/include-fixed -isystem /opt/Xilinx/2025.2/Vitis/gnu/aarch32/lin/gcc-arm-none-eabi/aarch32-xilinx-eabi/usr/include  -DSDT -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard  -MMD -MP -specs=/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/software/platform/export/platform/sw/standalone_ps7_cortexa9_0/Xilinx.spec -I/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/software/platform/export/platform/sw/standalone_ps7_cortexa9_0/include -Wall -Wextra      -O0  -g3     -U__clang__ -o CMakeFiles/app.elf.dir/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/software/app/srcs/main.c.obj -c /home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/software/app/srcs/main.c",
+  "file": "/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/software/app/srcs/main.c"
+}
+]
