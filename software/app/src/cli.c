@@ -14,10 +14,10 @@
 #define EMBEDDED_CLI_IMPL
 #include "embedded_cli.h"
 
-#define CLI_BUFFER_SIZE 256
+#define CLI_BUFFER_SIZE 2048
 
-static EmbeddedCli *cli;
-static XUartPs Uart_Instance;
+EmbeddedCli *cli_Instance;
+XUartPs Uart_Instance;
 
 // CLI callback functions
 static void cli_idn(EmbeddedCli *cli, char *args, void *context){
@@ -42,13 +42,10 @@ static void cli_counter(EmbeddedCli *cli, char *args, void *context){
     }
     const char *arg = embeddedCliGetToken(args, 1);
     if(!strcmp(arg, "on")){
-        xil_printf("Counter enabled\n\r");
         counter_enable();
     } else if(!strcmp(arg, "off")){
-        xil_printf("Counter disabled\n\r");
         counter_disable();
     } else if(!strcmp(arg, "rst")){
-        xil_printf("Counter reset\n\r");
         counter_reset();
     } else {
         xil_printf("Invalid argument!\n\r");
@@ -81,7 +78,7 @@ static int cli_registerCommands(){
     int status = 0;
     
     for(unsigned long i = 0; i < sizeof(cliCommands)/sizeof(cliCommands[0]); i++){
-        embeddedCliAddBinding(cli, cliCommands[i]);
+        embeddedCliAddBinding(cli_Instance, cliCommands[i]);
     }
 
     return status;
@@ -90,11 +87,10 @@ static int cli_registerCommands(){
 int cli_initialize(){
     int status;
     
-    
     //Initialize UART
     XUartPs_Config *uartConfig;
     uartConfig = XUartPs_LookupConfig(XPAR_UART1_BASEADDR);
-    if(uartConfig != NULL){
+    if(uartConfig == NULL){
         return XST_FAILURE;
     }
     
@@ -109,14 +105,22 @@ int cli_initialize(){
     static CLI_UINT cliBuffer[BYTES_TO_CLI_UINTS(CLI_BUFFER_SIZE)] = {'\0'};
     
     EmbeddedCliConfig *cliConfig = embeddedCliDefaultConfig();
-    
+    cliConfig->maxBindingCount = sizeof(cliCommands)/sizeof(cliCommands[0]) + 1;
     cliConfig->cliBuffer = cliBuffer;
     cliConfig->cliBufferSize = CLI_BUFFER_SIZE;
     
-    cli = embeddedCliNew(cliConfig);
-    cli->writeChar = cli_writeChar;
+    cli_Instance = embeddedCliNew(cliConfig);
+    cli_Instance->writeChar = cli_writeChar;
     
     cli_registerCommands();
+
+    xil_printf("CLI initialized!\n\r");
+
+    return 0;
+}
+
+int cli_process(){
+    embeddedCliProcess(cli_Instance);
 
     return 0;
 }
@@ -128,7 +132,7 @@ int cli_readChar(){
     // Store character in the Embedded-cli buffer
     if(XUartPs_IsReceiveData(Uart_Instance.Config.BaseAddress)){
         c = (char) XUartPs_RecvByte(Uart_Instance.Config.BaseAddress);
-        embeddedCliReceiveChar(cli, c);
+        embeddedCliReceiveChar(cli_Instance, c);
     } else {
         return 0;
     }

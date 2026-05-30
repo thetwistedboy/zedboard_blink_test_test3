@@ -2,4 +2,56 @@
 
 #include "xparameters.h"
 #include "xgpio.h"
+#include "xil_printf.h"
+#include <xstatus.h>
 
+#include "sleep.h"
+
+XGpio Gpio_Instance;
+
+int app_initialize(){
+    int status = XST_SUCCESS;
+    
+    // Initialize and set GPIO
+    XGpio_Config *gpioConfig;
+    gpioConfig = XGpio_LookupConfig(XPAR_AXI_GPIO_0_BASEADDR);
+    if(gpioConfig == NULL){
+        return XST_FAILURE;
+    }
+    
+    status = XGpio_CfgInitialize(&Gpio_Instance, gpioConfig, gpioConfig->BaseAddress);
+    if(status != XST_SUCCESS){
+        return XST_FAILURE;
+    }
+
+    XGpio_SetDataDirection(&Gpio_Instance, 1, 0x0);
+    XGpio_DiscreteWrite(&Gpio_Instance, 1, 0x2);
+    
+    counter_reset();
+
+    xil_printf("Application initialized!\n\r");
+
+    return status;
+}
+
+void counter_enable(){
+    XGpio_DiscreteSet(&Gpio_Instance, 1, GPIO_MASK_COUNTER_EN);
+
+    xil_printf("Counter enabled\n\r");
+}
+
+void counter_disable(){
+    XGpio_DiscreteClear(&Gpio_Instance, 1, GPIO_MASK_COUNTER_EN);
+
+    xil_printf("Counter disabled\n\r");
+}
+
+void counter_reset(){
+    XGpio_DiscreteClear(&Gpio_Instance, 1, GPIO_MASK_COUNTER_RESETN);
+
+    usleep(500);
+
+    XGpio_DiscreteClear(&Gpio_Instance, 1, GPIO_MASK_COUNTER_RESETN);
+
+    xil_printf("Counter reset\n\r");
+}
