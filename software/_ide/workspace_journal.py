@@ -37,3 +37,11 @@ comp.build()
 
 comp.build()
 
+comp.build()
+
+comp.build()
+
+comp.build()
+
+vitis.dispose()
+

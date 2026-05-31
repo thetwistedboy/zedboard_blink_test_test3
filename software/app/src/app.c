@@ -24,8 +24,8 @@ int app_initialize(){
         return XST_FAILURE;
     }
 
-    XGpio_SetDataDirection(&Gpio_Instance, 1, 0x0);
-    XGpio_DiscreteWrite(&Gpio_Instance, 1, 0x2);
+    XGpio_SetDataDirection(&Gpio_Instance, 1, 0xC);
+    XGpio_DiscreteWrite(&Gpio_Instance, 1, 0x0);
     
     counter_reset();
 
@@ -51,7 +51,7 @@ void counter_reset(){
 
     usleep(500);
 
-    XGpio_DiscreteClear(&Gpio_Instance, 1, GPIO_MASK_COUNTER_RESETN);
+    XGpio_DiscreteSet(&Gpio_Instance, 1, GPIO_MASK_COUNTER_RESETN);
 
     xil_printf("Counter reset\n\r");
 }
