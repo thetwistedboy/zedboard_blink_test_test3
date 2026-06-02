@@ -75,57 +75,39 @@ zb_blinky_block3 your_instance_name (
   .FIXED_IO_ps_srstb(FIXED_IO_ps_srstb), // inout wire FIXED_IO_ps_srstb
   .FIXED_IO_ps_clk(FIXED_IO_ps_clk), // inout wire FIXED_IO_ps_clk
   .FIXED_IO_ps_porb(FIXED_IO_ps_porb), // inout wire FIXED_IO_ps_porb
+  .esp32_pmod_pin1_o(esp32_pmod_pin1_o), // output wire esp32_pmod_pin1_o
+  .esp32_pmod_pin7_i(esp32_pmod_pin7_i), // input wire esp32_pmod_pin7_i
+  .esp32_pmod_pin2_o(esp32_pmod_pin2_o), // output wire esp32_pmod_pin2_o
+  .esp32_pmod_pin8_i(esp32_pmod_pin8_i), // input wire esp32_pmod_pin8_i
+  .esp32_pmod_pin3_o(esp32_pmod_pin3_o), // output wire esp32_pmod_pin3_o
+  .esp32_pmod_pin9_i(esp32_pmod_pin9_i), // input wire esp32_pmod_pin9_i
+  .esp32_pmod_pin10_o(esp32_pmod_pin10_o), // output wire esp32_pmod_pin10_o
+  .esp32_pmod_pin4_o(esp32_pmod_pin4_o), // output wire esp32_pmod_pin4_o
+  .esp32_pmod_pin3_i(esp32_pmod_pin3_i), // input wire esp32_pmod_pin3_i
+  .esp32_pmod_pin4_i(esp32_pmod_pin4_i), // input wire esp32_pmod_pin4_i
+  .esp32_pmod_pin1_i(esp32_pmod_pin1_i), // input wire esp32_pmod_pin1_i
+  .esp32_pmod_pin2_i(esp32_pmod_pin2_i), // input wire esp32_pmod_pin2_i
+  .esp32_pmod_pin10_t(esp32_pmod_pin10_t), // output wire esp32_pmod_pin10_t
+  .esp32_pmod_pin8_t(esp32_pmod_pin8_t), // output wire esp32_pmod_pin8_t
+  .esp32_pmod_pin9_t(esp32_pmod_pin9_t), // output wire esp32_pmod_pin9_t
+  .esp32_pmod_pin4_t(esp32_pmod_pin4_t), // output wire esp32_pmod_pin4_t
+  .esp32_pmod_pin9_o(esp32_pmod_pin9_o), // output wire esp32_pmod_pin9_o
+  .esp32_pmod_pin10_i(esp32_pmod_pin10_i), // input wire esp32_pmod_pin10_i
+  .esp32_pmod_pin7_t(esp32_pmod_pin7_t), // output wire esp32_pmod_pin7_t
+  .esp32_pmod_pin1_t(esp32_pmod_pin1_t), // output wire esp32_pmod_pin1_t
+  .esp32_pmod_pin2_t(esp32_pmod_pin2_t), // output wire esp32_pmod_pin2_t
+  .esp32_pmod_pin7_o(esp32_pmod_pin7_o), // output wire esp32_pmod_pin7_o
+  .esp32_pmod_pin3_t(esp32_pmod_pin3_t), // output wire esp32_pmod_pin3_t
+  .esp32_pmod_pin8_o(esp32_pmod_pin8_o), // output wire esp32_pmod_pin8_o
   .count_en(count_en), // input wire count_en
   .reset_n(reset_n), // input wire reset_n
   .led(led), // output wire [7:0] led
-  .Pmod_out_0_pin1_o(Pmod_out_0_pin1_o), // output wire Pmod_out_0_pin1_o
-  .Pmod_out_0_pin7_i(Pmod_out_0_pin7_i), // input wire Pmod_out_0_pin7_i
-  .Pmod_out_0_pin2_o(Pmod_out_0_pin2_o), // output wire Pmod_out_0_pin2_o
-  .Pmod_out_0_pin8_i(Pmod_out_0_pin8_i), // input wire Pmod_out_0_pin8_i
-  .Pmod_out_0_pin3_o(Pmod_out_0_pin3_o), // output wire Pmod_out_0_pin3_o
-  .Pmod_out_0_pin9_i(Pmod_out_0_pin9_i), // input wire Pmod_out_0_pin9_i
-  .Pmod_out_0_pin10_o(Pmod_out_0_pin10_o), // output wire Pmod_out_0_pin10_o
-  .Pmod_out_0_pin4_o(Pmod_out_0_pin4_o), // output wire Pmod_out_0_pin4_o
-  .Pmod_out_0_pin3_i(Pmod_out_0_pin3_i), // input wire Pmod_out_0_pin3_i
-  .Pmod_out_0_pin4_i(Pmod_out_0_pin4_i), // input wire Pmod_out_0_pin4_i
-  .Pmod_out_0_pin1_i(Pmod_out_0_pin1_i), // input wire Pmod_out_0_pin1_i
-  .Pmod_out_0_pin2_i(Pmod_out_0_pin2_i), // input wire Pmod_out_0_pin2_i
-  .Pmod_out_0_pin10_t(Pmod_out_0_pin10_t), // output wire Pmod_out_0_pin10_t
-  .Pmod_out_0_pin8_t(Pmod_out_0_pin8_t), // output wire Pmod_out_0_pin8_t
-  .Pmod_out_0_pin9_t(Pmod_out_0_pin9_t), // output wire Pmod_out_0_pin9_t
-  .Pmod_out_0_pin4_t(Pmod_out_0_pin4_t), // output wire Pmod_out_0_pin4_t
-  .Pmod_out_0_pin9_o(Pmod_out_0_pin9_o), // output wire Pmod_out_0_pin9_o
-  .Pmod_out_0_pin10_i(Pmod_out_0_pin10_i), // input wire Pmod_out_0_pin10_i
-  .Pmod_out_0_pin7_t(Pmod_out_0_pin7_t), // output wire Pmod_out_0_pin7_t
-  .Pmod_out_0_pin1_t(Pmod_out_0_pin1_t), // output wire Pmod_out_0_pin1_t
-  .Pmod_out_0_pin2_t(Pmod_out_0_pin2_t), // output wire Pmod_out_0_pin2_t
-  .Pmod_out_0_pin7_o(Pmod_out_0_pin7_o), // output wire Pmod_out_0_pin7_o
-  .Pmod_out_0_pin3_t(Pmod_out_0_pin3_t), // output wire Pmod_out_0_pin3_t
-  .Pmod_out_0_pin8_o(Pmod_out_0_pin8_o), // output wire Pmod_out_0_pin8_o
-  .Pmod_out_1_pin1_o(Pmod_out_1_pin1_o), // output wire Pmod_out_1_pin1_o
-  .Pmod_out_1_pin7_i(Pmod_out_1_pin7_i), // input wire Pmod_out_1_pin7_i
-  .Pmod_out_1_pin2_o(Pmod_out_1_pin2_o), // output wire Pmod_out_1_pin2_o
-  .Pmod_out_1_pin8_i(Pmod_out_1_pin8_i), // input wire Pmod_out_1_pin8_i
-  .Pmod_out_1_pin3_o(Pmod_out_1_pin3_o), // output wire Pmod_out_1_pin3_o
-  .Pmod_out_1_pin9_i(Pmod_out_1_pin9_i), // input wire Pmod_out_1_pin9_i
-  .Pmod_out_1_pin10_o(Pmod_out_1_pin10_o), // output wire Pmod_out_1_pin10_o
-  .Pmod_out_1_pin4_o(Pmod_out_1_pin4_o), // output wire Pmod_out_1_pin4_o
-  .Pmod_out_1_pin3_i(Pmod_out_1_pin3_i), // input wire Pmod_out_1_pin3_i
-  .Pmod_out_1_pin4_i(Pmod_out_1_pin4_i), // input wire Pmod_out_1_pin4_i
-  .Pmod_out_1_pin1_i(Pmod_out_1_pin1_i), // input wire Pmod_out_1_pin1_i
-  .Pmod_out_1_pin2_i(Pmod_out_1_pin2_i), // input wire Pmod_out_1_pin2_i
-  .Pmod_out_1_pin10_t(Pmod_out_1_pin10_t), // output wire Pmod_out_1_pin10_t
-  .Pmod_out_1_pin8_t(Pmod_out_1_pin8_t), // output wire Pmod_out_1_pin8_t
-  .Pmod_out_1_pin9_t(Pmod_out_1_pin9_t), // output wire Pmod_out_1_pin9_t
-  .Pmod_out_1_pin4_t(Pmod_out_1_pin4_t), // output wire Pmod_out_1_pin4_t
-  .Pmod_out_1_pin9_o(Pmod_out_1_pin9_o), // output wire Pmod_out_1_pin9_o
-  .Pmod_out_1_pin10_i(Pmod_out_1_pin10_i), // input wire Pmod_out_1_pin10_i
-  .Pmod_out_1_pin7_t(Pmod_out_1_pin7_t), // output wire Pmod_out_1_pin7_t
-  .Pmod_out_1_pin1_t(Pmod_out_1_pin1_t), // output wire Pmod_out_1_pin1_t
-  .Pmod_out_1_pin2_t(Pmod_out_1_pin2_t), // output wire Pmod_out_1_pin2_t
-  .Pmod_out_1_pin7_o(Pmod_out_1_pin7_o), // output wire Pmod_out_1_pin7_o
-  .Pmod_out_1_pin3_t(Pmod_out_1_pin3_t), // output wire Pmod_out_1_pin3_t
-  .Pmod_out_1_pin8_o(Pmod_out_1_pin8_o) // output wire Pmod_out_1_pin8_o
+  .cmps2_iic_scl_i(cmps2_iic_scl_i), // input wire cmps2_iic_scl_i
+  .cmps2_iic_scl_o(cmps2_iic_scl_o), // output wire cmps2_iic_scl_o
+  .cmps2_iic_scl_t(cmps2_iic_scl_t), // output wire cmps2_iic_scl_t
+  .cmps2_iic_sda_i(cmps2_iic_sda_i), // input wire cmps2_iic_sda_i
+  .cmps2_iic_sda_o(cmps2_iic_sda_o), // output wire cmps2_iic_sda_o
+  .cmps2_iic_sda_t(cmps2_iic_sda_t) // output wire cmps2_iic_sda_t
 );
 // INST_TAG_END ------  End cut for INSTANTIATION Template  ------
 

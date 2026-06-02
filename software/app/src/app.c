@@ -12,7 +12,15 @@ XGpio Gpio_Instance;
 int app_initialize(){
     int status = XST_SUCCESS;
     
+    // Initialize I2C
+    xil_printf("Initializing I2C... ");
+    
+    
+    
+    xil_printf("I2C Initialized!\r\n");
+    
     // Initialize and set GPIO
+    xil_printf("Initializing GPIO... ");
     XGpio_Config *gpioConfig;
     gpioConfig = XGpio_LookupConfig(XPAR_AXI_GPIO_0_BASEADDR);
     if(gpioConfig == NULL){
@@ -29,7 +37,9 @@ int app_initialize(){
     
     counter_reset();
 
-    xil_printf("Application initialized!\n\r");
+    xil_printf("GPIO Initialized!\r\n");
+    
+    xil_printf("Application initialized!\r\n");
 
     return status;
 }
@@ -37,13 +47,13 @@ int app_initialize(){
 void counter_enable(){
     XGpio_DiscreteSet(&Gpio_Instance, 1, GPIO_MASK_COUNTER_EN);
 
-    xil_printf("Counter enabled\n\r");
+    xil_printf("Counter enabled\r\n");
 }
 
 void counter_disable(){
     XGpio_DiscreteClear(&Gpio_Instance, 1, GPIO_MASK_COUNTER_EN);
 
-    xil_printf("Counter disabled\n\r");
+    xil_printf("Counter disabled\r\n");
 }
 
 void counter_reset(){
@@ -53,5 +63,5 @@ void counter_reset(){
 
     XGpio_DiscreteSet(&Gpio_Instance, 1, GPIO_MASK_COUNTER_RESETN);
 
-    xil_printf("Counter reset\n\r");
+    xil_printf("Counter reset\r\n");
 }

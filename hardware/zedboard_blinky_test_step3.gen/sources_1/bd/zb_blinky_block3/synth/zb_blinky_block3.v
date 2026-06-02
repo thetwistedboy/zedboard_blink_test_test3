@@ -2,7 +2,7 @@
 //Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2025.2 (lin64) Build 6299465 Fri Nov 14 12:34:56 MST 2025
-//Date        : Thu May 28 00:01:14 2026
+//Date        : Mon Jun  1 20:18:37 2026
 //Host        : jkelleylaptop running 64-bit Linux Mint 22.3
 //Command     : generate_target zb_blinky_block3.bd
 //Design      : zb_blinky_block3
@@ -10,7 +10,7 @@
 //--------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
-(* CORE_GENERATION_INFO = "zb_blinky_block3,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=zb_blinky_block3,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=11,numReposBlks=11,numNonXlnxBlks=3,numHierBlks=0,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=0,numPkgbdBlks=1,bdsource=USER,da_axi4_cnt=5,da_board_cnt=1,da_clkrst_cnt=13,da_ps7_cnt=1,synth_mode=Hierarchical}" *) (* HW_HANDOFF = "zb_blinky_block3.hwdef" *) 
+(* CORE_GENERATION_INFO = "zb_blinky_block3,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=zb_blinky_block3,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=11,numReposBlks=11,numNonXlnxBlks=2,numHierBlks=0,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=0,numPkgbdBlks=1,bdsource=USER,da_axi4_cnt=6,da_board_cnt=2,da_clkrst_cnt=13,da_ps7_cnt=1,synth_mode=Hierarchical}" *) (* HW_HANDOFF = "zb_blinky_block3.hwdef" *) 
 module zb_blinky_block3
    (DDR_addr,
     DDR_ba,
@@ -33,55 +33,37 @@ module zb_blinky_block3
     FIXED_IO_ps_clk,
     FIXED_IO_ps_porb,
     FIXED_IO_ps_srstb,
-    Pmod_out_0_pin10_i,
-    Pmod_out_0_pin10_o,
-    Pmod_out_0_pin10_t,
-    Pmod_out_0_pin1_i,
-    Pmod_out_0_pin1_o,
-    Pmod_out_0_pin1_t,
-    Pmod_out_0_pin2_i,
-    Pmod_out_0_pin2_o,
-    Pmod_out_0_pin2_t,
-    Pmod_out_0_pin3_i,
-    Pmod_out_0_pin3_o,
-    Pmod_out_0_pin3_t,
-    Pmod_out_0_pin4_i,
-    Pmod_out_0_pin4_o,
-    Pmod_out_0_pin4_t,
-    Pmod_out_0_pin7_i,
-    Pmod_out_0_pin7_o,
-    Pmod_out_0_pin7_t,
-    Pmod_out_0_pin8_i,
-    Pmod_out_0_pin8_o,
-    Pmod_out_0_pin8_t,
-    Pmod_out_0_pin9_i,
-    Pmod_out_0_pin9_o,
-    Pmod_out_0_pin9_t,
-    Pmod_out_1_pin10_i,
-    Pmod_out_1_pin10_o,
-    Pmod_out_1_pin10_t,
-    Pmod_out_1_pin1_i,
-    Pmod_out_1_pin1_o,
-    Pmod_out_1_pin1_t,
-    Pmod_out_1_pin2_i,
-    Pmod_out_1_pin2_o,
-    Pmod_out_1_pin2_t,
-    Pmod_out_1_pin3_i,
-    Pmod_out_1_pin3_o,
-    Pmod_out_1_pin3_t,
-    Pmod_out_1_pin4_i,
-    Pmod_out_1_pin4_o,
-    Pmod_out_1_pin4_t,
-    Pmod_out_1_pin7_i,
-    Pmod_out_1_pin7_o,
-    Pmod_out_1_pin7_t,
-    Pmod_out_1_pin8_i,
-    Pmod_out_1_pin8_o,
-    Pmod_out_1_pin8_t,
-    Pmod_out_1_pin9_i,
-    Pmod_out_1_pin9_o,
-    Pmod_out_1_pin9_t,
+    cmps2_iic_scl_i,
+    cmps2_iic_scl_o,
+    cmps2_iic_scl_t,
+    cmps2_iic_sda_i,
+    cmps2_iic_sda_o,
+    cmps2_iic_sda_t,
     count_en,
+    esp32_pmod_pin10_i,
+    esp32_pmod_pin10_o,
+    esp32_pmod_pin10_t,
+    esp32_pmod_pin1_i,
+    esp32_pmod_pin1_o,
+    esp32_pmod_pin1_t,
+    esp32_pmod_pin2_i,
+    esp32_pmod_pin2_o,
+    esp32_pmod_pin2_t,
+    esp32_pmod_pin3_i,
+    esp32_pmod_pin3_o,
+    esp32_pmod_pin3_t,
+    esp32_pmod_pin4_i,
+    esp32_pmod_pin4_o,
+    esp32_pmod_pin4_t,
+    esp32_pmod_pin7_i,
+    esp32_pmod_pin7_o,
+    esp32_pmod_pin7_t,
+    esp32_pmod_pin8_i,
+    esp32_pmod_pin8_o,
+    esp32_pmod_pin8_t,
+    esp32_pmod_pin9_i,
+    esp32_pmod_pin9_o,
+    esp32_pmod_pin9_t,
     led,
     reset_n);
   (* X_INTERFACE_INFO = "xilinx.com:interface:ddrx:1.0 DDR ADDR" *) (* X_INTERFACE_MODE = "Master" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME DDR, AXI_ARBITRATION_SCHEME TDM, BURST_LENGTH 8, CAN_DEBUG false, CAS_LATENCY 11, CAS_WRITE_LATENCY 11, CS_ENABLED true, DATA_MASK_ENABLED true, DATA_WIDTH 8, MEMORY_TYPE COMPONENTS, MEM_ADDR_MAP ROW_COLUMN_BANK, SLOT Single, TIMEPERIOD_PS 1250" *) inout [14:0]DDR_addr;
@@ -105,55 +87,37 @@ module zb_blinky_block3
   (* X_INTERFACE_INFO = "xilinx.com:display_processing_system7:fixedio:1.0 FIXED_IO PS_CLK" *) inout FIXED_IO_ps_clk;
   (* X_INTERFACE_INFO = "xilinx.com:display_processing_system7:fixedio:1.0 FIXED_IO PS_PORB" *) inout FIXED_IO_ps_porb;
   (* X_INTERFACE_INFO = "xilinx.com:display_processing_system7:fixedio:1.0 FIXED_IO PS_SRSTB" *) inout FIXED_IO_ps_srstb;
-  (* X_INTERFACE_INFO = "digilentinc.com:interface:pmod:1.0 Pmod_out_0 PIN10_I" *) (* X_INTERFACE_MODE = "Master" *) input Pmod_out_0_pin10_i;
-  (* X_INTERFACE_INFO = "digilentinc.com:interface:pmod:1.0 Pmod_out_0 PIN10_O" *) output Pmod_out_0_pin10_o;
-  (* X_INTERFACE_INFO = "digilentinc.com:interface:pmod:1.0 Pmod_out_0 PIN10_T" *) output Pmod_out_0_pin10_t;
-  (* X_INTERFACE_INFO = "digilentinc.com:interface:pmod:1.0 Pmod_out_0 PIN1_I" *) input Pmod_out_0_pin1_i;
-  (* X_INTERFACE_INFO = "digilentinc.com:interface:pmod:1.0 Pmod_out_0 PIN1_O" *) output Pmod_out_0_pin1_o;
-  (* X_INTERFACE_INFO = "digilentinc.com:interface:pmod:1.0 Pmod_out_0 PIN1_T" *) output Pmod_out_0_pin1_t;
-  (* X_INTERFACE_INFO = "digilentinc.com:interface:pmod:1.0 Pmod_out_0 PIN2_I" *) input Pmod_out_0_pin2_i;
-  (* X_INTERFACE_INFO = "digilentinc.com:interface:pmod:1.0 Pmod_out_0 PIN2_O" *) output Pmod_out_0_pin2_o;
-  (* X_INTERFACE_INFO = "digilentinc.com:interface:pmod:1.0 Pmod_out_0 PIN2_T" *) output Pmod_out_0_pin2_t;
-  (* X_INTERFACE_INFO = "digilentinc.com:interface:pmod:1.0 Pmod_out_0 PIN3_I" *) input Pmod_out_0_pin3_i;
-  (* X_INTERFACE_INFO = "digilentinc.com:interface:pmod:1.0 Pmod_out_0 PIN3_O" *) output Pmod_out_0_pin3_o;
-  (* X_INTERFACE_INFO = "digilentinc.com:interface:pmod:1.0 Pmod_out_0 PIN3_T" *) output Pmod_out_0_pin3_t;
-  (* X_INTERFACE_INFO = "digilentinc.com:interface:pmod:1.0 Pmod_out_0 PIN4_I" *) input Pmod_out_0_pin4_i;
-  (* X_INTERFACE_INFO = "digilentinc.com:interface:pmod:1.0 Pmod_out_0 PIN4_O" *) output Pmod_out_0_pin4_o;
-  (* X_INTERFACE_INFO = "digilentinc.com:interface:pmod:1.0 Pmod_out_0 PIN4_T" *) output Pmod_out_0_pin4_t;
-  (* X_INTERFACE_INFO = "digilentinc.com:interface:pmod:1.0 Pmod_out_0 PIN7_I" *) input Pmod_out_0_pin7_i;
-  (* X_INTERFACE_INFO = "digilentinc.com:interface:pmod:1.0 Pmod_out_0 PIN7_O" *) output Pmod_out_0_pin7_o;
-  (* X_INTERFACE_INFO = "digilentinc.com:interface:pmod:1.0 Pmod_out_0 PIN7_T" *) output Pmod_out_0_pin7_t;
-  (* X_INTERFACE_INFO = "digilentinc.com:interface:pmod:1.0 Pmod_out_0 PIN8_I" *) input Pmod_out_0_pin8_i;
-  (* X_INTERFACE_INFO = "digilentinc.com:interface:pmod:1.0 Pmod_out_0 PIN8_O" *) output Pmod_out_0_pin8_o;
-  (* X_INTERFACE_INFO = "digilentinc.com:interface:pmod:1.0 Pmod_out_0 PIN8_T" *) output Pmod_out_0_pin8_t;
-  (* X_INTERFACE_INFO = "digilentinc.com:interface:pmod:1.0 Pmod_out_0 PIN9_I" *) input Pmod_out_0_pin9_i;
-  (* X_INTERFACE_INFO = "digilentinc.com:interface:pmod:1.0 Pmod_out_0 PIN9_O" *) output Pmod_out_0_pin9_o;
-  (* X_INTERFACE_INFO = "digilentinc.com:interface:pmod:1.0 Pmod_out_0 PIN9_T" *) output Pmod_out_0_pin9_t;
-  (* X_INTERFACE_INFO = "digilentinc.com:interface:pmod:1.0 Pmod_out_1 PIN10_I" *) (* X_INTERFACE_MODE = "Master" *) input Pmod_out_1_pin10_i;
-  (* X_INTERFACE_INFO = "digilentinc.com:interface:pmod:1.0 Pmod_out_1 PIN10_O" *) output Pmod_out_1_pin10_o;
-  (* X_INTERFACE_INFO = "digilentinc.com:interface:pmod:1.0 Pmod_out_1 PIN10_T" *) output Pmod_out_1_pin10_t;
-  (* X_INTERFACE_INFO = "digilentinc.com:interface:pmod:1.0 Pmod_out_1 PIN1_I" *) input Pmod_out_1_pin1_i;
-  (* X_INTERFACE_INFO = "digilentinc.com:interface:pmod:1.0 Pmod_out_1 PIN1_O" *) output Pmod_out_1_pin1_o;
-  (* X_INTERFACE_INFO = "digilentinc.com:interface:pmod:1.0 Pmod_out_1 PIN1_T" *) output Pmod_out_1_pin1_t;
-  (* X_INTERFACE_INFO = "digilentinc.com:interface:pmod:1.0 Pmod_out_1 PIN2_I" *) input Pmod_out_1_pin2_i;
-  (* X_INTERFACE_INFO = "digilentinc.com:interface:pmod:1.0 Pmod_out_1 PIN2_O" *) output Pmod_out_1_pin2_o;
-  (* X_INTERFACE_INFO = "digilentinc.com:interface:pmod:1.0 Pmod_out_1 PIN2_T" *) output Pmod_out_1_pin2_t;
-  (* X_INTERFACE_INFO = "digilentinc.com:interface:pmod:1.0 Pmod_out_1 PIN3_I" *) input Pmod_out_1_pin3_i;
-  (* X_INTERFACE_INFO = "digilentinc.com:interface:pmod:1.0 Pmod_out_1 PIN3_O" *) output Pmod_out_1_pin3_o;
-  (* X_INTERFACE_INFO = "digilentinc.com:interface:pmod:1.0 Pmod_out_1 PIN3_T" *) output Pmod_out_1_pin3_t;
-  (* X_INTERFACE_INFO = "digilentinc.com:interface:pmod:1.0 Pmod_out_1 PIN4_I" *) input Pmod_out_1_pin4_i;
-  (* X_INTERFACE_INFO = "digilentinc.com:interface:pmod:1.0 Pmod_out_1 PIN4_O" *) output Pmod_out_1_pin4_o;
-  (* X_INTERFACE_INFO = "digilentinc.com:interface:pmod:1.0 Pmod_out_1 PIN4_T" *) output Pmod_out_1_pin4_t;
-  (* X_INTERFACE_INFO = "digilentinc.com:interface:pmod:1.0 Pmod_out_1 PIN7_I" *) input Pmod_out_1_pin7_i;
-  (* X_INTERFACE_INFO = "digilentinc.com:interface:pmod:1.0 Pmod_out_1 PIN7_O" *) output Pmod_out_1_pin7_o;
-  (* X_INTERFACE_INFO = "digilentinc.com:interface:pmod:1.0 Pmod_out_1 PIN7_T" *) output Pmod_out_1_pin7_t;
-  (* X_INTERFACE_INFO = "digilentinc.com:interface:pmod:1.0 Pmod_out_1 PIN8_I" *) input Pmod_out_1_pin8_i;
-  (* X_INTERFACE_INFO = "digilentinc.com:interface:pmod:1.0 Pmod_out_1 PIN8_O" *) output Pmod_out_1_pin8_o;
-  (* X_INTERFACE_INFO = "digilentinc.com:interface:pmod:1.0 Pmod_out_1 PIN8_T" *) output Pmod_out_1_pin8_t;
-  (* X_INTERFACE_INFO = "digilentinc.com:interface:pmod:1.0 Pmod_out_1 PIN9_I" *) input Pmod_out_1_pin9_i;
-  (* X_INTERFACE_INFO = "digilentinc.com:interface:pmod:1.0 Pmod_out_1 PIN9_O" *) output Pmod_out_1_pin9_o;
-  (* X_INTERFACE_INFO = "digilentinc.com:interface:pmod:1.0 Pmod_out_1 PIN9_T" *) output Pmod_out_1_pin9_t;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:iic:1.0 cmps2_iic SCL_I" *) (* X_INTERFACE_MODE = "Master" *) input cmps2_iic_scl_i;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:iic:1.0 cmps2_iic SCL_O" *) output cmps2_iic_scl_o;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:iic:1.0 cmps2_iic SCL_T" *) output cmps2_iic_scl_t;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:iic:1.0 cmps2_iic SDA_I" *) input cmps2_iic_sda_i;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:iic:1.0 cmps2_iic SDA_O" *) output cmps2_iic_sda_o;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:iic:1.0 cmps2_iic SDA_T" *) output cmps2_iic_sda_t;
   input count_en;
+  (* X_INTERFACE_INFO = "digilentinc.com:interface:pmod:1.0 esp32_pmod PIN10_I" *) (* X_INTERFACE_MODE = "Master" *) input esp32_pmod_pin10_i;
+  (* X_INTERFACE_INFO = "digilentinc.com:interface:pmod:1.0 esp32_pmod PIN10_O" *) output esp32_pmod_pin10_o;
+  (* X_INTERFACE_INFO = "digilentinc.com:interface:pmod:1.0 esp32_pmod PIN10_T" *) output esp32_pmod_pin10_t;
+  (* X_INTERFACE_INFO = "digilentinc.com:interface:pmod:1.0 esp32_pmod PIN1_I" *) input esp32_pmod_pin1_i;
+  (* X_INTERFACE_INFO = "digilentinc.com:interface:pmod:1.0 esp32_pmod PIN1_O" *) output esp32_pmod_pin1_o;
+  (* X_INTERFACE_INFO = "digilentinc.com:interface:pmod:1.0 esp32_pmod PIN1_T" *) output esp32_pmod_pin1_t;
+  (* X_INTERFACE_INFO = "digilentinc.com:interface:pmod:1.0 esp32_pmod PIN2_I" *) input esp32_pmod_pin2_i;
+  (* X_INTERFACE_INFO = "digilentinc.com:interface:pmod:1.0 esp32_pmod PIN2_O" *) output esp32_pmod_pin2_o;
+  (* X_INTERFACE_INFO = "digilentinc.com:interface:pmod:1.0 esp32_pmod PIN2_T" *) output esp32_pmod_pin2_t;
+  (* X_INTERFACE_INFO = "digilentinc.com:interface:pmod:1.0 esp32_pmod PIN3_I" *) input esp32_pmod_pin3_i;
+  (* X_INTERFACE_INFO = "digilentinc.com:interface:pmod:1.0 esp32_pmod PIN3_O" *) output esp32_pmod_pin3_o;
+  (* X_INTERFACE_INFO = "digilentinc.com:interface:pmod:1.0 esp32_pmod PIN3_T" *) output esp32_pmod_pin3_t;
+  (* X_INTERFACE_INFO = "digilentinc.com:interface:pmod:1.0 esp32_pmod PIN4_I" *) input esp32_pmod_pin4_i;
+  (* X_INTERFACE_INFO = "digilentinc.com:interface:pmod:1.0 esp32_pmod PIN4_O" *) output esp32_pmod_pin4_o;
+  (* X_INTERFACE_INFO = "digilentinc.com:interface:pmod:1.0 esp32_pmod PIN4_T" *) output esp32_pmod_pin4_t;
+  (* X_INTERFACE_INFO = "digilentinc.com:interface:pmod:1.0 esp32_pmod PIN7_I" *) input esp32_pmod_pin7_i;
+  (* X_INTERFACE_INFO = "digilentinc.com:interface:pmod:1.0 esp32_pmod PIN7_O" *) output esp32_pmod_pin7_o;
+  (* X_INTERFACE_INFO = "digilentinc.com:interface:pmod:1.0 esp32_pmod PIN7_T" *) output esp32_pmod_pin7_t;
+  (* X_INTERFACE_INFO = "digilentinc.com:interface:pmod:1.0 esp32_pmod PIN8_I" *) input esp32_pmod_pin8_i;
+  (* X_INTERFACE_INFO = "digilentinc.com:interface:pmod:1.0 esp32_pmod PIN8_O" *) output esp32_pmod_pin8_o;
+  (* X_INTERFACE_INFO = "digilentinc.com:interface:pmod:1.0 esp32_pmod PIN8_T" *) output esp32_pmod_pin8_t;
+  (* X_INTERFACE_INFO = "digilentinc.com:interface:pmod:1.0 esp32_pmod PIN9_I" *) input esp32_pmod_pin9_i;
+  (* X_INTERFACE_INFO = "digilentinc.com:interface:pmod:1.0 esp32_pmod PIN9_O" *) output esp32_pmod_pin9_o;
+  (* X_INTERFACE_INFO = "digilentinc.com:interface:pmod:1.0 esp32_pmod PIN9_T" *) output esp32_pmod_pin9_t;
   (* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 DATA.LED DATA" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME DATA.LED, LAYERED_METADATA undef" *) output [7:0]led;
   input reset_n;
 
@@ -178,54 +142,6 @@ module zb_blinky_block3
   wire FIXED_IO_ps_clk;
   wire FIXED_IO_ps_porb;
   wire FIXED_IO_ps_srstb;
-  wire Pmod_out_0_pin10_i;
-  wire Pmod_out_0_pin10_o;
-  wire Pmod_out_0_pin10_t;
-  wire Pmod_out_0_pin1_i;
-  wire Pmod_out_0_pin1_o;
-  wire Pmod_out_0_pin1_t;
-  wire Pmod_out_0_pin2_i;
-  wire Pmod_out_0_pin2_o;
-  wire Pmod_out_0_pin2_t;
-  wire Pmod_out_0_pin3_i;
-  wire Pmod_out_0_pin3_o;
-  wire Pmod_out_0_pin3_t;
-  wire Pmod_out_0_pin4_i;
-  wire Pmod_out_0_pin4_o;
-  wire Pmod_out_0_pin4_t;
-  wire Pmod_out_0_pin7_i;
-  wire Pmod_out_0_pin7_o;
-  wire Pmod_out_0_pin7_t;
-  wire Pmod_out_0_pin8_i;
-  wire Pmod_out_0_pin8_o;
-  wire Pmod_out_0_pin8_t;
-  wire Pmod_out_0_pin9_i;
-  wire Pmod_out_0_pin9_o;
-  wire Pmod_out_0_pin9_t;
-  wire Pmod_out_1_pin10_i;
-  wire Pmod_out_1_pin10_o;
-  wire Pmod_out_1_pin10_t;
-  wire Pmod_out_1_pin1_i;
-  wire Pmod_out_1_pin1_o;
-  wire Pmod_out_1_pin1_t;
-  wire Pmod_out_1_pin2_i;
-  wire Pmod_out_1_pin2_o;
-  wire Pmod_out_1_pin2_t;
-  wire Pmod_out_1_pin3_i;
-  wire Pmod_out_1_pin3_o;
-  wire Pmod_out_1_pin3_t;
-  wire Pmod_out_1_pin4_i;
-  wire Pmod_out_1_pin4_o;
-  wire Pmod_out_1_pin4_t;
-  wire Pmod_out_1_pin7_i;
-  wire Pmod_out_1_pin7_o;
-  wire Pmod_out_1_pin7_t;
-  wire Pmod_out_1_pin8_i;
-  wire Pmod_out_1_pin8_o;
-  wire Pmod_out_1_pin8_t;
-  wire Pmod_out_1_pin9_i;
-  wire Pmod_out_1_pin9_o;
-  wire Pmod_out_1_pin9_t;
   wire [3:0]axi_gpio_0_gpio_io_o;
   wire [8:0]axi_smc_M00_AXI_ARADDR;
   wire axi_smc_M00_AXI_ARREADY;
@@ -244,10 +160,10 @@ module zb_blinky_block3
   wire axi_smc_M00_AXI_WREADY;
   wire [3:0]axi_smc_M00_AXI_WSTRB;
   wire axi_smc_M00_AXI_WVALID;
-  wire [11:0]axi_smc_M01_AXI_ARADDR;
+  wire [8:0]axi_smc_M01_AXI_ARADDR;
   wire axi_smc_M01_AXI_ARREADY;
   wire axi_smc_M01_AXI_ARVALID;
-  wire [11:0]axi_smc_M01_AXI_AWADDR;
+  wire [8:0]axi_smc_M01_AXI_AWADDR;
   wire axi_smc_M01_AXI_AWREADY;
   wire axi_smc_M01_AXI_AWVALID;
   wire axi_smc_M01_AXI_BREADY;
@@ -295,7 +211,37 @@ module zb_blinky_block3
   wire axi_smc_M03_AXI_WREADY;
   wire [3:0]axi_smc_M03_AXI_WSTRB;
   wire axi_smc_M03_AXI_WVALID;
+  wire cmps2_iic_scl_i;
+  wire cmps2_iic_scl_o;
+  wire cmps2_iic_scl_t;
+  wire cmps2_iic_sda_i;
+  wire cmps2_iic_sda_o;
+  wire cmps2_iic_sda_t;
   wire count_en;
+  wire esp32_pmod_pin10_i;
+  wire esp32_pmod_pin10_o;
+  wire esp32_pmod_pin10_t;
+  wire esp32_pmod_pin1_i;
+  wire esp32_pmod_pin1_o;
+  wire esp32_pmod_pin1_t;
+  wire esp32_pmod_pin2_i;
+  wire esp32_pmod_pin2_o;
+  wire esp32_pmod_pin2_t;
+  wire esp32_pmod_pin3_i;
+  wire esp32_pmod_pin3_o;
+  wire esp32_pmod_pin3_t;
+  wire esp32_pmod_pin4_i;
+  wire esp32_pmod_pin4_o;
+  wire esp32_pmod_pin4_t;
+  wire esp32_pmod_pin7_i;
+  wire esp32_pmod_pin7_o;
+  wire esp32_pmod_pin7_t;
+  wire esp32_pmod_pin8_i;
+  wire esp32_pmod_pin8_o;
+  wire esp32_pmod_pin8_t;
+  wire esp32_pmod_pin9_i;
+  wire esp32_pmod_pin9_o;
+  wire esp32_pmod_pin9_t;
   wire [3:0]ilconcat_0_dout;
   wire [1:0]ilconstant_0_dout;
   wire [0:0]ilslice_0_Dout;
@@ -344,50 +290,6 @@ module zb_blinky_block3
   wire reset_n;
   wire [0:0]rst_ps7_0_100M_peripheral_aresetn;
 
-  zb_blinky_block3_PmodCMPS2_0_1 PmodCMPS2_0
-       (.AXI_LITE_IIC_araddr(axi_smc_M01_AXI_ARADDR[8:0]),
-        .AXI_LITE_IIC_arready(axi_smc_M01_AXI_ARREADY),
-        .AXI_LITE_IIC_arvalid(axi_smc_M01_AXI_ARVALID),
-        .AXI_LITE_IIC_awaddr(axi_smc_M01_AXI_AWADDR[8:0]),
-        .AXI_LITE_IIC_awready(axi_smc_M01_AXI_AWREADY),
-        .AXI_LITE_IIC_awvalid(axi_smc_M01_AXI_AWVALID),
-        .AXI_LITE_IIC_bready(axi_smc_M01_AXI_BREADY),
-        .AXI_LITE_IIC_bresp(axi_smc_M01_AXI_BRESP),
-        .AXI_LITE_IIC_bvalid(axi_smc_M01_AXI_BVALID),
-        .AXI_LITE_IIC_rdata(axi_smc_M01_AXI_RDATA),
-        .AXI_LITE_IIC_rready(axi_smc_M01_AXI_RREADY),
-        .AXI_LITE_IIC_rresp(axi_smc_M01_AXI_RRESP),
-        .AXI_LITE_IIC_rvalid(axi_smc_M01_AXI_RVALID),
-        .AXI_LITE_IIC_wdata(axi_smc_M01_AXI_WDATA),
-        .AXI_LITE_IIC_wready(axi_smc_M01_AXI_WREADY),
-        .AXI_LITE_IIC_wstrb(axi_smc_M01_AXI_WSTRB),
-        .AXI_LITE_IIC_wvalid(axi_smc_M01_AXI_WVALID),
-        .Pmod_out_pin10_i(Pmod_out_0_pin10_i),
-        .Pmod_out_pin10_o(Pmod_out_0_pin10_o),
-        .Pmod_out_pin10_t(Pmod_out_0_pin10_t),
-        .Pmod_out_pin1_i(Pmod_out_0_pin1_i),
-        .Pmod_out_pin1_o(Pmod_out_0_pin1_o),
-        .Pmod_out_pin1_t(Pmod_out_0_pin1_t),
-        .Pmod_out_pin2_i(Pmod_out_0_pin2_i),
-        .Pmod_out_pin2_o(Pmod_out_0_pin2_o),
-        .Pmod_out_pin2_t(Pmod_out_0_pin2_t),
-        .Pmod_out_pin3_i(Pmod_out_0_pin3_i),
-        .Pmod_out_pin3_o(Pmod_out_0_pin3_o),
-        .Pmod_out_pin3_t(Pmod_out_0_pin3_t),
-        .Pmod_out_pin4_i(Pmod_out_0_pin4_i),
-        .Pmod_out_pin4_o(Pmod_out_0_pin4_o),
-        .Pmod_out_pin4_t(Pmod_out_0_pin4_t),
-        .Pmod_out_pin7_i(Pmod_out_0_pin7_i),
-        .Pmod_out_pin7_o(Pmod_out_0_pin7_o),
-        .Pmod_out_pin7_t(Pmod_out_0_pin7_t),
-        .Pmod_out_pin8_i(Pmod_out_0_pin8_i),
-        .Pmod_out_pin8_o(Pmod_out_0_pin8_o),
-        .Pmod_out_pin8_t(Pmod_out_0_pin8_t),
-        .Pmod_out_pin9_i(Pmod_out_0_pin9_i),
-        .Pmod_out_pin9_o(Pmod_out_0_pin9_o),
-        .Pmod_out_pin9_t(Pmod_out_0_pin9_t),
-        .s_axi_aclk(processing_system7_0_FCLK_CLK0),
-        .s_axi_aresetn(rst_ps7_0_100M_peripheral_aresetn));
   zb_blinky_block3_PmodESP32_0_0 PmodESP32_0
        (.AXI_LITE_GPIO_araddr(axi_smc_M02_AXI_ARADDR),
         .AXI_LITE_GPIO_arready(axi_smc_M02_AXI_ARREADY),
@@ -423,30 +325,30 @@ module zb_blinky_block3
         .AXI_LITE_UART_wready(axi_smc_M03_AXI_WREADY),
         .AXI_LITE_UART_wstrb(axi_smc_M03_AXI_WSTRB),
         .AXI_LITE_UART_wvalid(axi_smc_M03_AXI_WVALID),
-        .Pmod_out_pin10_i(Pmod_out_1_pin10_i),
-        .Pmod_out_pin10_o(Pmod_out_1_pin10_o),
-        .Pmod_out_pin10_t(Pmod_out_1_pin10_t),
-        .Pmod_out_pin1_i(Pmod_out_1_pin1_i),
-        .Pmod_out_pin1_o(Pmod_out_1_pin1_o),
-        .Pmod_out_pin1_t(Pmod_out_1_pin1_t),
-        .Pmod_out_pin2_i(Pmod_out_1_pin2_i),
-        .Pmod_out_pin2_o(Pmod_out_1_pin2_o),
-        .Pmod_out_pin2_t(Pmod_out_1_pin2_t),
-        .Pmod_out_pin3_i(Pmod_out_1_pin3_i),
-        .Pmod_out_pin3_o(Pmod_out_1_pin3_o),
-        .Pmod_out_pin3_t(Pmod_out_1_pin3_t),
-        .Pmod_out_pin4_i(Pmod_out_1_pin4_i),
-        .Pmod_out_pin4_o(Pmod_out_1_pin4_o),
-        .Pmod_out_pin4_t(Pmod_out_1_pin4_t),
-        .Pmod_out_pin7_i(Pmod_out_1_pin7_i),
-        .Pmod_out_pin7_o(Pmod_out_1_pin7_o),
-        .Pmod_out_pin7_t(Pmod_out_1_pin7_t),
-        .Pmod_out_pin8_i(Pmod_out_1_pin8_i),
-        .Pmod_out_pin8_o(Pmod_out_1_pin8_o),
-        .Pmod_out_pin8_t(Pmod_out_1_pin8_t),
-        .Pmod_out_pin9_i(Pmod_out_1_pin9_i),
-        .Pmod_out_pin9_o(Pmod_out_1_pin9_o),
-        .Pmod_out_pin9_t(Pmod_out_1_pin9_t),
+        .Pmod_out_pin10_i(esp32_pmod_pin10_i),
+        .Pmod_out_pin10_o(esp32_pmod_pin10_o),
+        .Pmod_out_pin10_t(esp32_pmod_pin10_t),
+        .Pmod_out_pin1_i(esp32_pmod_pin1_i),
+        .Pmod_out_pin1_o(esp32_pmod_pin1_o),
+        .Pmod_out_pin1_t(esp32_pmod_pin1_t),
+        .Pmod_out_pin2_i(esp32_pmod_pin2_i),
+        .Pmod_out_pin2_o(esp32_pmod_pin2_o),
+        .Pmod_out_pin2_t(esp32_pmod_pin2_t),
+        .Pmod_out_pin3_i(esp32_pmod_pin3_i),
+        .Pmod_out_pin3_o(esp32_pmod_pin3_o),
+        .Pmod_out_pin3_t(esp32_pmod_pin3_t),
+        .Pmod_out_pin4_i(esp32_pmod_pin4_i),
+        .Pmod_out_pin4_o(esp32_pmod_pin4_o),
+        .Pmod_out_pin4_t(esp32_pmod_pin4_t),
+        .Pmod_out_pin7_i(esp32_pmod_pin7_i),
+        .Pmod_out_pin7_o(esp32_pmod_pin7_o),
+        .Pmod_out_pin7_t(esp32_pmod_pin7_t),
+        .Pmod_out_pin8_i(esp32_pmod_pin8_i),
+        .Pmod_out_pin8_o(esp32_pmod_pin8_o),
+        .Pmod_out_pin8_t(esp32_pmod_pin8_t),
+        .Pmod_out_pin9_i(esp32_pmod_pin9_i),
+        .Pmod_out_pin9_o(esp32_pmod_pin9_o),
+        .Pmod_out_pin9_t(esp32_pmod_pin9_t),
         .s_axi_aclk(processing_system7_0_FCLK_CLK0),
         .s_axi_aresetn(rst_ps7_0_100M_peripheral_aresetn));
   zb_blinky_block3_axi_gpio_0_0 axi_gpio_0
@@ -471,6 +373,32 @@ module zb_blinky_block3
         .s_axi_wready(axi_smc_M00_AXI_WREADY),
         .s_axi_wstrb(axi_smc_M00_AXI_WSTRB),
         .s_axi_wvalid(axi_smc_M00_AXI_WVALID));
+  zb_blinky_block3_axi_iic_0_0 axi_iic_0
+       (.s_axi_aclk(processing_system7_0_FCLK_CLK0),
+        .s_axi_araddr(axi_smc_M01_AXI_ARADDR),
+        .s_axi_aresetn(rst_ps7_0_100M_peripheral_aresetn),
+        .s_axi_arready(axi_smc_M01_AXI_ARREADY),
+        .s_axi_arvalid(axi_smc_M01_AXI_ARVALID),
+        .s_axi_awaddr(axi_smc_M01_AXI_AWADDR),
+        .s_axi_awready(axi_smc_M01_AXI_AWREADY),
+        .s_axi_awvalid(axi_smc_M01_AXI_AWVALID),
+        .s_axi_bready(axi_smc_M01_AXI_BREADY),
+        .s_axi_bresp(axi_smc_M01_AXI_BRESP),
+        .s_axi_bvalid(axi_smc_M01_AXI_BVALID),
+        .s_axi_rdata(axi_smc_M01_AXI_RDATA),
+        .s_axi_rready(axi_smc_M01_AXI_RREADY),
+        .s_axi_rresp(axi_smc_M01_AXI_RRESP),
+        .s_axi_rvalid(axi_smc_M01_AXI_RVALID),
+        .s_axi_wdata(axi_smc_M01_AXI_WDATA),
+        .s_axi_wready(axi_smc_M01_AXI_WREADY),
+        .s_axi_wstrb(axi_smc_M01_AXI_WSTRB),
+        .s_axi_wvalid(axi_smc_M01_AXI_WVALID),
+        .scl_i(cmps2_iic_scl_i),
+        .scl_o(cmps2_iic_scl_o),
+        .scl_t(cmps2_iic_scl_t),
+        .sda_i(cmps2_iic_sda_i),
+        .sda_o(cmps2_iic_sda_o),
+        .sda_t(cmps2_iic_sda_t));
   zb_blinky_block3_axi_smc_0 axi_smc
        (.M00_AXI_araddr(axi_smc_M00_AXI_ARADDR),
         .M00_AXI_arready(axi_smc_M00_AXI_ARREADY),

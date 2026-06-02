@@ -5,6 +5,10 @@
 
 int app_initialize(void);
 
+// Counter control functions
 void counter_enable(void);
 void counter_disable(void);
 void counter_reset(void);
+
+// CMPS control functions
+void compass_read();

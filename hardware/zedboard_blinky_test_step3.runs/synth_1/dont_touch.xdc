@@ -24,7 +24,7 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==zb_blinky_b
 # IP: bd/zb_blinky_block3/ip/zb_blinky_block3_rst_ps7_0_100M_0/zb_blinky_block3_rst_ps7_0_100M_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==zb_blinky_block3_rst_ps7_0_100M_0 || ORIG_REF_NAME==zb_blinky_block3_rst_ps7_0_100M_0} -quiet] -quiet
 
-# IP: bd/zb_blinky_block3/ip/zb_blinky_block3_PmodCMPS2_0_1/zb_blinky_block3_PmodCMPS2_0_1.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==zb_blinky_block3_PmodCMPS2_0_1 || ORIG_REF_NAME==zb_blinky_block3_PmodCMPS2_0_1} -quiet] -quiet
+# IP: bd/zb_blinky_block3/ip/zb_blinky_block3_axi_iic_0_0/zb_blinky_block3_axi_iic_0_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==zb_blinky_block3_axi_iic_0_0 || ORIG_REF_NAME==zb_blinky_block3_axi_iic_0_0} -quiet] -quiet
 
 # XDC: /home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/zb_blinky_block3_ooc.xdc

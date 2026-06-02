@@ -96,107 +96,71 @@ module zb_blinky_block3_sv (
   (* X_INTERFACE_IGNORE = "true" *)
   inout wire FIXED_IO_ps_porb,
   (* X_INTERFACE_IGNORE = "true" *)
+  output wire esp32_pmod_pin1_o,
+  (* X_INTERFACE_IGNORE = "true" *)
+  input wire esp32_pmod_pin7_i,
+  (* X_INTERFACE_IGNORE = "true" *)
+  output wire esp32_pmod_pin2_o,
+  (* X_INTERFACE_IGNORE = "true" *)
+  input wire esp32_pmod_pin8_i,
+  (* X_INTERFACE_IGNORE = "true" *)
+  output wire esp32_pmod_pin3_o,
+  (* X_INTERFACE_IGNORE = "true" *)
+  input wire esp32_pmod_pin9_i,
+  (* X_INTERFACE_IGNORE = "true" *)
+  output wire esp32_pmod_pin10_o,
+  (* X_INTERFACE_IGNORE = "true" *)
+  output wire esp32_pmod_pin4_o,
+  (* X_INTERFACE_IGNORE = "true" *)
+  input wire esp32_pmod_pin3_i,
+  (* X_INTERFACE_IGNORE = "true" *)
+  input wire esp32_pmod_pin4_i,
+  (* X_INTERFACE_IGNORE = "true" *)
+  input wire esp32_pmod_pin1_i,
+  (* X_INTERFACE_IGNORE = "true" *)
+  input wire esp32_pmod_pin2_i,
+  (* X_INTERFACE_IGNORE = "true" *)
+  output wire esp32_pmod_pin10_t,
+  (* X_INTERFACE_IGNORE = "true" *)
+  output wire esp32_pmod_pin8_t,
+  (* X_INTERFACE_IGNORE = "true" *)
+  output wire esp32_pmod_pin9_t,
+  (* X_INTERFACE_IGNORE = "true" *)
+  output wire esp32_pmod_pin4_t,
+  (* X_INTERFACE_IGNORE = "true" *)
+  output wire esp32_pmod_pin9_o,
+  (* X_INTERFACE_IGNORE = "true" *)
+  input wire esp32_pmod_pin10_i,
+  (* X_INTERFACE_IGNORE = "true" *)
+  output wire esp32_pmod_pin7_t,
+  (* X_INTERFACE_IGNORE = "true" *)
+  output wire esp32_pmod_pin1_t,
+  (* X_INTERFACE_IGNORE = "true" *)
+  output wire esp32_pmod_pin2_t,
+  (* X_INTERFACE_IGNORE = "true" *)
+  output wire esp32_pmod_pin7_o,
+  (* X_INTERFACE_IGNORE = "true" *)
+  output wire esp32_pmod_pin3_t,
+  (* X_INTERFACE_IGNORE = "true" *)
+  output wire esp32_pmod_pin8_o,
+  (* X_INTERFACE_IGNORE = "true" *)
   input wire count_en,
   (* X_INTERFACE_IGNORE = "true" *)
   input wire reset_n,
   (* X_INTERFACE_IGNORE = "true" *)
   output wire [7:0] led,
   (* X_INTERFACE_IGNORE = "true" *)
-  output wire Pmod_out_0_pin1_o,
+  input wire cmps2_iic_scl_i,
   (* X_INTERFACE_IGNORE = "true" *)
-  input wire Pmod_out_0_pin7_i,
+  output wire cmps2_iic_scl_o,
   (* X_INTERFACE_IGNORE = "true" *)
-  output wire Pmod_out_0_pin2_o,
+  output wire cmps2_iic_scl_t,
   (* X_INTERFACE_IGNORE = "true" *)
-  input wire Pmod_out_0_pin8_i,
+  input wire cmps2_iic_sda_i,
   (* X_INTERFACE_IGNORE = "true" *)
-  output wire Pmod_out_0_pin3_o,
+  output wire cmps2_iic_sda_o,
   (* X_INTERFACE_IGNORE = "true" *)
-  input wire Pmod_out_0_pin9_i,
-  (* X_INTERFACE_IGNORE = "true" *)
-  output wire Pmod_out_0_pin10_o,
-  (* X_INTERFACE_IGNORE = "true" *)
-  output wire Pmod_out_0_pin4_o,
-  (* X_INTERFACE_IGNORE = "true" *)
-  input wire Pmod_out_0_pin3_i,
-  (* X_INTERFACE_IGNORE = "true" *)
-  input wire Pmod_out_0_pin4_i,
-  (* X_INTERFACE_IGNORE = "true" *)
-  input wire Pmod_out_0_pin1_i,
-  (* X_INTERFACE_IGNORE = "true" *)
-  input wire Pmod_out_0_pin2_i,
-  (* X_INTERFACE_IGNORE = "true" *)
-  output wire Pmod_out_0_pin10_t,
-  (* X_INTERFACE_IGNORE = "true" *)
-  output wire Pmod_out_0_pin8_t,
-  (* X_INTERFACE_IGNORE = "true" *)
-  output wire Pmod_out_0_pin9_t,
-  (* X_INTERFACE_IGNORE = "true" *)
-  output wire Pmod_out_0_pin4_t,
-  (* X_INTERFACE_IGNORE = "true" *)
-  output wire Pmod_out_0_pin9_o,
-  (* X_INTERFACE_IGNORE = "true" *)
-  input wire Pmod_out_0_pin10_i,
-  (* X_INTERFACE_IGNORE = "true" *)
-  output wire Pmod_out_0_pin7_t,
-  (* X_INTERFACE_IGNORE = "true" *)
-  output wire Pmod_out_0_pin1_t,
-  (* X_INTERFACE_IGNORE = "true" *)
-  output wire Pmod_out_0_pin2_t,
-  (* X_INTERFACE_IGNORE = "true" *)
-  output wire Pmod_out_0_pin7_o,
-  (* X_INTERFACE_IGNORE = "true" *)
-  output wire Pmod_out_0_pin3_t,
-  (* X_INTERFACE_IGNORE = "true" *)
-  output wire Pmod_out_0_pin8_o,
-  (* X_INTERFACE_IGNORE = "true" *)
-  output wire Pmod_out_1_pin1_o,
-  (* X_INTERFACE_IGNORE = "true" *)
-  input wire Pmod_out_1_pin7_i,
-  (* X_INTERFACE_IGNORE = "true" *)
-  output wire Pmod_out_1_pin2_o,
-  (* X_INTERFACE_IGNORE = "true" *)
-  input wire Pmod_out_1_pin8_i,
-  (* X_INTERFACE_IGNORE = "true" *)
-  output wire Pmod_out_1_pin3_o,
-  (* X_INTERFACE_IGNORE = "true" *)
-  input wire Pmod_out_1_pin9_i,
-  (* X_INTERFACE_IGNORE = "true" *)
-  output wire Pmod_out_1_pin10_o,
-  (* X_INTERFACE_IGNORE = "true" *)
-  output wire Pmod_out_1_pin4_o,
-  (* X_INTERFACE_IGNORE = "true" *)
-  input wire Pmod_out_1_pin3_i,
-  (* X_INTERFACE_IGNORE = "true" *)
-  input wire Pmod_out_1_pin4_i,
-  (* X_INTERFACE_IGNORE = "true" *)
-  input wire Pmod_out_1_pin1_i,
-  (* X_INTERFACE_IGNORE = "true" *)
-  input wire Pmod_out_1_pin2_i,
-  (* X_INTERFACE_IGNORE = "true" *)
-  output wire Pmod_out_1_pin10_t,
-  (* X_INTERFACE_IGNORE = "true" *)
-  output wire Pmod_out_1_pin8_t,
-  (* X_INTERFACE_IGNORE = "true" *)
-  output wire Pmod_out_1_pin9_t,
-  (* X_INTERFACE_IGNORE = "true" *)
-  output wire Pmod_out_1_pin4_t,
-  (* X_INTERFACE_IGNORE = "true" *)
-  output wire Pmod_out_1_pin9_o,
-  (* X_INTERFACE_IGNORE = "true" *)
-  input wire Pmod_out_1_pin10_i,
-  (* X_INTERFACE_IGNORE = "true" *)
-  output wire Pmod_out_1_pin7_t,
-  (* X_INTERFACE_IGNORE = "true" *)
-  output wire Pmod_out_1_pin1_t,
-  (* X_INTERFACE_IGNORE = "true" *)
-  output wire Pmod_out_1_pin2_t,
-  (* X_INTERFACE_IGNORE = "true" *)
-  output wire Pmod_out_1_pin7_o,
-  (* X_INTERFACE_IGNORE = "true" *)
-  output wire Pmod_out_1_pin3_t,
-  (* X_INTERFACE_IGNORE = "true" *)
-  output wire Pmod_out_1_pin8_o
+  output wire cmps2_iic_sda_t
 );
 
   zb_blinky_block3 inst (
@@ -221,57 +185,39 @@ module zb_blinky_block3_sv (
     .FIXED_IO_ps_srstb(FIXED_IO_ps_srstb),
     .FIXED_IO_ps_clk(FIXED_IO_ps_clk),
     .FIXED_IO_ps_porb(FIXED_IO_ps_porb),
+    .esp32_pmod_pin1_o(esp32_pmod_pin1_o),
+    .esp32_pmod_pin7_i(esp32_pmod_pin7_i),
+    .esp32_pmod_pin2_o(esp32_pmod_pin2_o),
+    .esp32_pmod_pin8_i(esp32_pmod_pin8_i),
+    .esp32_pmod_pin3_o(esp32_pmod_pin3_o),
+    .esp32_pmod_pin9_i(esp32_pmod_pin9_i),
+    .esp32_pmod_pin10_o(esp32_pmod_pin10_o),
+    .esp32_pmod_pin4_o(esp32_pmod_pin4_o),
+    .esp32_pmod_pin3_i(esp32_pmod_pin3_i),
+    .esp32_pmod_pin4_i(esp32_pmod_pin4_i),
+    .esp32_pmod_pin1_i(esp32_pmod_pin1_i),
+    .esp32_pmod_pin2_i(esp32_pmod_pin2_i),
+    .esp32_pmod_pin10_t(esp32_pmod_pin10_t),
+    .esp32_pmod_pin8_t(esp32_pmod_pin8_t),
+    .esp32_pmod_pin9_t(esp32_pmod_pin9_t),
+    .esp32_pmod_pin4_t(esp32_pmod_pin4_t),
+    .esp32_pmod_pin9_o(esp32_pmod_pin9_o),
+    .esp32_pmod_pin10_i(esp32_pmod_pin10_i),
+    .esp32_pmod_pin7_t(esp32_pmod_pin7_t),
+    .esp32_pmod_pin1_t(esp32_pmod_pin1_t),
+    .esp32_pmod_pin2_t(esp32_pmod_pin2_t),
+    .esp32_pmod_pin7_o(esp32_pmod_pin7_o),
+    .esp32_pmod_pin3_t(esp32_pmod_pin3_t),
+    .esp32_pmod_pin8_o(esp32_pmod_pin8_o),
     .count_en(count_en),
     .reset_n(reset_n),
     .led(led),
-    .Pmod_out_0_pin1_o(Pmod_out_0_pin1_o),
-    .Pmod_out_0_pin7_i(Pmod_out_0_pin7_i),
-    .Pmod_out_0_pin2_o(Pmod_out_0_pin2_o),
-    .Pmod_out_0_pin8_i(Pmod_out_0_pin8_i),
-    .Pmod_out_0_pin3_o(Pmod_out_0_pin3_o),
-    .Pmod_out_0_pin9_i(Pmod_out_0_pin9_i),
-    .Pmod_out_0_pin10_o(Pmod_out_0_pin10_o),
-    .Pmod_out_0_pin4_o(Pmod_out_0_pin4_o),
-    .Pmod_out_0_pin3_i(Pmod_out_0_pin3_i),
-    .Pmod_out_0_pin4_i(Pmod_out_0_pin4_i),
-    .Pmod_out_0_pin1_i(Pmod_out_0_pin1_i),
-    .Pmod_out_0_pin2_i(Pmod_out_0_pin2_i),
-    .Pmod_out_0_pin10_t(Pmod_out_0_pin10_t),
-    .Pmod_out_0_pin8_t(Pmod_out_0_pin8_t),
-    .Pmod_out_0_pin9_t(Pmod_out_0_pin9_t),
-    .Pmod_out_0_pin4_t(Pmod_out_0_pin4_t),
-    .Pmod_out_0_pin9_o(Pmod_out_0_pin9_o),
-    .Pmod_out_0_pin10_i(Pmod_out_0_pin10_i),
-    .Pmod_out_0_pin7_t(Pmod_out_0_pin7_t),
-    .Pmod_out_0_pin1_t(Pmod_out_0_pin1_t),
-    .Pmod_out_0_pin2_t(Pmod_out_0_pin2_t),
-    .Pmod_out_0_pin7_o(Pmod_out_0_pin7_o),
-    .Pmod_out_0_pin3_t(Pmod_out_0_pin3_t),
-    .Pmod_out_0_pin8_o(Pmod_out_0_pin8_o),
-    .Pmod_out_1_pin1_o(Pmod_out_1_pin1_o),
-    .Pmod_out_1_pin7_i(Pmod_out_1_pin7_i),
-    .Pmod_out_1_pin2_o(Pmod_out_1_pin2_o),
-    .Pmod_out_1_pin8_i(Pmod_out_1_pin8_i),
-    .Pmod_out_1_pin3_o(Pmod_out_1_pin3_o),
-    .Pmod_out_1_pin9_i(Pmod_out_1_pin9_i),
-    .Pmod_out_1_pin10_o(Pmod_out_1_pin10_o),
-    .Pmod_out_1_pin4_o(Pmod_out_1_pin4_o),
-    .Pmod_out_1_pin3_i(Pmod_out_1_pin3_i),
-    .Pmod_out_1_pin4_i(Pmod_out_1_pin4_i),
-    .Pmod_out_1_pin1_i(Pmod_out_1_pin1_i),
-    .Pmod_out_1_pin2_i(Pmod_out_1_pin2_i),
-    .Pmod_out_1_pin10_t(Pmod_out_1_pin10_t),
-    .Pmod_out_1_pin8_t(Pmod_out_1_pin8_t),
-    .Pmod_out_1_pin9_t(Pmod_out_1_pin9_t),
-    .Pmod_out_1_pin4_t(Pmod_out_1_pin4_t),
-    .Pmod_out_1_pin9_o(Pmod_out_1_pin9_o),
-    .Pmod_out_1_pin10_i(Pmod_out_1_pin10_i),
-    .Pmod_out_1_pin7_t(Pmod_out_1_pin7_t),
-    .Pmod_out_1_pin1_t(Pmod_out_1_pin1_t),
-    .Pmod_out_1_pin2_t(Pmod_out_1_pin2_t),
-    .Pmod_out_1_pin7_o(Pmod_out_1_pin7_o),
-    .Pmod_out_1_pin3_t(Pmod_out_1_pin3_t),
-    .Pmod_out_1_pin8_o(Pmod_out_1_pin8_o)
+    .cmps2_iic_scl_i(cmps2_iic_scl_i),
+    .cmps2_iic_scl_o(cmps2_iic_scl_o),
+    .cmps2_iic_scl_t(cmps2_iic_scl_t),
+    .cmps2_iic_sda_i(cmps2_iic_sda_i),
+    .cmps2_iic_sda_o(cmps2_iic_sda_o),
+    .cmps2_iic_sda_t(cmps2_iic_sda_t)
   );
 
 endmodule

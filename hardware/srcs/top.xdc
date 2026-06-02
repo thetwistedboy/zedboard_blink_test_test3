@@ -123,14 +123,14 @@
 # JD Pmod - Bank 13
 # ---------------------------------------------------------------------------- 
 # Using this for CMPS - PMOD1
-set_property PACKAGE_PIN W7 [get_ports {Pmod_out_0_pin2_io}];  # "JD1_N"
-set_property PACKAGE_PIN V7 [get_ports {Pmod_out_0_pin1_io}];  # "JD1_P"
-set_property PACKAGE_PIN V4 [get_ports {Pmod_out_0_pin4_io}];  # "JD2_N"
-set_property PACKAGE_PIN V5 [get_ports {Pmod_out_0_pin3_io}];  # "JD2_P"
-set_property PACKAGE_PIN W5 [get_ports {Pmod_out_0_pin8_io}];  # "JD3_N"
-set_property PACKAGE_PIN W6 [get_ports {Pmod_out_0_pin7_io}];  # "JD3_P"
-set_property PACKAGE_PIN U5 [get_ports {Pmod_out_0_pin10_io}];  # "JD4_N"
-set_property PACKAGE_PIN U6 [get_ports {Pmod_out_0_pin9_io}];  # "JD4_P"
+# set_property PACKAGE_PIN W7 [get_ports {Pmod_out_0_pin2_io}];  # "JD1_N"
+# set_property PACKAGE_PIN V7 [get_ports {Pmod_out_0_pin1_io}];  # "JD1_P"
+set_property PACKAGE_PIN V4 [get_ports {cmps2_iic_sda_io}];  # SDA
+set_property PACKAGE_PIN V5 [get_ports {cmps2_iic_scl_io}];  # SCL
+# set_property PACKAGE_PIN W5 [get_ports {Pmod_out_0_pin8_io}];  # "JD3_N"
+# set_property PACKAGE_PIN W6 [get_ports {Pmod_out_0_pin7_io}];  # "JD3_P"
+# set_property PACKAGE_PIN U5 [get_ports {Pmod_out_0_pin10_io}];  # "JD4_N"
+# set_property PACKAGE_PIN U6 [get_ports {Pmod_out_0_pin9_io}];  # "JD4_P"
 
 # ----------------------------------------------------------------------------
 # OLED Display - Bank 13

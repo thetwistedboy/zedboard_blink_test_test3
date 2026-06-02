@@ -2,7 +2,7 @@
 //Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2025.2 (lin64) Build 6299465 Fri Nov 14 12:34:56 MST 2025
-//Date        : Thu May 28 00:01:15 2026
+//Date        : Mon Jun  1 20:18:37 2026
 //Host        : jkelleylaptop running 64-bit Linux Mint 22.3
 //Command     : generate_target zb_blinky_block3_wrapper.bd
 //Design      : zb_blinky_block3_wrapper
@@ -32,23 +32,17 @@ module zb_blinky_block3_wrapper
     FIXED_IO_ps_clk,
     FIXED_IO_ps_porb,
     FIXED_IO_ps_srstb,
-    Pmod_out_0_pin10_io,
-    Pmod_out_0_pin1_io,
-    Pmod_out_0_pin2_io,
-    Pmod_out_0_pin3_io,
-    Pmod_out_0_pin4_io,
-    Pmod_out_0_pin7_io,
-    Pmod_out_0_pin8_io,
-    Pmod_out_0_pin9_io,
-    Pmod_out_1_pin10_io,
-    Pmod_out_1_pin1_io,
-    Pmod_out_1_pin2_io,
-    Pmod_out_1_pin3_io,
-    Pmod_out_1_pin4_io,
-    Pmod_out_1_pin7_io,
-    Pmod_out_1_pin8_io,
-    Pmod_out_1_pin9_io,
+    cmps2_iic_scl_io,
+    cmps2_iic_sda_io,
     count_en,
+    esp32_pmod_pin10_io,
+    esp32_pmod_pin1_io,
+    esp32_pmod_pin2_io,
+    esp32_pmod_pin3_io,
+    esp32_pmod_pin4_io,
+    esp32_pmod_pin7_io,
+    esp32_pmod_pin8_io,
+    esp32_pmod_pin9_io,
     led,
     reset_n);
   inout [14:0]DDR_addr;
@@ -72,23 +66,17 @@ module zb_blinky_block3_wrapper
   inout FIXED_IO_ps_clk;
   inout FIXED_IO_ps_porb;
   inout FIXED_IO_ps_srstb;
-  inout Pmod_out_0_pin10_io;
-  inout Pmod_out_0_pin1_io;
-  inout Pmod_out_0_pin2_io;
-  inout Pmod_out_0_pin3_io;
-  inout Pmod_out_0_pin4_io;
-  inout Pmod_out_0_pin7_io;
-  inout Pmod_out_0_pin8_io;
-  inout Pmod_out_0_pin9_io;
-  inout Pmod_out_1_pin10_io;
-  inout Pmod_out_1_pin1_io;
-  inout Pmod_out_1_pin2_io;
-  inout Pmod_out_1_pin3_io;
-  inout Pmod_out_1_pin4_io;
-  inout Pmod_out_1_pin7_io;
-  inout Pmod_out_1_pin8_io;
-  inout Pmod_out_1_pin9_io;
+  inout cmps2_iic_scl_io;
+  inout cmps2_iic_sda_io;
   input count_en;
+  inout esp32_pmod_pin10_io;
+  inout esp32_pmod_pin1_io;
+  inout esp32_pmod_pin2_io;
+  inout esp32_pmod_pin3_io;
+  inout esp32_pmod_pin4_io;
+  inout esp32_pmod_pin7_io;
+  inout esp32_pmod_pin8_io;
+  inout esp32_pmod_pin9_io;
   output [7:0]led;
   input reset_n;
 
@@ -113,154 +101,100 @@ module zb_blinky_block3_wrapper
   wire FIXED_IO_ps_clk;
   wire FIXED_IO_ps_porb;
   wire FIXED_IO_ps_srstb;
-  wire Pmod_out_0_pin10_i;
-  wire Pmod_out_0_pin10_io;
-  wire Pmod_out_0_pin10_o;
-  wire Pmod_out_0_pin10_t;
-  wire Pmod_out_0_pin1_i;
-  wire Pmod_out_0_pin1_io;
-  wire Pmod_out_0_pin1_o;
-  wire Pmod_out_0_pin1_t;
-  wire Pmod_out_0_pin2_i;
-  wire Pmod_out_0_pin2_io;
-  wire Pmod_out_0_pin2_o;
-  wire Pmod_out_0_pin2_t;
-  wire Pmod_out_0_pin3_i;
-  wire Pmod_out_0_pin3_io;
-  wire Pmod_out_0_pin3_o;
-  wire Pmod_out_0_pin3_t;
-  wire Pmod_out_0_pin4_i;
-  wire Pmod_out_0_pin4_io;
-  wire Pmod_out_0_pin4_o;
-  wire Pmod_out_0_pin4_t;
-  wire Pmod_out_0_pin7_i;
-  wire Pmod_out_0_pin7_io;
-  wire Pmod_out_0_pin7_o;
-  wire Pmod_out_0_pin7_t;
-  wire Pmod_out_0_pin8_i;
-  wire Pmod_out_0_pin8_io;
-  wire Pmod_out_0_pin8_o;
-  wire Pmod_out_0_pin8_t;
-  wire Pmod_out_0_pin9_i;
-  wire Pmod_out_0_pin9_io;
-  wire Pmod_out_0_pin9_o;
-  wire Pmod_out_0_pin9_t;
-  wire Pmod_out_1_pin10_i;
-  wire Pmod_out_1_pin10_io;
-  wire Pmod_out_1_pin10_o;
-  wire Pmod_out_1_pin10_t;
-  wire Pmod_out_1_pin1_i;
-  wire Pmod_out_1_pin1_io;
-  wire Pmod_out_1_pin1_o;
-  wire Pmod_out_1_pin1_t;
-  wire Pmod_out_1_pin2_i;
-  wire Pmod_out_1_pin2_io;
-  wire Pmod_out_1_pin2_o;
-  wire Pmod_out_1_pin2_t;
-  wire Pmod_out_1_pin3_i;
-  wire Pmod_out_1_pin3_io;
-  wire Pmod_out_1_pin3_o;
-  wire Pmod_out_1_pin3_t;
-  wire Pmod_out_1_pin4_i;
-  wire Pmod_out_1_pin4_io;
-  wire Pmod_out_1_pin4_o;
-  wire Pmod_out_1_pin4_t;
-  wire Pmod_out_1_pin7_i;
-  wire Pmod_out_1_pin7_io;
-  wire Pmod_out_1_pin7_o;
-  wire Pmod_out_1_pin7_t;
-  wire Pmod_out_1_pin8_i;
-  wire Pmod_out_1_pin8_io;
-  wire Pmod_out_1_pin8_o;
-  wire Pmod_out_1_pin8_t;
-  wire Pmod_out_1_pin9_i;
-  wire Pmod_out_1_pin9_io;
-  wire Pmod_out_1_pin9_o;
-  wire Pmod_out_1_pin9_t;
+  wire cmps2_iic_scl_i;
+  wire cmps2_iic_scl_io;
+  wire cmps2_iic_scl_o;
+  wire cmps2_iic_scl_t;
+  wire cmps2_iic_sda_i;
+  wire cmps2_iic_sda_io;
+  wire cmps2_iic_sda_o;
+  wire cmps2_iic_sda_t;
   wire count_en;
+  wire esp32_pmod_pin10_i;
+  wire esp32_pmod_pin10_io;
+  wire esp32_pmod_pin10_o;
+  wire esp32_pmod_pin10_t;
+  wire esp32_pmod_pin1_i;
+  wire esp32_pmod_pin1_io;
+  wire esp32_pmod_pin1_o;
+  wire esp32_pmod_pin1_t;
+  wire esp32_pmod_pin2_i;
+  wire esp32_pmod_pin2_io;
+  wire esp32_pmod_pin2_o;
+  wire esp32_pmod_pin2_t;
+  wire esp32_pmod_pin3_i;
+  wire esp32_pmod_pin3_io;
+  wire esp32_pmod_pin3_o;
+  wire esp32_pmod_pin3_t;
+  wire esp32_pmod_pin4_i;
+  wire esp32_pmod_pin4_io;
+  wire esp32_pmod_pin4_o;
+  wire esp32_pmod_pin4_t;
+  wire esp32_pmod_pin7_i;
+  wire esp32_pmod_pin7_io;
+  wire esp32_pmod_pin7_o;
+  wire esp32_pmod_pin7_t;
+  wire esp32_pmod_pin8_i;
+  wire esp32_pmod_pin8_io;
+  wire esp32_pmod_pin8_o;
+  wire esp32_pmod_pin8_t;
+  wire esp32_pmod_pin9_i;
+  wire esp32_pmod_pin9_io;
+  wire esp32_pmod_pin9_o;
+  wire esp32_pmod_pin9_t;
   wire [7:0]led;
   wire reset_n;
 
-  IOBUF Pmod_out_0_pin10_iobuf
-       (.I(Pmod_out_0_pin10_o),
-        .IO(Pmod_out_0_pin10_io),
-        .O(Pmod_out_0_pin10_i),
-        .T(Pmod_out_0_pin10_t));
-  IOBUF Pmod_out_0_pin1_iobuf
-       (.I(Pmod_out_0_pin1_o),
-        .IO(Pmod_out_0_pin1_io),
-        .O(Pmod_out_0_pin1_i),
-        .T(Pmod_out_0_pin1_t));
-  IOBUF Pmod_out_0_pin2_iobuf
-       (.I(Pmod_out_0_pin2_o),
-        .IO(Pmod_out_0_pin2_io),
-        .O(Pmod_out_0_pin2_i),
-        .T(Pmod_out_0_pin2_t));
-  IOBUF Pmod_out_0_pin3_iobuf
-       (.I(Pmod_out_0_pin3_o),
-        .IO(Pmod_out_0_pin3_io),
-        .O(Pmod_out_0_pin3_i),
-        .T(Pmod_out_0_pin3_t));
-  IOBUF Pmod_out_0_pin4_iobuf
-       (.I(Pmod_out_0_pin4_o),
-        .IO(Pmod_out_0_pin4_io),
-        .O(Pmod_out_0_pin4_i),
-        .T(Pmod_out_0_pin4_t));
-  IOBUF Pmod_out_0_pin7_iobuf
-       (.I(Pmod_out_0_pin7_o),
-        .IO(Pmod_out_0_pin7_io),
-        .O(Pmod_out_0_pin7_i),
-        .T(Pmod_out_0_pin7_t));
-  IOBUF Pmod_out_0_pin8_iobuf
-       (.I(Pmod_out_0_pin8_o),
-        .IO(Pmod_out_0_pin8_io),
-        .O(Pmod_out_0_pin8_i),
-        .T(Pmod_out_0_pin8_t));
-  IOBUF Pmod_out_0_pin9_iobuf
-       (.I(Pmod_out_0_pin9_o),
-        .IO(Pmod_out_0_pin9_io),
-        .O(Pmod_out_0_pin9_i),
-        .T(Pmod_out_0_pin9_t));
-  IOBUF Pmod_out_1_pin10_iobuf
-       (.I(Pmod_out_1_pin10_o),
-        .IO(Pmod_out_1_pin10_io),
-        .O(Pmod_out_1_pin10_i),
-        .T(Pmod_out_1_pin10_t));
-  IOBUF Pmod_out_1_pin1_iobuf
-       (.I(Pmod_out_1_pin1_o),
-        .IO(Pmod_out_1_pin1_io),
-        .O(Pmod_out_1_pin1_i),
-        .T(Pmod_out_1_pin1_t));
-  IOBUF Pmod_out_1_pin2_iobuf
-       (.I(Pmod_out_1_pin2_o),
-        .IO(Pmod_out_1_pin2_io),
-        .O(Pmod_out_1_pin2_i),
-        .T(Pmod_out_1_pin2_t));
-  IOBUF Pmod_out_1_pin3_iobuf
-       (.I(Pmod_out_1_pin3_o),
-        .IO(Pmod_out_1_pin3_io),
-        .O(Pmod_out_1_pin3_i),
-        .T(Pmod_out_1_pin3_t));
-  IOBUF Pmod_out_1_pin4_iobuf
-       (.I(Pmod_out_1_pin4_o),
-        .IO(Pmod_out_1_pin4_io),
-        .O(Pmod_out_1_pin4_i),
-        .T(Pmod_out_1_pin4_t));
-  IOBUF Pmod_out_1_pin7_iobuf
-       (.I(Pmod_out_1_pin7_o),
-        .IO(Pmod_out_1_pin7_io),
-        .O(Pmod_out_1_pin7_i),
-        .T(Pmod_out_1_pin7_t));
-  IOBUF Pmod_out_1_pin8_iobuf
-       (.I(Pmod_out_1_pin8_o),
-        .IO(Pmod_out_1_pin8_io),
-        .O(Pmod_out_1_pin8_i),
-        .T(Pmod_out_1_pin8_t));
-  IOBUF Pmod_out_1_pin9_iobuf
-       (.I(Pmod_out_1_pin9_o),
-        .IO(Pmod_out_1_pin9_io),
-        .O(Pmod_out_1_pin9_i),
-        .T(Pmod_out_1_pin9_t));
+  IOBUF cmps2_iic_scl_iobuf
+       (.I(cmps2_iic_scl_o),
+        .IO(cmps2_iic_scl_io),
+        .O(cmps2_iic_scl_i),
+        .T(cmps2_iic_scl_t));
+  IOBUF cmps2_iic_sda_iobuf
+       (.I(cmps2_iic_sda_o),
+        .IO(cmps2_iic_sda_io),
+        .O(cmps2_iic_sda_i),
+        .T(cmps2_iic_sda_t));
+  IOBUF esp32_pmod_pin10_iobuf
+       (.I(esp32_pmod_pin10_o),
+        .IO(esp32_pmod_pin10_io),
+        .O(esp32_pmod_pin10_i),
+        .T(esp32_pmod_pin10_t));
+  IOBUF esp32_pmod_pin1_iobuf
+       (.I(esp32_pmod_pin1_o),
+        .IO(esp32_pmod_pin1_io),
+        .O(esp32_pmod_pin1_i),
+        .T(esp32_pmod_pin1_t));
+  IOBUF esp32_pmod_pin2_iobuf
+       (.I(esp32_pmod_pin2_o),
+        .IO(esp32_pmod_pin2_io),
+        .O(esp32_pmod_pin2_i),
+        .T(esp32_pmod_pin2_t));
+  IOBUF esp32_pmod_pin3_iobuf
+       (.I(esp32_pmod_pin3_o),
+        .IO(esp32_pmod_pin3_io),
+        .O(esp32_pmod_pin3_i),
+        .T(esp32_pmod_pin3_t));
+  IOBUF esp32_pmod_pin4_iobuf
+       (.I(esp32_pmod_pin4_o),
+        .IO(esp32_pmod_pin4_io),
+        .O(esp32_pmod_pin4_i),
+        .T(esp32_pmod_pin4_t));
+  IOBUF esp32_pmod_pin7_iobuf
+       (.I(esp32_pmod_pin7_o),
+        .IO(esp32_pmod_pin7_io),
+        .O(esp32_pmod_pin7_i),
+        .T(esp32_pmod_pin7_t));
+  IOBUF esp32_pmod_pin8_iobuf
+       (.I(esp32_pmod_pin8_o),
+        .IO(esp32_pmod_pin8_io),
+        .O(esp32_pmod_pin8_i),
+        .T(esp32_pmod_pin8_t));
+  IOBUF esp32_pmod_pin9_iobuf
+       (.I(esp32_pmod_pin9_o),
+        .IO(esp32_pmod_pin9_io),
+        .O(esp32_pmod_pin9_i),
+        .T(esp32_pmod_pin9_t));
   zb_blinky_block3 zb_blinky_block3_i
        (.DDR_addr(DDR_addr),
         .DDR_ba(DDR_ba),
@@ -283,55 +217,37 @@ module zb_blinky_block3_wrapper
         .FIXED_IO_ps_clk(FIXED_IO_ps_clk),
         .FIXED_IO_ps_porb(FIXED_IO_ps_porb),
         .FIXED_IO_ps_srstb(FIXED_IO_ps_srstb),
-        .Pmod_out_0_pin10_i(Pmod_out_0_pin10_i),
-        .Pmod_out_0_pin10_o(Pmod_out_0_pin10_o),
-        .Pmod_out_0_pin10_t(Pmod_out_0_pin10_t),
-        .Pmod_out_0_pin1_i(Pmod_out_0_pin1_i),
-        .Pmod_out_0_pin1_o(Pmod_out_0_pin1_o),
-        .Pmod_out_0_pin1_t(Pmod_out_0_pin1_t),
-        .Pmod_out_0_pin2_i(Pmod_out_0_pin2_i),
-        .Pmod_out_0_pin2_o(Pmod_out_0_pin2_o),
-        .Pmod_out_0_pin2_t(Pmod_out_0_pin2_t),
-        .Pmod_out_0_pin3_i(Pmod_out_0_pin3_i),
-        .Pmod_out_0_pin3_o(Pmod_out_0_pin3_o),
-        .Pmod_out_0_pin3_t(Pmod_out_0_pin3_t),
-        .Pmod_out_0_pin4_i(Pmod_out_0_pin4_i),
-        .Pmod_out_0_pin4_o(Pmod_out_0_pin4_o),
-        .Pmod_out_0_pin4_t(Pmod_out_0_pin4_t),
-        .Pmod_out_0_pin7_i(Pmod_out_0_pin7_i),
-        .Pmod_out_0_pin7_o(Pmod_out_0_pin7_o),
-        .Pmod_out_0_pin7_t(Pmod_out_0_pin7_t),
-        .Pmod_out_0_pin8_i(Pmod_out_0_pin8_i),
-        .Pmod_out_0_pin8_o(Pmod_out_0_pin8_o),
-        .Pmod_out_0_pin8_t(Pmod_out_0_pin8_t),
-        .Pmod_out_0_pin9_i(Pmod_out_0_pin9_i),
-        .Pmod_out_0_pin9_o(Pmod_out_0_pin9_o),
-        .Pmod_out_0_pin9_t(Pmod_out_0_pin9_t),
-        .Pmod_out_1_pin10_i(Pmod_out_1_pin10_i),
-        .Pmod_out_1_pin10_o(Pmod_out_1_pin10_o),
-        .Pmod_out_1_pin10_t(Pmod_out_1_pin10_t),
-        .Pmod_out_1_pin1_i(Pmod_out_1_pin1_i),
-        .Pmod_out_1_pin1_o(Pmod_out_1_pin1_o),
-        .Pmod_out_1_pin1_t(Pmod_out_1_pin1_t),
-        .Pmod_out_1_pin2_i(Pmod_out_1_pin2_i),
-        .Pmod_out_1_pin2_o(Pmod_out_1_pin2_o),
-        .Pmod_out_1_pin2_t(Pmod_out_1_pin2_t),
-        .Pmod_out_1_pin3_i(Pmod_out_1_pin3_i),
-        .Pmod_out_1_pin3_o(Pmod_out_1_pin3_o),
-        .Pmod_out_1_pin3_t(Pmod_out_1_pin3_t),
-        .Pmod_out_1_pin4_i(Pmod_out_1_pin4_i),
-        .Pmod_out_1_pin4_o(Pmod_out_1_pin4_o),
-        .Pmod_out_1_pin4_t(Pmod_out_1_pin4_t),
-        .Pmod_out_1_pin7_i(Pmod_out_1_pin7_i),
-        .Pmod_out_1_pin7_o(Pmod_out_1_pin7_o),
-        .Pmod_out_1_pin7_t(Pmod_out_1_pin7_t),
-        .Pmod_out_1_pin8_i(Pmod_out_1_pin8_i),
-        .Pmod_out_1_pin8_o(Pmod_out_1_pin8_o),
-        .Pmod_out_1_pin8_t(Pmod_out_1_pin8_t),
-        .Pmod_out_1_pin9_i(Pmod_out_1_pin9_i),
-        .Pmod_out_1_pin9_o(Pmod_out_1_pin9_o),
-        .Pmod_out_1_pin9_t(Pmod_out_1_pin9_t),
+        .cmps2_iic_scl_i(cmps2_iic_scl_i),
+        .cmps2_iic_scl_o(cmps2_iic_scl_o),
+        .cmps2_iic_scl_t(cmps2_iic_scl_t),
+        .cmps2_iic_sda_i(cmps2_iic_sda_i),
+        .cmps2_iic_sda_o(cmps2_iic_sda_o),
+        .cmps2_iic_sda_t(cmps2_iic_sda_t),
         .count_en(count_en),
+        .esp32_pmod_pin10_i(esp32_pmod_pin10_i),
+        .esp32_pmod_pin10_o(esp32_pmod_pin10_o),
+        .esp32_pmod_pin10_t(esp32_pmod_pin10_t),
+        .esp32_pmod_pin1_i(esp32_pmod_pin1_i),
+        .esp32_pmod_pin1_o(esp32_pmod_pin1_o),
+        .esp32_pmod_pin1_t(esp32_pmod_pin1_t),
+        .esp32_pmod_pin2_i(esp32_pmod_pin2_i),
+        .esp32_pmod_pin2_o(esp32_pmod_pin2_o),
+        .esp32_pmod_pin2_t(esp32_pmod_pin2_t),
+        .esp32_pmod_pin3_i(esp32_pmod_pin3_i),
+        .esp32_pmod_pin3_o(esp32_pmod_pin3_o),
+        .esp32_pmod_pin3_t(esp32_pmod_pin3_t),
+        .esp32_pmod_pin4_i(esp32_pmod_pin4_i),
+        .esp32_pmod_pin4_o(esp32_pmod_pin4_o),
+        .esp32_pmod_pin4_t(esp32_pmod_pin4_t),
+        .esp32_pmod_pin7_i(esp32_pmod_pin7_i),
+        .esp32_pmod_pin7_o(esp32_pmod_pin7_o),
+        .esp32_pmod_pin7_t(esp32_pmod_pin7_t),
+        .esp32_pmod_pin8_i(esp32_pmod_pin8_i),
+        .esp32_pmod_pin8_o(esp32_pmod_pin8_o),
+        .esp32_pmod_pin8_t(esp32_pmod_pin8_t),
+        .esp32_pmod_pin9_i(esp32_pmod_pin9_i),
+        .esp32_pmod_pin9_o(esp32_pmod_pin9_o),
+        .esp32_pmod_pin9_t(esp32_pmod_pin9_t),
         .led(led),
         .reset_n(reset_n));
 endmodule

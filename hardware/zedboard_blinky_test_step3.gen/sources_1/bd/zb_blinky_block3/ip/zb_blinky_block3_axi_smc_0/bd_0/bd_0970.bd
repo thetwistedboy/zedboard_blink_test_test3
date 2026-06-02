@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0xD8D9E750A639B28B",
+      "boundary_crc": "0x77599D0A4D2877EB",
       "design_src": "SBD",
       "device": "xc7z020clg484-1",
       "name": "bd_0970",
@@ -379,7 +379,7 @@
         "vlnv": "xilinx.com:interface:aximm_rtl:1.0",
         "parameters": {
           "ADDR_WIDTH": {
-            "value": "12",
+            "value": "9",
             "value_src": "ip_prop"
           },
           "ARUSER_WIDTH": {
@@ -3361,7 +3361,7 @@
                 "value": "READ_WRITE"
               },
               "SEG000_BASE_ADDR": {
-                "value": "0x0000000040000000"
+                "value": "0x0000000041200000"
               },
               "SEG000_SECURE_READ": {
                 "value": "0"
@@ -3370,10 +3370,10 @@
                 "value": "0"
               },
               "SEG000_SEP_ROUTE": {
-                "value": "0b0000000000000000000000000000000000000000000000000000000000000001"
+                "value": "0b0000000000000000000000000000000000000000000000000000000000000000"
               },
               "SEG000_SIZE": {
-                "value": "12"
+                "value": "16"
               },
               "SEG000_SUPPORTS_READ": {
                 "value": "1"
@@ -3382,7 +3382,7 @@
                 "value": "1"
               },
               "SEG001_BASE_ADDR": {
-                "value": "0x0000000041200000"
+                "value": "0x0000000041600000"
               },
               "SEG001_SECURE_READ": {
                 "value": "0"
@@ -3391,7 +3391,7 @@
                 "value": "0"
               },
               "SEG001_SEP_ROUTE": {
-                "value": "0b0000000000000000000000000000000000000000000000000000000000000000"
+                "value": "0b0000000000000000000000000000000000000000000000000000000000000001"
               },
               "SEG001_SIZE": {
                 "value": "16"
@@ -6406,7 +6406,7 @@
         "has_run_ip_tcl": "true",
         "parameters": {
           "AXI_ADDR_WIDTH": {
-            "value": "12"
+            "value": "9"
           },
           "AXI_ID_WIDTH": {
             "value": "1"
@@ -7657,7 +7657,7 @@
             "has_run_ip_tcl": "true",
             "parameters": {
               "ADDR_WIDTH": {
-                "value": "12"
+                "value": "9"
               },
               "ENABLE_PIPELINING": {
                 "value": "0"

@@ -1,20 +1,8 @@
 set_property SRC_FILE_INFO {cfile:/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/srcs/top.xdc rfile:../../../srcs/top.xdc id:1} [current_design]
-set_property src_info {type:XDC file:1 line:126 export:INPUT save:INPUT read:READ} [current_design]
-set_property PACKAGE_PIN W7 [get_ports {Pmod_out_0_pin2_io}];  # "JD1_N"
-set_property src_info {type:XDC file:1 line:127 export:INPUT save:INPUT read:READ} [current_design]
-set_property PACKAGE_PIN V7 [get_ports {Pmod_out_0_pin1_io}];  # "JD1_P"
 set_property src_info {type:XDC file:1 line:128 export:INPUT save:INPUT read:READ} [current_design]
-set_property PACKAGE_PIN V4 [get_ports {Pmod_out_0_pin4_io}];  # "JD2_N"
+set_property PACKAGE_PIN V4 [get_ports {cmps2_iic_sda_io}];  # SDA
 set_property src_info {type:XDC file:1 line:129 export:INPUT save:INPUT read:READ} [current_design]
-set_property PACKAGE_PIN V5 [get_ports {Pmod_out_0_pin3_io}];  # "JD2_P"
-set_property src_info {type:XDC file:1 line:130 export:INPUT save:INPUT read:READ} [current_design]
-set_property PACKAGE_PIN W5 [get_ports {Pmod_out_0_pin8_io}];  # "JD3_N"
-set_property src_info {type:XDC file:1 line:131 export:INPUT save:INPUT read:READ} [current_design]
-set_property PACKAGE_PIN W6 [get_ports {Pmod_out_0_pin7_io}];  # "JD3_P"
-set_property src_info {type:XDC file:1 line:132 export:INPUT save:INPUT read:READ} [current_design]
-set_property PACKAGE_PIN U5 [get_ports {Pmod_out_0_pin10_io}];  # "JD4_N"
-set_property src_info {type:XDC file:1 line:133 export:INPUT save:INPUT read:READ} [current_design]
-set_property PACKAGE_PIN U6 [get_ports {Pmod_out_0_pin9_io}];  # "JD4_P"
+set_property PACKAGE_PIN V5 [get_ports {cmps2_iic_scl_io}];  # SCL
 set_property src_info {type:XDC file:1 line:177 export:INPUT save:INPUT read:READ} [current_design]
 set_property PACKAGE_PIN T22 [get_ports {led[0]}];  # "LD0"
 set_property src_info {type:XDC file:1 line:178 export:INPUT save:INPUT read:READ} [current_design]

@@ -74,57 +74,39 @@ COMPONENT zb_blinky_block3
     FIXED_IO_ps_srstb : INOUT STD_LOGIC;
     FIXED_IO_ps_clk : INOUT STD_LOGIC;
     FIXED_IO_ps_porb : INOUT STD_LOGIC;
+    esp32_pmod_pin1_o : OUT STD_LOGIC;
+    esp32_pmod_pin7_i : IN STD_LOGIC;
+    esp32_pmod_pin2_o : OUT STD_LOGIC;
+    esp32_pmod_pin8_i : IN STD_LOGIC;
+    esp32_pmod_pin3_o : OUT STD_LOGIC;
+    esp32_pmod_pin9_i : IN STD_LOGIC;
+    esp32_pmod_pin10_o : OUT STD_LOGIC;
+    esp32_pmod_pin4_o : OUT STD_LOGIC;
+    esp32_pmod_pin3_i : IN STD_LOGIC;
+    esp32_pmod_pin4_i : IN STD_LOGIC;
+    esp32_pmod_pin1_i : IN STD_LOGIC;
+    esp32_pmod_pin2_i : IN STD_LOGIC;
+    esp32_pmod_pin10_t : OUT STD_LOGIC;
+    esp32_pmod_pin8_t : OUT STD_LOGIC;
+    esp32_pmod_pin9_t : OUT STD_LOGIC;
+    esp32_pmod_pin4_t : OUT STD_LOGIC;
+    esp32_pmod_pin9_o : OUT STD_LOGIC;
+    esp32_pmod_pin10_i : IN STD_LOGIC;
+    esp32_pmod_pin7_t : OUT STD_LOGIC;
+    esp32_pmod_pin1_t : OUT STD_LOGIC;
+    esp32_pmod_pin2_t : OUT STD_LOGIC;
+    esp32_pmod_pin7_o : OUT STD_LOGIC;
+    esp32_pmod_pin3_t : OUT STD_LOGIC;
+    esp32_pmod_pin8_o : OUT STD_LOGIC;
     count_en : IN STD_LOGIC;
     reset_n : IN STD_LOGIC;
     led : OUT STD_LOGIC_VECTOR(7 DOWNTO 0);
-    Pmod_out_0_pin1_o : OUT STD_LOGIC;
-    Pmod_out_0_pin7_i : IN STD_LOGIC;
-    Pmod_out_0_pin2_o : OUT STD_LOGIC;
-    Pmod_out_0_pin8_i : IN STD_LOGIC;
-    Pmod_out_0_pin3_o : OUT STD_LOGIC;
-    Pmod_out_0_pin9_i : IN STD_LOGIC;
-    Pmod_out_0_pin10_o : OUT STD_LOGIC;
-    Pmod_out_0_pin4_o : OUT STD_LOGIC;
-    Pmod_out_0_pin3_i : IN STD_LOGIC;
-    Pmod_out_0_pin4_i : IN STD_LOGIC;
-    Pmod_out_0_pin1_i : IN STD_LOGIC;
-    Pmod_out_0_pin2_i : IN STD_LOGIC;
-    Pmod_out_0_pin10_t : OUT STD_LOGIC;
-    Pmod_out_0_pin8_t : OUT STD_LOGIC;
-    Pmod_out_0_pin9_t : OUT STD_LOGIC;
-    Pmod_out_0_pin4_t : OUT STD_LOGIC;
-    Pmod_out_0_pin9_o : OUT STD_LOGIC;
-    Pmod_out_0_pin10_i : IN STD_LOGIC;
-    Pmod_out_0_pin7_t : OUT STD_LOGIC;
-    Pmod_out_0_pin1_t : OUT STD_LOGIC;
-    Pmod_out_0_pin2_t : OUT STD_LOGIC;
-    Pmod_out_0_pin7_o : OUT STD_LOGIC;
-    Pmod_out_0_pin3_t : OUT STD_LOGIC;
-    Pmod_out_0_pin8_o : OUT STD_LOGIC;
-    Pmod_out_1_pin1_o : OUT STD_LOGIC;
-    Pmod_out_1_pin7_i : IN STD_LOGIC;
-    Pmod_out_1_pin2_o : OUT STD_LOGIC;
-    Pmod_out_1_pin8_i : IN STD_LOGIC;
-    Pmod_out_1_pin3_o : OUT STD_LOGIC;
-    Pmod_out_1_pin9_i : IN STD_LOGIC;
-    Pmod_out_1_pin10_o : OUT STD_LOGIC;
-    Pmod_out_1_pin4_o : OUT STD_LOGIC;
-    Pmod_out_1_pin3_i : IN STD_LOGIC;
-    Pmod_out_1_pin4_i : IN STD_LOGIC;
-    Pmod_out_1_pin1_i : IN STD_LOGIC;
-    Pmod_out_1_pin2_i : IN STD_LOGIC;
-    Pmod_out_1_pin10_t : OUT STD_LOGIC;
-    Pmod_out_1_pin8_t : OUT STD_LOGIC;
-    Pmod_out_1_pin9_t : OUT STD_LOGIC;
-    Pmod_out_1_pin4_t : OUT STD_LOGIC;
-    Pmod_out_1_pin9_o : OUT STD_LOGIC;
-    Pmod_out_1_pin10_i : IN STD_LOGIC;
-    Pmod_out_1_pin7_t : OUT STD_LOGIC;
-    Pmod_out_1_pin1_t : OUT STD_LOGIC;
-    Pmod_out_1_pin2_t : OUT STD_LOGIC;
-    Pmod_out_1_pin7_o : OUT STD_LOGIC;
-    Pmod_out_1_pin3_t : OUT STD_LOGIC;
-    Pmod_out_1_pin8_o : OUT STD_LOGIC
+    cmps2_iic_scl_i : IN STD_LOGIC;
+    cmps2_iic_scl_o : OUT STD_LOGIC;
+    cmps2_iic_scl_t : OUT STD_LOGIC;
+    cmps2_iic_sda_i : IN STD_LOGIC;
+    cmps2_iic_sda_o : OUT STD_LOGIC;
+    cmps2_iic_sda_t : OUT STD_LOGIC
   );
 END COMPONENT;
 -- COMP_TAG_END ------  End cut for COMPONENT Declaration  ------
@@ -156,57 +138,39 @@ your_instance_name : zb_blinky_block3
     FIXED_IO_ps_srstb => FIXED_IO_ps_srstb,
     FIXED_IO_ps_clk => FIXED_IO_ps_clk,
     FIXED_IO_ps_porb => FIXED_IO_ps_porb,
+    esp32_pmod_pin1_o => esp32_pmod_pin1_o,
+    esp32_pmod_pin7_i => esp32_pmod_pin7_i,
+    esp32_pmod_pin2_o => esp32_pmod_pin2_o,
+    esp32_pmod_pin8_i => esp32_pmod_pin8_i,
+    esp32_pmod_pin3_o => esp32_pmod_pin3_o,
+    esp32_pmod_pin9_i => esp32_pmod_pin9_i,
+    esp32_pmod_pin10_o => esp32_pmod_pin10_o,
+    esp32_pmod_pin4_o => esp32_pmod_pin4_o,
+    esp32_pmod_pin3_i => esp32_pmod_pin3_i,
+    esp32_pmod_pin4_i => esp32_pmod_pin4_i,
+    esp32_pmod_pin1_i => esp32_pmod_pin1_i,
+    esp32_pmod_pin2_i => esp32_pmod_pin2_i,
+    esp32_pmod_pin10_t => esp32_pmod_pin10_t,
+    esp32_pmod_pin8_t => esp32_pmod_pin8_t,
+    esp32_pmod_pin9_t => esp32_pmod_pin9_t,
+    esp32_pmod_pin4_t => esp32_pmod_pin4_t,
+    esp32_pmod_pin9_o => esp32_pmod_pin9_o,
+    esp32_pmod_pin10_i => esp32_pmod_pin10_i,
+    esp32_pmod_pin7_t => esp32_pmod_pin7_t,
+    esp32_pmod_pin1_t => esp32_pmod_pin1_t,
+    esp32_pmod_pin2_t => esp32_pmod_pin2_t,
+    esp32_pmod_pin7_o => esp32_pmod_pin7_o,
+    esp32_pmod_pin3_t => esp32_pmod_pin3_t,
+    esp32_pmod_pin8_o => esp32_pmod_pin8_o,
     count_en => count_en,
     reset_n => reset_n,
     led => led,
-    Pmod_out_0_pin1_o => Pmod_out_0_pin1_o,
-    Pmod_out_0_pin7_i => Pmod_out_0_pin7_i,
-    Pmod_out_0_pin2_o => Pmod_out_0_pin2_o,
-    Pmod_out_0_pin8_i => Pmod_out_0_pin8_i,
-    Pmod_out_0_pin3_o => Pmod_out_0_pin3_o,
-    Pmod_out_0_pin9_i => Pmod_out_0_pin9_i,
-    Pmod_out_0_pin10_o => Pmod_out_0_pin10_o,
-    Pmod_out_0_pin4_o => Pmod_out_0_pin4_o,
-    Pmod_out_0_pin3_i => Pmod_out_0_pin3_i,
-    Pmod_out_0_pin4_i => Pmod_out_0_pin4_i,
-    Pmod_out_0_pin1_i => Pmod_out_0_pin1_i,
-    Pmod_out_0_pin2_i => Pmod_out_0_pin2_i,
-    Pmod_out_0_pin10_t => Pmod_out_0_pin10_t,
-    Pmod_out_0_pin8_t => Pmod_out_0_pin8_t,
-    Pmod_out_0_pin9_t => Pmod_out_0_pin9_t,
-    Pmod_out_0_pin4_t => Pmod_out_0_pin4_t,
-    Pmod_out_0_pin9_o => Pmod_out_0_pin9_o,
-    Pmod_out_0_pin10_i => Pmod_out_0_pin10_i,
-    Pmod_out_0_pin7_t => Pmod_out_0_pin7_t,
-    Pmod_out_0_pin1_t => Pmod_out_0_pin1_t,
-    Pmod_out_0_pin2_t => Pmod_out_0_pin2_t,
-    Pmod_out_0_pin7_o => Pmod_out_0_pin7_o,
-    Pmod_out_0_pin3_t => Pmod_out_0_pin3_t,
-    Pmod_out_0_pin8_o => Pmod_out_0_pin8_o,
-    Pmod_out_1_pin1_o => Pmod_out_1_pin1_o,
-    Pmod_out_1_pin7_i => Pmod_out_1_pin7_i,
-    Pmod_out_1_pin2_o => Pmod_out_1_pin2_o,
-    Pmod_out_1_pin8_i => Pmod_out_1_pin8_i,
-    Pmod_out_1_pin3_o => Pmod_out_1_pin3_o,
-    Pmod_out_1_pin9_i => Pmod_out_1_pin9_i,
-    Pmod_out_1_pin10_o => Pmod_out_1_pin10_o,
-    Pmod_out_1_pin4_o => Pmod_out_1_pin4_o,
-    Pmod_out_1_pin3_i => Pmod_out_1_pin3_i,
-    Pmod_out_1_pin4_i => Pmod_out_1_pin4_i,
-    Pmod_out_1_pin1_i => Pmod_out_1_pin1_i,
-    Pmod_out_1_pin2_i => Pmod_out_1_pin2_i,
-    Pmod_out_1_pin10_t => Pmod_out_1_pin10_t,
-    Pmod_out_1_pin8_t => Pmod_out_1_pin8_t,
-    Pmod_out_1_pin9_t => Pmod_out_1_pin9_t,
-    Pmod_out_1_pin4_t => Pmod_out_1_pin4_t,
-    Pmod_out_1_pin9_o => Pmod_out_1_pin9_o,
-    Pmod_out_1_pin10_i => Pmod_out_1_pin10_i,
-    Pmod_out_1_pin7_t => Pmod_out_1_pin7_t,
-    Pmod_out_1_pin1_t => Pmod_out_1_pin1_t,
-    Pmod_out_1_pin2_t => Pmod_out_1_pin2_t,
-    Pmod_out_1_pin7_o => Pmod_out_1_pin7_o,
-    Pmod_out_1_pin3_t => Pmod_out_1_pin3_t,
-    Pmod_out_1_pin8_o => Pmod_out_1_pin8_o
+    cmps2_iic_scl_i => cmps2_iic_scl_i,
+    cmps2_iic_scl_o => cmps2_iic_scl_o,
+    cmps2_iic_scl_t => cmps2_iic_scl_t,
+    cmps2_iic_sda_i => cmps2_iic_sda_i,
+    cmps2_iic_sda_o => cmps2_iic_sda_o,
+    cmps2_iic_sda_t => cmps2_iic_sda_t
   );
 -- INST_TAG_END ------  End cut for INSTANTIATION Template  ------
 

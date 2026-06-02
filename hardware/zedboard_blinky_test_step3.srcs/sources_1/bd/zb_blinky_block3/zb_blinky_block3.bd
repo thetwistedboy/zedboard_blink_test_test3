@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0x9EA1989CBD53EAE",
+      "boundary_crc": "0xF2207A5F04C38A9B",
       "device": "xc7z020clg484-1",
       "gen_directory": "../../../../zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3",
       "name": "zb_blinky_block3",
@@ -21,7 +21,7 @@
       "ilslice_1": "",
       "ilconcat_0": "",
       "ilconstant_0": "",
-      "PmodCMPS2_0": ""
+      "axi_iic_0": ""
     },
     "interface_ports": {
       "DDR": {
@@ -204,7 +204,7 @@
           }
         }
       },
-      "Pmod_out_0": {
+      "esp32_pmod": {
         "mode": "Master",
         "vlnv_bus_definition": "digilentinc.com:interface:pmod:1.0",
         "vlnv": "digilentinc.com:interface:pmod_rtl:1.0",
@@ -216,107 +216,107 @@
         },
         "port_maps": {
           "PIN1_O": {
-            "physical_name": "Pmod_out_0_pin1_o",
+            "physical_name": "esp32_pmod_pin1_o",
             "direction": "O"
           },
           "PIN7_I": {
-            "physical_name": "Pmod_out_0_pin7_i",
+            "physical_name": "esp32_pmod_pin7_i",
             "direction": "I"
           },
           "PIN2_O": {
-            "physical_name": "Pmod_out_0_pin2_o",
+            "physical_name": "esp32_pmod_pin2_o",
             "direction": "O"
           },
           "PIN8_I": {
-            "physical_name": "Pmod_out_0_pin8_i",
+            "physical_name": "esp32_pmod_pin8_i",
             "direction": "I"
           },
           "PIN3_O": {
-            "physical_name": "Pmod_out_0_pin3_o",
+            "physical_name": "esp32_pmod_pin3_o",
             "direction": "O"
           },
           "PIN9_I": {
-            "physical_name": "Pmod_out_0_pin9_i",
+            "physical_name": "esp32_pmod_pin9_i",
             "direction": "I"
           },
           "PIN10_O": {
-            "physical_name": "Pmod_out_0_pin10_o",
+            "physical_name": "esp32_pmod_pin10_o",
             "direction": "O"
           },
           "PIN4_O": {
-            "physical_name": "Pmod_out_0_pin4_o",
+            "physical_name": "esp32_pmod_pin4_o",
             "direction": "O"
           },
           "PIN3_I": {
-            "physical_name": "Pmod_out_0_pin3_i",
+            "physical_name": "esp32_pmod_pin3_i",
             "direction": "I"
           },
           "PIN4_I": {
-            "physical_name": "Pmod_out_0_pin4_i",
+            "physical_name": "esp32_pmod_pin4_i",
             "direction": "I"
           },
           "PIN1_I": {
-            "physical_name": "Pmod_out_0_pin1_i",
+            "physical_name": "esp32_pmod_pin1_i",
             "direction": "I"
           },
           "PIN2_I": {
-            "physical_name": "Pmod_out_0_pin2_i",
+            "physical_name": "esp32_pmod_pin2_i",
             "direction": "I"
           },
           "PIN10_T": {
-            "physical_name": "Pmod_out_0_pin10_t",
+            "physical_name": "esp32_pmod_pin10_t",
             "direction": "O"
           },
           "PIN8_T": {
-            "physical_name": "Pmod_out_0_pin8_t",
+            "physical_name": "esp32_pmod_pin8_t",
             "direction": "O"
           },
           "PIN9_T": {
-            "physical_name": "Pmod_out_0_pin9_t",
+            "physical_name": "esp32_pmod_pin9_t",
             "direction": "O"
           },
           "PIN4_T": {
-            "physical_name": "Pmod_out_0_pin4_t",
+            "physical_name": "esp32_pmod_pin4_t",
             "direction": "O"
           },
           "PIN9_O": {
-            "physical_name": "Pmod_out_0_pin9_o",
+            "physical_name": "esp32_pmod_pin9_o",
             "direction": "O"
           },
           "PIN10_I": {
-            "physical_name": "Pmod_out_0_pin10_i",
+            "physical_name": "esp32_pmod_pin10_i",
             "direction": "I"
           },
           "PIN7_T": {
-            "physical_name": "Pmod_out_0_pin7_t",
+            "physical_name": "esp32_pmod_pin7_t",
             "direction": "O"
           },
           "PIN1_T": {
-            "physical_name": "Pmod_out_0_pin1_t",
+            "physical_name": "esp32_pmod_pin1_t",
             "direction": "O"
           },
           "PIN2_T": {
-            "physical_name": "Pmod_out_0_pin2_t",
+            "physical_name": "esp32_pmod_pin2_t",
             "direction": "O"
           },
           "PIN7_O": {
-            "physical_name": "Pmod_out_0_pin7_o",
+            "physical_name": "esp32_pmod_pin7_o",
             "direction": "O"
           },
           "PIN3_T": {
-            "physical_name": "Pmod_out_0_pin3_t",
+            "physical_name": "esp32_pmod_pin3_t",
             "direction": "O"
           },
           "PIN8_O": {
-            "physical_name": "Pmod_out_0_pin8_o",
+            "physical_name": "esp32_pmod_pin8_o",
             "direction": "O"
           }
         }
       },
-      "Pmod_out_1": {
+      "cmps2_iic": {
         "mode": "Master",
-        "vlnv_bus_definition": "digilentinc.com:interface:pmod:1.0",
-        "vlnv": "digilentinc.com:interface:pmod_rtl:1.0",
+        "vlnv_bus_definition": "xilinx.com:interface:iic:1.0",
+        "vlnv": "xilinx.com:interface:iic_rtl:1.0",
         "hdl_attributes": {
           "LOCKED": {
             "value": "FALSE",
@@ -324,100 +324,28 @@
           }
         },
         "port_maps": {
-          "PIN1_O": {
-            "physical_name": "Pmod_out_1_pin1_o",
-            "direction": "O"
-          },
-          "PIN7_I": {
-            "physical_name": "Pmod_out_1_pin7_i",
+          "SCL_I": {
+            "physical_name": "cmps2_iic_scl_i",
             "direction": "I"
           },
-          "PIN2_O": {
-            "physical_name": "Pmod_out_1_pin2_o",
+          "SCL_O": {
+            "physical_name": "cmps2_iic_scl_o",
             "direction": "O"
           },
-          "PIN8_I": {
-            "physical_name": "Pmod_out_1_pin8_i",
+          "SCL_T": {
+            "physical_name": "cmps2_iic_scl_t",
+            "direction": "O"
+          },
+          "SDA_I": {
+            "physical_name": "cmps2_iic_sda_i",
             "direction": "I"
           },
-          "PIN3_O": {
-            "physical_name": "Pmod_out_1_pin3_o",
+          "SDA_O": {
+            "physical_name": "cmps2_iic_sda_o",
             "direction": "O"
           },
-          "PIN9_I": {
-            "physical_name": "Pmod_out_1_pin9_i",
-            "direction": "I"
-          },
-          "PIN10_O": {
-            "physical_name": "Pmod_out_1_pin10_o",
-            "direction": "O"
-          },
-          "PIN4_O": {
-            "physical_name": "Pmod_out_1_pin4_o",
-            "direction": "O"
-          },
-          "PIN3_I": {
-            "physical_name": "Pmod_out_1_pin3_i",
-            "direction": "I"
-          },
-          "PIN4_I": {
-            "physical_name": "Pmod_out_1_pin4_i",
-            "direction": "I"
-          },
-          "PIN1_I": {
-            "physical_name": "Pmod_out_1_pin1_i",
-            "direction": "I"
-          },
-          "PIN2_I": {
-            "physical_name": "Pmod_out_1_pin2_i",
-            "direction": "I"
-          },
-          "PIN10_T": {
-            "physical_name": "Pmod_out_1_pin10_t",
-            "direction": "O"
-          },
-          "PIN8_T": {
-            "physical_name": "Pmod_out_1_pin8_t",
-            "direction": "O"
-          },
-          "PIN9_T": {
-            "physical_name": "Pmod_out_1_pin9_t",
-            "direction": "O"
-          },
-          "PIN4_T": {
-            "physical_name": "Pmod_out_1_pin4_t",
-            "direction": "O"
-          },
-          "PIN9_O": {
-            "physical_name": "Pmod_out_1_pin9_o",
-            "direction": "O"
-          },
-          "PIN10_I": {
-            "physical_name": "Pmod_out_1_pin10_i",
-            "direction": "I"
-          },
-          "PIN7_T": {
-            "physical_name": "Pmod_out_1_pin7_t",
-            "direction": "O"
-          },
-          "PIN1_T": {
-            "physical_name": "Pmod_out_1_pin1_t",
-            "direction": "O"
-          },
-          "PIN2_T": {
-            "physical_name": "Pmod_out_1_pin2_t",
-            "direction": "O"
-          },
-          "PIN7_O": {
-            "physical_name": "Pmod_out_1_pin7_o",
-            "direction": "O"
-          },
-          "PIN3_T": {
-            "physical_name": "Pmod_out_1_pin3_t",
-            "direction": "O"
-          },
-          "PIN8_O": {
-            "physical_name": "Pmod_out_1_pin8_o",
+          "SDA_T": {
+            "physical_name": "cmps2_iic_sda_t",
             "direction": "O"
           }
         }
@@ -1652,38 +1580,26 @@
           }
         }
       },
-      "PmodCMPS2_0": {
-        "vlnv": "digilentinc.com:IP:PmodCMPS2:1.0",
-        "ip_revision": "15",
-        "xci_name": "zb_blinky_block3_PmodCMPS2_0_1",
-        "xci_path": "ip/zb_blinky_block3_PmodCMPS2_0_1/zb_blinky_block3_PmodCMPS2_0_1.xci",
-        "inst_hier_path": "PmodCMPS2_0",
-        "has_run_ip_tcl": "true",
-        "parameters": {
-          "PMOD": {
-            "value": "Custom"
-          }
-        },
-        "interface_ports": {
-          "AXI_LITE_IIC": {
-            "vlnv": "xilinx.com:interface:aximm_rtl:1.0",
-            "mode": "Slave",
-            "memory_map_ref": "AXI_LITE_IIC"
-          }
-        }
+      "axi_iic_0": {
+        "vlnv": "xilinx.com:ip:axi_iic:2.1",
+        "ip_revision": "11",
+        "xci_name": "zb_blinky_block3_axi_iic_0_0",
+        "xci_path": "ip/zb_blinky_block3_axi_iic_0_0/zb_blinky_block3_axi_iic_0_0.xci",
+        "inst_hier_path": "axi_iic_0",
+        "has_run_ip_tcl": "true"
       }
     },
     "interface_nets": {
-      "PmodCMPS2_0_Pmod_out": {
-        "interface_ports": [
-          "Pmod_out_0",
-          "PmodCMPS2_0/Pmod_out"
-        ]
-      },
       "PmodESP32_0_Pmod_out": {
         "interface_ports": [
-          "Pmod_out_1",
+          "esp32_pmod",
           "PmodESP32_0/Pmod_out"
+        ]
+      },
+      "axi_iic_0_IIC": {
+        "interface_ports": [
+          "cmps2_iic",
+          "axi_iic_0/IIC"
         ]
       },
       "axi_smc_M00_AXI": {
@@ -1695,7 +1611,7 @@
       "axi_smc_M01_AXI": {
         "interface_ports": [
           "axi_smc/M01_AXI",
-          "PmodCMPS2_0/AXI_LITE_IIC"
+          "axi_iic_0/S_AXI"
         ]
       },
       "axi_smc_M02_AXI": {
@@ -1776,7 +1692,7 @@
           "processing_system7_0/M_AXI_GP0_ACLK",
           "rst_ps7_0_100M/slowest_sync_clk",
           "zedboard_blinky_test_0/clk",
-          "PmodCMPS2_0/s_axi_aclk"
+          "axi_iic_0/s_axi_aclk"
         ]
       },
       "processing_system7_0_FCLK_RESET0_N": {
@@ -1797,7 +1713,7 @@
           "axi_gpio_0/s_axi_aresetn",
           "axi_smc/aresetn",
           "PmodESP32_0/s_axi_aresetn",
-          "PmodCMPS2_0/s_axi_aresetn"
+          "axi_iic_0/s_axi_aresetn"
         ]
       },
       "zedboard_blinky_test_0_led": {
@@ -1812,13 +1728,6 @@
         "address_spaces": {
           "Data": {
             "segments": {
-              "SEG_PmodCMPS2_0_Reg0": {
-                "address_block": "/PmodCMPS2_0/AXI_LITE_IIC/Reg0",
-                "offset": "0x40000000",
-                "range": "4K",
-                "offset_base_param": "AXI_LITE_IIC_BASEADDR",
-                "offset_high_param": "AXI_LITE_IIC_HIGHADDR"
-              },
               "SEG_PmodESP32_0_Reg0": {
                 "address_block": "/PmodESP32_0/AXI_LITE_GPIO/Reg0",
                 "offset": "0x43C00000",
@@ -1836,6 +1745,11 @@
               "SEG_axi_gpio_0_Reg": {
                 "address_block": "/axi_gpio_0/S_AXI/Reg",
                 "offset": "0x41200000",
+                "range": "64K"
+              },
+              "SEG_axi_iic_0_Reg": {
+                "address_block": "/axi_iic_0/S_AXI/Reg",
+                "offset": "0x41600000",
                 "range": "64K"
               }
             }

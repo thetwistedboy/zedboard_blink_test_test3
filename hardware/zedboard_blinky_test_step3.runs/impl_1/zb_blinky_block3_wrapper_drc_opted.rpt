@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2025.2 (lin64) Build 6299465 Fri Nov 14 12:34:56 MST 2025
-| Date         : Thu May 28 00:07:45 2026
+| Date         : Mon Jun  1 20:21:28 2026
 | Host         : jkelleylaptop running 64-bit Linux Mint 22.3
 | Command      : report_drc -file zb_blinky_block3_wrapper_drc_opted.rpt -pb zb_blinky_block3_wrapper_drc_opted.pb -rpx zb_blinky_block3_wrapper_drc_opted.rpx
 | Design       : zb_blinky_block3_wrapper
@@ -24,48 +24,18 @@ Table of Contents
       Design limits: <entire design considered>
            Ruledeck: default
              Max checks: <unlimited>
-             Checks found: 7
+             Checks found: 1
 +--------+----------+--------------------------+--------+
 | Rule   | Severity | Description              | Checks |
 +--------+----------+--------------------------+--------+
-| BUFC-1 | Warning  | Input Buffer Connections | 7      |
+| BUFC-1 | Warning  | Input Buffer Connections | 1      |
 +--------+----------+--------------------------+--------+
 
 2. REPORT DETAILS
 -----------------
 BUFC-1#1 Warning
 Input Buffer Connections  
-Input buffer Pmod_out_0_pin10_iobuf/IBUF (in Pmod_out_0_pin10_iobuf macro) has no loads. It is recommended to have an input buffer drive an internal load.
-Related violations: <none>
-
-BUFC-1#2 Warning
-Input Buffer Connections  
-Input buffer Pmod_out_0_pin1_iobuf/IBUF (in Pmod_out_0_pin1_iobuf macro) has no loads. It is recommended to have an input buffer drive an internal load.
-Related violations: <none>
-
-BUFC-1#3 Warning
-Input Buffer Connections  
-Input buffer Pmod_out_0_pin2_iobuf/IBUF (in Pmod_out_0_pin2_iobuf macro) has no loads. It is recommended to have an input buffer drive an internal load.
-Related violations: <none>
-
-BUFC-1#4 Warning
-Input Buffer Connections  
-Input buffer Pmod_out_0_pin7_iobuf/IBUF (in Pmod_out_0_pin7_iobuf macro) has no loads. It is recommended to have an input buffer drive an internal load.
-Related violations: <none>
-
-BUFC-1#5 Warning
-Input Buffer Connections  
-Input buffer Pmod_out_0_pin8_iobuf/IBUF (in Pmod_out_0_pin8_iobuf macro) has no loads. It is recommended to have an input buffer drive an internal load.
-Related violations: <none>
-
-BUFC-1#6 Warning
-Input Buffer Connections  
-Input buffer Pmod_out_0_pin9_iobuf/IBUF (in Pmod_out_0_pin9_iobuf macro) has no loads. It is recommended to have an input buffer drive an internal load.
-Related violations: <none>
-
-BUFC-1#7 Warning
-Input Buffer Connections  
-Input buffer Pmod_out_1_pin2_iobuf/IBUF (in Pmod_out_1_pin2_iobuf macro) has no loads. It is recommended to have an input buffer drive an internal load.
+Input buffer esp32_pmod_pin2_iobuf/IBUF (in esp32_pmod_pin2_iobuf macro) has no loads. It is recommended to have an input buffer drive an internal load.
 Related violations: <none>
 
 
