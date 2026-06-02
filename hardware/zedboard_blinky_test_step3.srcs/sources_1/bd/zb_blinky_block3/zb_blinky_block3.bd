@@ -1739,26 +1739,26 @@
               "SEG_PmodESP32_0_Reg0": {
                 "address_block": "/PmodESP32_0/AXI_LITE_GPIO/Reg0",
                 "offset": "0x43C00000",
-                "range": "64K",
+                "range": "2K",
                 "offset_base_param": "AXI_LITE_GPIO_BASEADDR",
                 "offset_high_param": "AXI_LITE_GPIO_HIGHADDR"
               },
               "SEG_PmodESP32_0_Reg0_1": {
                 "address_block": "/PmodESP32_0/AXI_LITE_UART/Reg0",
                 "offset": "0x43C10000",
-                "range": "64K",
+                "range": "2K",
                 "offset_base_param": "AXI_LITE_UART_BASEADDR",
                 "offset_high_param": "AXI_LITE_UART_HIGHADDR"
               },
               "SEG_axi_gpio_0_Reg": {
                 "address_block": "/axi_gpio_0/S_AXI/Reg",
                 "offset": "0x41200000",
-                "range": "64K"
+                "range": "2K"
               },
               "SEG_axi_iic_0_Reg": {
                 "address_block": "/axi_iic_0/S_AXI/Reg",
                 "offset": "0x41600000",
-                "range": "64K"
+                "range": "2K"
               }
             }
           }

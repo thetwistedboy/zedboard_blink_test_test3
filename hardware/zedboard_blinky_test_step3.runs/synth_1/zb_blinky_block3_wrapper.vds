@@ -3,8 +3,8 @@
 # SW Build 6299465 on Fri Nov 14 12:34:56 MST 2025
 # IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
 # SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
-# Start of session at: Mon Jun  1 22:39:19 2026
-# Process ID         : 477635
+# Start of session at: Mon Jun  1 23:11:59 2026
+# Process ID         : 529587
 # Current directory  : /home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.runs/synth_1
 # Command line       : vivado -log zb_blinky_block3_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source zb_blinky_block3_wrapper.tcl
 # Log file           : /home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.runs/synth_1/zb_blinky_block3_wrapper.vds
@@ -13,13 +13,13 @@
 # Platform           : Linuxmint
 # Operating System   : Linux Mint 22.3
 # Processor Detail   : 11th Gen Intel(R) Core(TM) i7-11800H @ 2.30GHz
-# CPU Frequency      : 1219.133 MHz
+# CPU Frequency      : 4212.229 MHz
 # CPU Physical cores : 8
 # CPU Logical cores  : 16
 # Host memory        : 16453 MB
 # Swap memory        : 2147 MB
 # Total Virtual      : 18600 MB
-# Available Virtual  : 7230 MB
+# Available Virtual  : 5260 MB
 #-----------------------------------------------------------
 source zb_blinky_block3_wrapper.tcl -notrace
 INFO: [IP_Flow 19-234] Refreshing IP repositories
@@ -38,30 +38,30 @@ INFO: [Designutils 20-5440] No compile time benefit to using incremental synthes
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 7 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 477709
+INFO: [Synth 8-7075] Helper process launched with PID 529711
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2304.504 ; gain = 482.125 ; free physical = 471 ; free virtual = 5514
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2305.207 ; gain = 484.125 ; free physical = 591 ; free virtual = 3688
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'zb_blinky_block3_wrapper' [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/hdl/zb_blinky_block3_wrapper.v:13]
 INFO: [Synth 8-6157] synthesizing module 'IOBUF' [/opt/Xilinx/2025.2/Vivado/scripts/rt/data/unisim_comp.v:87566]
 INFO: [Synth 8-6155] done synthesizing module 'IOBUF' (0#1) [/opt/Xilinx/2025.2/Vivado/scripts/rt/data/unisim_comp.v:87566]
 INFO: [Synth 8-6157] synthesizing module 'zb_blinky_block3' [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/synth/zb_blinky_block3.v:13]
-INFO: [Synth 8-6157] synthesizing module 'zb_blinky_block3_PmodESP32_0_0' [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.runs/synth_1/.Xil/Vivado-477635-jkelleylaptop/realtime/zb_blinky_block3_PmodESP32_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'zb_blinky_block3_PmodESP32_0_0' (0#1) [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.runs/synth_1/.Xil/Vivado-477635-jkelleylaptop/realtime/zb_blinky_block3_PmodESP32_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'zb_blinky_block3_PmodESP32_0_0' [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.runs/synth_1/.Xil/Vivado-529587-jkelleylaptop/realtime/zb_blinky_block3_PmodESP32_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'zb_blinky_block3_PmodESP32_0_0' (0#1) [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.runs/synth_1/.Xil/Vivado-529587-jkelleylaptop/realtime/zb_blinky_block3_PmodESP32_0_0_stub.v:6]
 WARNING: [Synth 8-7071] port 'gpio_interrupt' of module 'zb_blinky_block3_PmodESP32_0_0' is unconnected for instance 'PmodESP32_0' [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/synth/zb_blinky_block3.v:293]
 WARNING: [Synth 8-7071] port 'uart_interrupt' of module 'zb_blinky_block3_PmodESP32_0_0' is unconnected for instance 'PmodESP32_0' [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/synth/zb_blinky_block3.v:293]
 WARNING: [Synth 8-7023] instance 'PmodESP32_0' of module 'zb_blinky_block3_PmodESP32_0_0' has 62 connections declared, but only 60 given [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/synth/zb_blinky_block3.v:293]
-INFO: [Synth 8-6157] synthesizing module 'zb_blinky_block3_axi_gpio_0_0' [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.runs/synth_1/.Xil/Vivado-477635-jkelleylaptop/realtime/zb_blinky_block3_axi_gpio_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'zb_blinky_block3_axi_gpio_0_0' (0#1) [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.runs/synth_1/.Xil/Vivado-477635-jkelleylaptop/realtime/zb_blinky_block3_axi_gpio_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'zb_blinky_block3_axi_gpio_0_0' [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.runs/synth_1/.Xil/Vivado-529587-jkelleylaptop/realtime/zb_blinky_block3_axi_gpio_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'zb_blinky_block3_axi_gpio_0_0' (0#1) [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.runs/synth_1/.Xil/Vivado-529587-jkelleylaptop/realtime/zb_blinky_block3_axi_gpio_0_0_stub.v:6]
 WARNING: [Synth 8-7071] port 'gpio_io_t' of module 'zb_blinky_block3_axi_gpio_0_0' is unconnected for instance 'axi_gpio_0' [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/synth/zb_blinky_block3.v:354]
 WARNING: [Synth 8-7023] instance 'axi_gpio_0' of module 'zb_blinky_block3_axi_gpio_0_0' has 22 connections declared, but only 21 given [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/synth/zb_blinky_block3.v:354]
-INFO: [Synth 8-6157] synthesizing module 'zb_blinky_block3_axi_iic_0_0' [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.runs/synth_1/.Xil/Vivado-477635-jkelleylaptop/realtime/zb_blinky_block3_axi_iic_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'zb_blinky_block3_axi_iic_0_0' (0#1) [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.runs/synth_1/.Xil/Vivado-477635-jkelleylaptop/realtime/zb_blinky_block3_axi_iic_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'zb_blinky_block3_axi_iic_0_0' [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.runs/synth_1/.Xil/Vivado-529587-jkelleylaptop/realtime/zb_blinky_block3_axi_iic_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'zb_blinky_block3_axi_iic_0_0' (0#1) [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.runs/synth_1/.Xil/Vivado-529587-jkelleylaptop/realtime/zb_blinky_block3_axi_iic_0_0_stub.v:6]
 WARNING: [Synth 8-7071] port 'iic2intc_irpt' of module 'zb_blinky_block3_axi_iic_0_0' is unconnected for instance 'axi_iic_0' [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/synth/zb_blinky_block3.v:376]
 WARNING: [Synth 8-7071] port 'gpo' of module 'zb_blinky_block3_axi_iic_0_0' is unconnected for instance 'axi_iic_0' [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/synth/zb_blinky_block3.v:376]
 WARNING: [Synth 8-7023] instance 'axi_iic_0' of module 'zb_blinky_block3_axi_iic_0_0' has 27 connections declared, but only 25 given [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/synth/zb_blinky_block3.v:376]
-INFO: [Synth 8-6157] synthesizing module 'zb_blinky_block3_axi_smc_0' [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.runs/synth_1/.Xil/Vivado-477635-jkelleylaptop/realtime/zb_blinky_block3_axi_smc_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'zb_blinky_block3_axi_smc_0' (0#1) [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.runs/synth_1/.Xil/Vivado-477635-jkelleylaptop/realtime/zb_blinky_block3_axi_smc_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'zb_blinky_block3_axi_smc_0' [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.runs/synth_1/.Xil/Vivado-529587-jkelleylaptop/realtime/zb_blinky_block3_axi_smc_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'zb_blinky_block3_axi_smc_0' (0#1) [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.runs/synth_1/.Xil/Vivado-529587-jkelleylaptop/realtime/zb_blinky_block3_axi_smc_0_stub.v:6]
 WARNING: [Synth 8-7071] port 'M00_AXI_awprot' of module 'zb_blinky_block3_axi_smc_0' is unconnected for instance 'axi_smc' [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/synth/zb_blinky_block3.v:402]
 WARNING: [Synth 8-7071] port 'M00_AXI_arprot' of module 'zb_blinky_block3_axi_smc_0' is unconnected for instance 'axi_smc' [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/synth/zb_blinky_block3.v:402]
 WARNING: [Synth 8-7071] port 'M01_AXI_awprot' of module 'zb_blinky_block3_axi_smc_0' is unconnected for instance 'axi_smc' [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/synth/zb_blinky_block3.v:402]
@@ -71,8 +71,8 @@ WARNING: [Synth 8-7071] port 'M02_AXI_arprot' of module 'zb_blinky_block3_axi_sm
 WARNING: [Synth 8-7071] port 'M03_AXI_awprot' of module 'zb_blinky_block3_axi_smc_0' is unconnected for instance 'axi_smc' [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/synth/zb_blinky_block3.v:402]
 WARNING: [Synth 8-7071] port 'M03_AXI_arprot' of module 'zb_blinky_block3_axi_smc_0' is unconnected for instance 'axi_smc' [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/synth/zb_blinky_block3.v:402]
 WARNING: [Synth 8-7023] instance 'axi_smc' of module 'zb_blinky_block3_axi_smc_0' has 116 connections declared, but only 108 given [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/synth/zb_blinky_block3.v:402]
-INFO: [Synth 8-6157] synthesizing module 'zb_blinky_block3_processing_system7_0_0' [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.runs/synth_1/.Xil/Vivado-477635-jkelleylaptop/realtime/zb_blinky_block3_processing_system7_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'zb_blinky_block3_processing_system7_0_0' (0#1) [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.runs/synth_1/.Xil/Vivado-477635-jkelleylaptop/realtime/zb_blinky_block3_processing_system7_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'zb_blinky_block3_processing_system7_0_0' [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.runs/synth_1/.Xil/Vivado-529587-jkelleylaptop/realtime/zb_blinky_block3_processing_system7_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'zb_blinky_block3_processing_system7_0_0' (0#1) [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.runs/synth_1/.Xil/Vivado-529587-jkelleylaptop/realtime/zb_blinky_block3_processing_system7_0_0_stub.v:6]
 WARNING: [Synth 8-7071] port 'ENET0_MDIO_MDC' of module 'zb_blinky_block3_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/synth/zb_blinky_block3.v:515]
 WARNING: [Synth 8-7071] port 'ENET0_MDIO_O' of module 'zb_blinky_block3_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/synth/zb_blinky_block3.v:515]
 WARNING: [Synth 8-7071] port 'ENET0_MDIO_T' of module 'zb_blinky_block3_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/synth/zb_blinky_block3.v:515]
@@ -84,30 +84,30 @@ WARNING: [Synth 8-7071] port 'TTC0_WAVE2_OUT' of module 'zb_blinky_block3_proces
 WARNING: [Synth 8-7071] port 'USB0_PORT_INDCTL' of module 'zb_blinky_block3_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/synth/zb_blinky_block3.v:515]
 WARNING: [Synth 8-7071] port 'USB0_VBUS_PWRSELECT' of module 'zb_blinky_block3_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/synth/zb_blinky_block3.v:515]
 WARNING: [Synth 8-7023] instance 'processing_system7_0' of module 'zb_blinky_block3_processing_system7_0_0' has 76 connections declared, but only 66 given [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/synth/zb_blinky_block3.v:515]
-INFO: [Synth 8-6157] synthesizing module 'zb_blinky_block3_rst_ps7_0_100M_0' [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.runs/synth_1/.Xil/Vivado-477635-jkelleylaptop/realtime/zb_blinky_block3_rst_ps7_0_100M_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'zb_blinky_block3_rst_ps7_0_100M_0' (0#1) [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.runs/synth_1/.Xil/Vivado-477635-jkelleylaptop/realtime/zb_blinky_block3_rst_ps7_0_100M_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'zb_blinky_block3_rst_ps7_0_100M_0' [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.runs/synth_1/.Xil/Vivado-529587-jkelleylaptop/realtime/zb_blinky_block3_rst_ps7_0_100M_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'zb_blinky_block3_rst_ps7_0_100M_0' (0#1) [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.runs/synth_1/.Xil/Vivado-529587-jkelleylaptop/realtime/zb_blinky_block3_rst_ps7_0_100M_0_stub.v:6]
 WARNING: [Synth 8-7071] port 'mb_reset' of module 'zb_blinky_block3_rst_ps7_0_100M_0' is unconnected for instance 'rst_ps7_0_100M' [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/synth/zb_blinky_block3.v:582]
 WARNING: [Synth 8-7071] port 'bus_struct_reset' of module 'zb_blinky_block3_rst_ps7_0_100M_0' is unconnected for instance 'rst_ps7_0_100M' [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/synth/zb_blinky_block3.v:582]
 WARNING: [Synth 8-7071] port 'peripheral_reset' of module 'zb_blinky_block3_rst_ps7_0_100M_0' is unconnected for instance 'rst_ps7_0_100M' [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/synth/zb_blinky_block3.v:582]
 WARNING: [Synth 8-7071] port 'interconnect_aresetn' of module 'zb_blinky_block3_rst_ps7_0_100M_0' is unconnected for instance 'rst_ps7_0_100M' [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/synth/zb_blinky_block3.v:582]
 WARNING: [Synth 8-7023] instance 'rst_ps7_0_100M' of module 'zb_blinky_block3_rst_ps7_0_100M_0' has 10 connections declared, but only 6 given [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/synth/zb_blinky_block3.v:582]
-INFO: [Synth 8-6157] synthesizing module 'zb_blinky_block3_zedboard_blinky_test_0_0' [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.runs/synth_1/.Xil/Vivado-477635-jkelleylaptop/realtime/zb_blinky_block3_zedboard_blinky_test_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'zb_blinky_block3_zedboard_blinky_test_0_0' (0#1) [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.runs/synth_1/.Xil/Vivado-477635-jkelleylaptop/realtime/zb_blinky_block3_zedboard_blinky_test_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'zb_blinky_block3_zedboard_blinky_test_0_0' [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.runs/synth_1/.Xil/Vivado-529587-jkelleylaptop/realtime/zb_blinky_block3_zedboard_blinky_test_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'zb_blinky_block3_zedboard_blinky_test_0_0' (0#1) [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.runs/synth_1/.Xil/Vivado-529587-jkelleylaptop/realtime/zb_blinky_block3_zedboard_blinky_test_0_0_stub.v:6]
 INFO: [Synth 8-6155] done synthesizing module 'zb_blinky_block3' (0#1) [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/synth/zb_blinky_block3.v:13]
 INFO: [Synth 8-6155] done synthesizing module 'zb_blinky_block3_wrapper' (0#1) [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/hdl/zb_blinky_block3_wrapper.v:13]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 2398.473 ; gain = 576.094 ; free physical = 377 ; free virtual = 5421
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2398.145 ; gain = 577.062 ; free physical = 519 ; free virtual = 3619
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 2404.410 ; gain = 582.031 ; free physical = 377 ; free virtual = 5421
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2410.020 ; gain = 588.938 ; free physical = 520 ; free virtual = 3619
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 2404.410 ; gain = 582.031 ; free physical = 377 ; free virtual = 5421
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2410.020 ; gain = 588.938 ; free physical = 520 ; free virtual = 3619
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2404.410 ; gain = 0.000 ; free physical = 376 ; free virtual = 5420
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2412.988 ; gain = 0.000 ; free physical = 520 ; free virtual = 3619
 INFO: [Netlist 29-17] Analyzing 10 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -140,32 +140,32 @@ Parsing XDC File [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hard
 Finished Parsing XDC File [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.runs/synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2478.180 ; gain = 0.000 ; free physical = 372 ; free virtual = 5415
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2490.758 ; gain = 0.000 ; free physical = 525 ; free virtual = 3625
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 10 instances were transformed.
   IOBUF => IOBUF (IBUF, OBUFT): 10 instances
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2478.215 ; gain = 0.000 ; free physical = 372 ; free virtual = 5415
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 2490.793 ; gain = 0.000 ; free physical = 525 ; free virtual = 3625
 INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 2478.215 ; gain = 655.836 ; free physical = 385 ; free virtual = 5430
+Finished Constraint Validation : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 2490.793 ; gain = 669.711 ; free physical = 548 ; free virtual = 3648
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z020clg484-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 2486.184 ; gain = 663.805 ; free physical = 385 ; free virtual = 5430
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 2498.762 ; gain = 677.680 ; free physical = 548 ; free virtual = 3648
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 2486.184 ; gain = 663.805 ; free physical = 381 ; free virtual = 5425
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 2498.762 ; gain = 677.680 ; free physical = 546 ; free virtual = 3647
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 2486.184 ; gain = 663.805 ; free physical = 374 ; free virtual = 5419
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 2498.762 ; gain = 677.680 ; free physical = 528 ; free virtual = 3630
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -187,25 +187,25 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 2486.184 ; gain = 663.805 ; free physical = 280 ; free virtual = 5332
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 2498.762 ; gain = 677.680 ; free physical = 535 ; free virtual = 3641
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 2562.184 ; gain = 739.805 ; free physical = 292 ; free virtual = 5319
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 2563.762 ; gain = 742.680 ; free physical = 453 ; free virtual = 3559
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 2563.184 ; gain = 740.805 ; free physical = 294 ; free virtual = 5320
+Finished Timing Optimization : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 2563.762 ; gain = 742.680 ; free physical = 453 ; free virtual = 3559
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 2572.199 ; gain = 749.820 ; free physical = 286 ; free virtual = 5312
+Finished Technology Mapping : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 2573.777 ; gain = 752.695 ; free physical = 451 ; free virtual = 3558
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -223,37 +223,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 2759.012 ; gain = 936.633 ; free physical = 223 ; free virtual = 5174
+Finished IO Insertion : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 2759.590 ; gain = 938.508 ; free physical = 283 ; free virtual = 3390
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 2759.012 ; gain = 936.633 ; free physical = 223 ; free virtual = 5174
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 2759.590 ; gain = 938.508 ; free physical = 283 ; free virtual = 3390
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 2759.012 ; gain = 936.633 ; free physical = 223 ; free virtual = 5174
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 2759.590 ; gain = 938.508 ; free physical = 283 ; free virtual = 3390
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 2759.012 ; gain = 936.633 ; free physical = 223 ; free virtual = 5174
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 2759.590 ; gain = 938.508 ; free physical = 283 ; free virtual = 3390
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 2759.012 ; gain = 936.633 ; free physical = 223 ; free virtual = 5174
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 2759.590 ; gain = 938.508 ; free physical = 283 ; free virtual = 3390
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 2759.012 ; gain = 936.633 ; free physical = 223 ; free virtual = 5174
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 2759.590 ; gain = 938.508 ; free physical = 283 ; free virtual = 3390
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -288,18 +288,18 @@ Report Cell Usage:
 |10    |OBUF                                    |     8|
 +------+----------------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 2759.012 ; gain = 936.633 ; free physical = 223 ; free virtual = 5174
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 2759.590 ; gain = 938.508 ; free physical = 283 ; free virtual = 3390
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 2759.012 ; gain = 862.828 ; free physical = 223 ; free virtual = 5174
-Synthesis Optimization Complete : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 2759.020 ; gain = 936.633 ; free physical = 223 ; free virtual = 5174
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 2759.590 ; gain = 857.734 ; free physical = 282 ; free virtual = 3390
+Synthesis Optimization Complete : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 2759.598 ; gain = 938.508 ; free physical = 283 ; free virtual = 3390
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2759.020 ; gain = 0.000 ; free physical = 223 ; free virtual = 5174
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2759.598 ; gain = 0.000 ; free physical = 283 ; free virtual = 3390
 INFO: [Netlist 29-17] Analyzing 10 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2759.020 ; gain = 0.000 ; free physical = 365 ; free virtual = 5316
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2759.598 ; gain = 0.000 ; free physical = 451 ; free virtual = 3559
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 10 instances were transformed.
   IOBUF => IOBUF (IBUF, OBUFT): 10 instances
@@ -308,10 +308,10 @@ Synth Design complete | Checksum: 357e8907
 INFO: [Common 17-83] Releasing license: Synthesis
 47 Infos, 37 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:25 ; elapsed = 00:00:23 . Memory (MB): peak = 2759.047 ; gain = 1138.512 ; free physical = 365 ; free virtual = 5316
-INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 1891.660; main = 1891.660; forked = 283.107
-INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 3481.430; main = 2759.016; forked = 995.242
-Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2783.023 ; gain = 0.000 ; free physical = 365 ; free virtual = 5316
+synth_design: Time (s): cpu = 00:00:24 ; elapsed = 00:00:22 . Memory (MB): peak = 2759.625 ; gain = 1139.355 ; free physical = 451 ; free virtual = 3558
+INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 1886.169; main = 1886.169; forked = 282.312
+INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 3494.012; main = 2759.594; forked = 995.246
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2783.602 ; gain = 0.000 ; free physical = 451 ; free virtual = 3558
 INFO: [Common 17-1381] The checkpoint '/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.runs/synth_1/zb_blinky_block3_wrapper.dcp' has been generated.
 INFO: [Vivado 12-24828] Executing command : report_utilization -file zb_blinky_block3_wrapper_utilization_synth.rpt -pb zb_blinky_block3_wrapper_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Mon Jun  1 22:39:48 2026...
+INFO: [Common 17-206] Exiting Vivado at Mon Jun  1 23:12:27 2026...

@@ -18,22 +18,6 @@ XIic Iic_Instance;
 int app_initialize(){
     int status = XST_SUCCESS;
     
-    // Initialize I2C
-    xil_printf("Initializing I2C... ");
-    
-    XIic_Config *iicConfig;
-    iicConfig = XIic_LookupConfig(XPAR_AXI_IIC_0_BASEADDR);
-    if(iicConfig == NULL){
-        return XST_FAILURE;
-    }
-    
-    status = XIic_CfgInitialize(&Iic_Instance, iicConfig, iicConfig->BaseAddress);
-    if(status != XST_SUCCESS){
-        return XST_FAILURE;
-    }
-    
-    xil_printf("I2C Initialized!\r\n");
-    
     // Initialize and set GPIO
     xil_printf("Initializing GPIO... ");
     
@@ -50,11 +34,27 @@ int app_initialize(){
 
     XGpio_SetDataDirection(&Gpio_Instance, 1, 0xC);
     XGpio_DiscreteWrite(&Gpio_Instance, 1, 0x0);
+
+    xil_printf("GPIO Initialized!\r\n");
     
     counter_reset();
 
-    xil_printf("GPIO Initialized!\r\n");
-
+    // Initialize I2C
+    xil_printf("Initializing I2C... ");
+    
+    XIic_Config *iicConfig;
+    iicConfig = XIic_LookupConfig(XPAR_AXI_IIC_0_BASEADDR);
+    if(iicConfig == NULL){
+        return XST_FAILURE;
+    }
+    
+    status = XIic_CfgInitialize(&Iic_Instance, iicConfig, iicConfig->BaseAddress);
+    if(status != XST_SUCCESS){
+        return XST_FAILURE;
+    }
+    
+    xil_printf("I2C Initialized!\r\n");
+    
     // Initialize the PMOD compass
     xil_printf("Initializing PMOD Compass... ");
     

@@ -197,7 +197,7 @@
             "V3": {
                 "VT": "AC",
                 "BA": "0x41200000",
-                "HA": "0x4120FFFF",
+                "HA": "0x412007FF",
                 "BP": "C_BASEADDR",
                 "HP": "C_HIGHADDR",
                 "MA": "Data",
@@ -215,7 +215,7 @@
             "V4": {
                 "VT": "AC",
                 "BA": "0x41600000",
-                "HA": "0x4160FFFF",
+                "HA": "0x416007FF",
                 "BP": "C_BASEADDR",
                 "HP": "C_HIGHADDR",
                 "MA": "Data",
@@ -233,7 +233,7 @@
             "V5": {
                 "VT": "AC",
                 "BA": "0x43C00000",
-                "HA": "0x43C0FFFF",
+                "HA": "0x43C007FF",
                 "BP": "AXI_LITE_GPIO_BASEADDR",
                 "HP": "AXI_LITE_GPIO_HIGHADDR",
                 "MA": "Data",
@@ -251,7 +251,7 @@
             "V6": {
                 "VT": "AC",
                 "BA": "0x43C10000",
-                "HA": "0x43C1FFFF",
+                "HA": "0x43C107FF",
                 "BP": "AXI_LITE_UART_BASEADDR",
                 "HP": "AXI_LITE_UART_HIGHADDR",
                 "MA": "Data",

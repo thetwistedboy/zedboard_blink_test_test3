@@ -60,7 +60,6 @@ set_param checkpoint.writeSynthRtdsInDcp 1
 set_param chipscope.maxJobs 4
 set_param general.usePosixSpawnForFork 1
 set_param bd.open.in_stealth_mode 1
-set_param synth.incrementalSynthesisCache ./.Xil/Vivado-362857-jkelleylaptop/incrSyn
 set_msg_config -id {Synth 8-256} -limit 10000
 set_msg_config -id {Synth 8-638} -limit 10000
 OPTRACE "Creating in-memory project" START { }

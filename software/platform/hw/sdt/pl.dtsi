@@ -54,7 +54,7 @@
 		axi_iic_0: i2c@41600000 {
 			xlnx,iic-freq-khz = <100>;
 			compatible = "xlnx,axi-iic-2.1" , "xlnx,xps-iic-2.00.a";
-			xlnx,scl-inertial-delay = <0>;
+			xlnx,scl-inertial-delay = <5>;
 			xlnx,ip-name = "axi_iic";
 			xlnx,disable-setup-violation-check = <0>;
 			reg = <0x41600000 0x10000>;
@@ -73,7 +73,7 @@
 			xlnx,smbus-pmbus-host = <0>;
 			xlnx,name = "axi_iic_0";
 			xlnx,axi-aclk-freq-mhz = <100>;
-			xlnx,sda-inertial-delay = <0>;
+			xlnx,sda-inertial-delay = <5>;
 		};
 	};
 };
