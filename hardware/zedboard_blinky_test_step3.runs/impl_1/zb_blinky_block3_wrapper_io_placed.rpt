@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version              : Vivado v.2025.2 (lin64) Build 6299465 Fri Nov 14 12:34:56 MST 2025
-| Date                      : Mon Jun  1 20:21:34 2026
+| Date                      : Mon Jun  1 22:40:13 2026
 | Host                      : jkelleylaptop running 64-bit Linux Mint 22.3
 | Command                   : report_io -file zb_blinky_block3_wrapper_io_placed.rpt
 | Design                    : zb_blinky_block3_wrapper

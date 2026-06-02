@@ -11,4 +11,5 @@ void counter_disable(void);
 void counter_reset(void);
 
 // CMPS control functions
-void compass_read();
+int compass_init(void);
+void compass_read(void);

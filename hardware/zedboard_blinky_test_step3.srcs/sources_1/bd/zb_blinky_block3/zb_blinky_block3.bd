@@ -1586,7 +1586,15 @@
         "xci_name": "zb_blinky_block3_axi_iic_0_0",
         "xci_path": "ip/zb_blinky_block3_axi_iic_0_0/zb_blinky_block3_axi_iic_0_0.xci",
         "inst_hier_path": "axi_iic_0",
-        "has_run_ip_tcl": "true"
+        "has_run_ip_tcl": "true",
+        "parameters": {
+          "C_SCL_INERTIAL_DELAY": {
+            "value": "5"
+          },
+          "C_SDA_INERTIAL_DELAY": {
+            "value": "5"
+          }
+        }
       }
     },
     "interface_nets": {

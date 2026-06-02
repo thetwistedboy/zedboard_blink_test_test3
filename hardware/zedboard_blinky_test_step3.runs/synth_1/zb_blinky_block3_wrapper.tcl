@@ -57,6 +57,7 @@ if {$::dispatch::connected} {
 
 OPTRACE "synth_1" START { ROLLUP_AUTO }
 set_param checkpoint.writeSynthRtdsInDcp 1
+set_param chipscope.maxJobs 4
 set_param general.usePosixSpawnForFork 1
 set_param bd.open.in_stealth_mode 1
 set_param synth.incrementalSynthesisCache ./.Xil/Vivado-362857-jkelleylaptop/incrSyn

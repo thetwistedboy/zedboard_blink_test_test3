@@ -107,6 +107,22 @@
 #define XPAR_XGPIOPS_0_INTERRUPTS 0x4014
 #define XPAR_XGPIOPS_0_INTERRUPT_PARENT 0xf8f01000
 
+#define XPAR_XIIC_NUM_INSTANCES 1
+
+/* Definitions for peripheral AXI_IIC_0 */
+#define XPAR_AXI_IIC_0_COMPATIBLE "xlnx,axi-iic-2.1"
+#define XPAR_AXI_IIC_0_BASEADDR 0x41600000
+#define XPAR_AXI_IIC_0_HIGHADDR 0x4160ffff
+#define XPAR_AXI_IIC_0_TEN_BIT_ADR 0x0
+#define XPAR_AXI_IIC_0_GPO_WIDTH 0x1
+
+/* Canonical definitions for peripheral AXI_IIC_0 */
+#define XPAR_XIIC_0_BASEADDR 0x41600000
+#define XPAR_XIIC_0_HIGHADDR 0x4160ffff
+#define XPAR_XIIC_0_COMPATIBLE "xlnx,axi-iic-2.1"
+#define XPAR_XIIC_0_GPO_WIDTH 0x1
+#define XPAR_XIIC_0_TEN_BIT_ADR 0x0
+
 #define XPAR_XQSPIPS_NUM_INSTANCES 1
 
 /* Definitions for peripheral QSPI */
@@ -380,10 +396,6 @@
 /* Definitions for peripheral PS7_AFI_3 */
 #define XPAR_PS7_AFI_3_BASEADDR 0xf800b000
 #define XPAR_PS7_AFI_3_HIGHADDR 0xf800bfff
-
-/* Definitions for peripheral PMODCMPS2_0 */
-#define XPAR_PMODCMPS2_0_BASEADDR 0x40000000
-#define XPAR_PMODCMPS2_0_HIGHADDR 0x40000fff
 
 /* Definitions for peripheral PMODESP32_0 */
 #define XPAR_PMODESP32_0_BASEADDR 0x43c00000

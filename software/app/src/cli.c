@@ -54,6 +54,22 @@ static void cli_counter(EmbeddedCli *cli, char *args, void *context){
     return;
 }
 
+static void cli_compass(EmbeddedCli *cli, char *args, void *context){
+    (void) cli;
+    (void) context;
+    
+    int argCount = embeddedCliGetTokenCount(args);
+
+    if(argCount != 0){
+        xil_printf("Incorrect number of arguments!\n\r");
+        return;
+    }
+    
+    compass_read();    
+
+    return;
+}
+
 // CLI call back command definitions and bindings
 static CliCommandBinding cliCommands[] = {
     {
@@ -69,6 +85,13 @@ static CliCommandBinding cliCommands[] = {
         .tokenizeArgs   = true,
         .context        = NULL,
         .binding        = cli_counter
+    },
+    {
+        .name           = "compass",
+        .help           = "Controls compass: counter",
+        .tokenizeArgs   = true,
+        .context        = NULL,
+        .binding        = cli_compass
     }
 };
 

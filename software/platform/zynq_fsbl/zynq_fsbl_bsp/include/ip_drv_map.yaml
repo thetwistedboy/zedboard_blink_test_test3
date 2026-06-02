@@ -1,12 +1,12 @@
-PmodCMPS2_0:
-- PmodCMPS2
-- None
 PmodESP32_0:
 - PmodESP32
 - None
 axi_gpio_0:
 - axi_gpio
 - gpio
+axi_iic_0:
+- axi_iic
+- iic
 ps7_afi_0:
 - ps7_afi
 - None
