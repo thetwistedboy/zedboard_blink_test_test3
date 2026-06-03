@@ -13,17 +13,6 @@
 			clock-output-names = "fabric_clk";
 			clocks = <&clkc 15>;
 		};
-		PmodESP32_0: PmodESP32@43c00000 {
-			compatible = "xlnx,PmodESP32-1.0";
-			status = "okay";
-			clock-names = "s_axi_aclk";
-			xlnx,ip-name = "PmodESP32";
-			xlnx,pmod = "jc";
-			xlnx,edk-iptype = "PERIPHERAL";
-			reg = <0x43c00000 0x10000 0x43c10000 0x10000>;
-			clocks = <&clkc 15>;
-			xlnx,name = "PmodESP32_0";
-		};
 		axi_gpio_0: gpio@41200000 {
 			xlnx,gpio-board-interface = "Custom";
 			compatible = "xlnx,axi-gpio-2.0" , "xlnx,xps-gpio-1.00.a";
@@ -52,9 +41,11 @@
 			xlnx,all-inputs = <0>;
 		};
 		axi_iic_0: i2c@41600000 {
+			interrupts = < 0 29 4 >;
 			xlnx,iic-freq-khz = <100>;
 			compatible = "xlnx,axi-iic-2.1" , "xlnx,xps-iic-2.00.a";
-			xlnx,scl-inertial-delay = <5>;
+			xlnx,scl-inertial-delay = <0>;
+			interrupt-parent = <&intc>;
 			xlnx,ip-name = "axi_iic";
 			xlnx,disable-setup-violation-check = <0>;
 			reg = <0x41600000 0x10000>;
@@ -67,13 +58,14 @@
 			clock-names = "s_axi_aclk";
 			xlnx,ten-bit-adr = <0>;
 			xlnx,default-value = <0x0>;
+			interrupt-names = "iic2intc_irpt";
 			xlnx,iic-board-interface = "Custom";
 			xlnx,timing-reg-width = <32>;
 			xlnx,iic-freq = <100000>;
 			xlnx,smbus-pmbus-host = <0>;
 			xlnx,name = "axi_iic_0";
 			xlnx,axi-aclk-freq-mhz = <100>;
-			xlnx,sda-inertial-delay = <5>;
+			xlnx,sda-inertial-delay = <0>;
 		};
 	};
 };

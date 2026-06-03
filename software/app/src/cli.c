@@ -88,7 +88,7 @@ static CliCommandBinding cliCommands[] = {
     },
     {
         .name           = "compass",
-        .help           = "Controls compass: counter",
+        .help           = "Queries compass: Gets X, Y, Z",
         .tokenizeArgs   = true,
         .context        = NULL,
         .binding        = cli_compass
@@ -110,7 +110,10 @@ static int cli_registerCommands(){
 int cli_initialize(){
     int status;
     
+    xil_printf("Initializing CLI... ");
+    
     //Initialize UART
+    
     XUartPs_Config *uartConfig;
     uartConfig = XUartPs_LookupConfig(XPAR_UART1_BASEADDR);
     if(uartConfig == NULL){
@@ -124,7 +127,8 @@ int cli_initialize(){
 
     XUartPs_SetBaudRate(&Uart_Instance, 115200);
 
-    // Initialize CLI
+    // Initialize CLI    
+    
     static CLI_UINT cliBuffer[BYTES_TO_CLI_UINTS(CLI_BUFFER_SIZE)] = {'\0'};
     
     EmbeddedCliConfig *cliConfig = embeddedCliDefaultConfig();
@@ -137,7 +141,7 @@ int cli_initialize(){
     
     cli_registerCommands();
 
-    xil_printf("CLI initialized!\n\r");
+    xil_printf("Success!\n\r");
 
     return 0;
 }

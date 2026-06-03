@@ -56,12 +56,9 @@ if {$::dispatch::connected} {
 }
 
 OPTRACE "synth_1" START { ROLLUP_AUTO }
-set_param checkpoint.writeSynthRtdsInDcp 1
 set_param chipscope.maxJobs 4
+set_param xicom.use_bs_reader 1
 set_param general.usePosixSpawnForFork 1
-set_param bd.open.in_stealth_mode 1
-set_msg_config -id {Synth 8-256} -limit 10000
-set_msg_config -id {Synth 8-638} -limit 10000
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7z020clg484-1
 
@@ -88,14 +85,6 @@ OPTRACE "Adding files" START { }
 read_verilog -library xil_defaultlib /home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/hdl/zb_blinky_block3_wrapper.v
 add_files /home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.srcs/sources_1/bd/zb_blinky_block3/zb_blinky_block3.bd
 set_property used_in_implementation false [get_files -all /home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/ip/zb_blinky_block3_processing_system7_0_0/zb_blinky_block3_processing_system7_0_0.xdc]
-set_property used_in_implementation false [get_files -all /home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/ip/zb_blinky_block3_PmodESP32_0_0/src/PmodESP32_axi_gpio_0_0/PmodESP32_axi_gpio_0_0_board.xdc]
-set_property used_in_implementation false [get_files -all /home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/ip/zb_blinky_block3_PmodESP32_0_0/src/PmodESP32_axi_gpio_0_0/PmodESP32_axi_gpio_0_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/ip/zb_blinky_block3_PmodESP32_0_0/src/PmodESP32_axi_uartlite_0_0/PmodESP32_axi_uartlite_0_0_board.xdc]
-set_property used_in_implementation false [get_files -all /home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/ip/zb_blinky_block3_PmodESP32_0_0/src/PmodESP32_axi_uartlite_0_0/PmodESP32_axi_uartlite_0_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/ip/zb_blinky_block3_PmodESP32_0_0/src/PmodESP32_pmod_bridge_0_0/PmodESP32_pmod_bridge_0_0_board.xdc]
-set_property used_in_implementation false [get_files -all /home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/ip/zb_blinky_block3_PmodESP32_0_0/src/PmodESP32_pmod_bridge_0_0/src/pmod_concat_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/ip/zb_blinky_block3_PmodESP32_0_0/zb_blinky_block3_PmodESP32_0_0_board.xdc]
-set_property used_in_implementation false [get_files -all /home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/ip/zb_blinky_block3_PmodESP32_0_0/src/PmodESP32_ooc.xdc]
 set_property used_in_implementation false [get_files -all /home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/ip/zb_blinky_block3_axi_gpio_0_0/zb_blinky_block3_axi_gpio_0_0_board.xdc]
 set_property used_in_implementation false [get_files -all /home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/ip/zb_blinky_block3_axi_gpio_0_0/zb_blinky_block3_axi_gpio_0_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all /home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/ip/zb_blinky_block3_axi_smc_0/bd_0/ip/ip_1/bd_0970_psr_aclk_0_board.xdc]
@@ -132,24 +121,12 @@ set_property used_in_implementation false [get_files -all /home/jkelley/Document
 set_property used_in_implementation false [get_files -all /home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/ip/zb_blinky_block3_axi_smc_0/bd_0/ip/ip_36/bd_0970_m01awn_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all /home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/ip/zb_blinky_block3_axi_smc_0/bd_0/ip/ip_37/bd_0970_m01wn_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all /home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/ip/zb_blinky_block3_axi_smc_0/bd_0/ip/ip_38/bd_0970_m01bn_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/ip/zb_blinky_block3_axi_smc_0/bd_0/ip/ip_40/bd_0970_m02s2a_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/ip/zb_blinky_block3_axi_smc_0/bd_0/ip/ip_41/bd_0970_m02arn_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/ip/zb_blinky_block3_axi_smc_0/bd_0/ip/ip_42/bd_0970_m02rn_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/ip/zb_blinky_block3_axi_smc_0/bd_0/ip/ip_43/bd_0970_m02awn_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/ip/zb_blinky_block3_axi_smc_0/bd_0/ip/ip_44/bd_0970_m02wn_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/ip/zb_blinky_block3_axi_smc_0/bd_0/ip/ip_45/bd_0970_m02bn_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/ip/zb_blinky_block3_axi_smc_0/bd_0/ip/ip_47/bd_0970_m03s2a_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/ip/zb_blinky_block3_axi_smc_0/bd_0/ip/ip_48/bd_0970_m03arn_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/ip/zb_blinky_block3_axi_smc_0/bd_0/ip/ip_49/bd_0970_m03rn_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/ip/zb_blinky_block3_axi_smc_0/bd_0/ip/ip_50/bd_0970_m03awn_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/ip/zb_blinky_block3_axi_smc_0/bd_0/ip/ip_51/bd_0970_m03wn_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/ip/zb_blinky_block3_axi_smc_0/bd_0/ip/ip_52/bd_0970_m03bn_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all /home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/ip/zb_blinky_block3_axi_smc_0/ooc.xdc]
 set_property used_in_implementation false [get_files -all /home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/ip/zb_blinky_block3_axi_smc_0/smartconnect.xdc]
 set_property used_in_implementation false [get_files -all /home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/ip/zb_blinky_block3_rst_ps7_0_100M_0/zb_blinky_block3_rst_ps7_0_100M_0_board.xdc]
 set_property used_in_implementation false [get_files -all /home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/ip/zb_blinky_block3_rst_ps7_0_100M_0/zb_blinky_block3_rst_ps7_0_100M_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/ip/zb_blinky_block3_axi_iic_0_0/zb_blinky_block3_axi_iic_0_0_board.xdc]
-set_property used_in_implementation false [get_files -all /home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/ip/zb_blinky_block3_axi_iic_0_0/zb_blinky_block3_axi_iic_0_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/ip/zb_blinky_block3_axi_iic_0_1/zb_blinky_block3_axi_iic_0_1_board.xdc]
+set_property used_in_implementation false [get_files -all /home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/ip/zb_blinky_block3_axi_iic_0_1/zb_blinky_block3_axi_iic_0_1_ooc.xdc]
 set_property used_in_implementation false [get_files -all /home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/zb_blinky_block3_ooc.xdc]
 
 OPTRACE "Adding files" END { }

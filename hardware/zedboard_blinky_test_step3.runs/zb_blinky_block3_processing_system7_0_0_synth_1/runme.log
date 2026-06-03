@@ -7,13 +7,14 @@
   **** SW Build 6299465 on Fri Nov 14 12:34:56 MST 2025
   **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
   **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
-  **** Start of session at: Wed May 27 00:46:21 2026
+  **** Start of session at: Wed Jun  3 00:09:56 2026
     ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
     ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 
 source zb_blinky_block3_processing_system7_0_0.tcl -notrace
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step2/ip_repo'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/jkelley/Documents/Xilinx/ip/vivado-library'.
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx/2025.2/data/ip'.
 Command: synth_design -top zb_blinky_block3_processing_system7_0_0 -part xc7z020clg484-1 -incremental_mode off -mode out_of_context
 Starting synth_design
@@ -22,34 +23,34 @@ INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020
 INFO: [Device 21-403] Loading part xc7z020clg484-1
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 7 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 1986874
+INFO: [Synth 8-7075] Helper process launched with PID 324079
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2262.477 ; gain = 478.875 ; free physical = 214 ; free virtual = 3963
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2272.664 ; gain = 479.156 ; free physical = 286 ; free virtual = 4654
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-6157] synthesizing module 'zb_blinky_block3_processing_system7_0_0' [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/ip/zb_blinky_block3_processing_system7_0_0/synth/zb_blinky_block3_processing_system7_0_0.v:53]
-INFO: [Synth 8-6157] synthesizing module 'processing_system7_v5_5_processing_system7' [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/ip/zb_blinky_block3_processing_system7_0_0/hdl/verilog/processing_system7_v5_5_processing_system7.v:152]
+INFO: [Synth 8-6157] synthesizing module 'zb_blinky_block3_processing_system7_0_0' [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/ip/zb_blinky_block3_processing_system7_0_0/synth/zb_blinky_block3_processing_system7_0_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'processing_system7_v5_5_processing_system7' [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/ip/zb_blinky_block3_processing_system7_0_0/hdl/verilog/processing_system7_v5_5_processing_system7.v:152]
 INFO: [Synth 8-6157] synthesizing module 'BUFG' [/opt/Xilinx/2025.2/Vivado/scripts/rt/data/unisim_comp.v:2678]
 INFO: [Synth 8-6155] done synthesizing module 'BUFG' (0#1) [/opt/Xilinx/2025.2/Vivado/scripts/rt/data/unisim_comp.v:2678]
 INFO: [Synth 8-6157] synthesizing module 'BIBUF' [/opt/Xilinx/2025.2/Vivado/scripts/rt/data/unisim_comp.v:2325]
 INFO: [Synth 8-6155] done synthesizing module 'BIBUF' (0#1) [/opt/Xilinx/2025.2/Vivado/scripts/rt/data/unisim_comp.v:2325]
 INFO: [Synth 8-6157] synthesizing module 'PS7' [/opt/Xilinx/2025.2/Vivado/scripts/rt/data/unisim_comp.v:140294]
 INFO: [Synth 8-6155] done synthesizing module 'PS7' (0#1) [/opt/Xilinx/2025.2/Vivado/scripts/rt/data/unisim_comp.v:140294]
-INFO: [Synth 8-6155] done synthesizing module 'processing_system7_v5_5_processing_system7' (0#1) [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/ip/zb_blinky_block3_processing_system7_0_0/hdl/verilog/processing_system7_v5_5_processing_system7.v:152]
-INFO: [Synth 8-7071] port 'M_AXI_GP0_ARESETN' of module 'processing_system7_v5_5_processing_system7' is unconnected for instance 'inst' [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/ip/zb_blinky_block3_processing_system7_0_0/synth/zb_blinky_block3_processing_system7_0_0.v:364]
-INFO: [Synth 8-7071] port 'M_AXI_GP1_ARESETN' of module 'processing_system7_v5_5_processing_system7' is unconnected for instance 'inst' [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/ip/zb_blinky_block3_processing_system7_0_0/synth/zb_blinky_block3_processing_system7_0_0.v:364]
-INFO: [Synth 8-7071] port 'S_AXI_GP0_ARESETN' of module 'processing_system7_v5_5_processing_system7' is unconnected for instance 'inst' [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/ip/zb_blinky_block3_processing_system7_0_0/synth/zb_blinky_block3_processing_system7_0_0.v:364]
-INFO: [Synth 8-7071] port 'S_AXI_GP1_ARESETN' of module 'processing_system7_v5_5_processing_system7' is unconnected for instance 'inst' [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/ip/zb_blinky_block3_processing_system7_0_0/synth/zb_blinky_block3_processing_system7_0_0.v:364]
-INFO: [Synth 8-7071] port 'S_AXI_ACP_ARESETN' of module 'processing_system7_v5_5_processing_system7' is unconnected for instance 'inst' [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/ip/zb_blinky_block3_processing_system7_0_0/synth/zb_blinky_block3_processing_system7_0_0.v:364]
-INFO: [Synth 8-7071] port 'S_AXI_HP0_ARESETN' of module 'processing_system7_v5_5_processing_system7' is unconnected for instance 'inst' [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/ip/zb_blinky_block3_processing_system7_0_0/synth/zb_blinky_block3_processing_system7_0_0.v:364]
-INFO: [Synth 8-7071] port 'S_AXI_HP1_ARESETN' of module 'processing_system7_v5_5_processing_system7' is unconnected for instance 'inst' [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/ip/zb_blinky_block3_processing_system7_0_0/synth/zb_blinky_block3_processing_system7_0_0.v:364]
-INFO: [Synth 8-7071] port 'S_AXI_HP2_ARESETN' of module 'processing_system7_v5_5_processing_system7' is unconnected for instance 'inst' [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/ip/zb_blinky_block3_processing_system7_0_0/synth/zb_blinky_block3_processing_system7_0_0.v:364]
-INFO: [Synth 8-7071] port 'S_AXI_HP3_ARESETN' of module 'processing_system7_v5_5_processing_system7' is unconnected for instance 'inst' [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/ip/zb_blinky_block3_processing_system7_0_0/synth/zb_blinky_block3_processing_system7_0_0.v:364]
-INFO: [Synth 8-7071] port 'DMA0_RSTN' of module 'processing_system7_v5_5_processing_system7' is unconnected for instance 'inst' [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/ip/zb_blinky_block3_processing_system7_0_0/synth/zb_blinky_block3_processing_system7_0_0.v:364]
-INFO: [Synth 8-7071] port 'DMA1_RSTN' of module 'processing_system7_v5_5_processing_system7' is unconnected for instance 'inst' [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/ip/zb_blinky_block3_processing_system7_0_0/synth/zb_blinky_block3_processing_system7_0_0.v:364]
-INFO: [Synth 8-7071] port 'DMA2_RSTN' of module 'processing_system7_v5_5_processing_system7' is unconnected for instance 'inst' [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/ip/zb_blinky_block3_processing_system7_0_0/synth/zb_blinky_block3_processing_system7_0_0.v:364]
-INFO: [Synth 8-7071] port 'DMA3_RSTN' of module 'processing_system7_v5_5_processing_system7' is unconnected for instance 'inst' [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/ip/zb_blinky_block3_processing_system7_0_0/synth/zb_blinky_block3_processing_system7_0_0.v:364]
-INFO: [Synth 8-7023] instance 'inst' of module 'processing_system7_v5_5_processing_system7' has 685 connections declared, but only 672 given [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/ip/zb_blinky_block3_processing_system7_0_0/synth/zb_blinky_block3_processing_system7_0_0.v:364]
-INFO: [Synth 8-6155] done synthesizing module 'zb_blinky_block3_processing_system7_0_0' (0#1) [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/ip/zb_blinky_block3_processing_system7_0_0/synth/zb_blinky_block3_processing_system7_0_0.v:53]
+INFO: [Synth 8-6155] done synthesizing module 'processing_system7_v5_5_processing_system7' (0#1) [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/ip/zb_blinky_block3_processing_system7_0_0/hdl/verilog/processing_system7_v5_5_processing_system7.v:152]
+INFO: [Synth 8-7071] port 'M_AXI_GP0_ARESETN' of module 'processing_system7_v5_5_processing_system7' is unconnected for instance 'inst' [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/ip/zb_blinky_block3_processing_system7_0_0/synth/zb_blinky_block3_processing_system7_0_0.v:369]
+INFO: [Synth 8-7071] port 'M_AXI_GP1_ARESETN' of module 'processing_system7_v5_5_processing_system7' is unconnected for instance 'inst' [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/ip/zb_blinky_block3_processing_system7_0_0/synth/zb_blinky_block3_processing_system7_0_0.v:369]
+INFO: [Synth 8-7071] port 'S_AXI_GP0_ARESETN' of module 'processing_system7_v5_5_processing_system7' is unconnected for instance 'inst' [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/ip/zb_blinky_block3_processing_system7_0_0/synth/zb_blinky_block3_processing_system7_0_0.v:369]
+INFO: [Synth 8-7071] port 'S_AXI_GP1_ARESETN' of module 'processing_system7_v5_5_processing_system7' is unconnected for instance 'inst' [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/ip/zb_blinky_block3_processing_system7_0_0/synth/zb_blinky_block3_processing_system7_0_0.v:369]
+INFO: [Synth 8-7071] port 'S_AXI_ACP_ARESETN' of module 'processing_system7_v5_5_processing_system7' is unconnected for instance 'inst' [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/ip/zb_blinky_block3_processing_system7_0_0/synth/zb_blinky_block3_processing_system7_0_0.v:369]
+INFO: [Synth 8-7071] port 'S_AXI_HP0_ARESETN' of module 'processing_system7_v5_5_processing_system7' is unconnected for instance 'inst' [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/ip/zb_blinky_block3_processing_system7_0_0/synth/zb_blinky_block3_processing_system7_0_0.v:369]
+INFO: [Synth 8-7071] port 'S_AXI_HP1_ARESETN' of module 'processing_system7_v5_5_processing_system7' is unconnected for instance 'inst' [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/ip/zb_blinky_block3_processing_system7_0_0/synth/zb_blinky_block3_processing_system7_0_0.v:369]
+INFO: [Synth 8-7071] port 'S_AXI_HP2_ARESETN' of module 'processing_system7_v5_5_processing_system7' is unconnected for instance 'inst' [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/ip/zb_blinky_block3_processing_system7_0_0/synth/zb_blinky_block3_processing_system7_0_0.v:369]
+INFO: [Synth 8-7071] port 'S_AXI_HP3_ARESETN' of module 'processing_system7_v5_5_processing_system7' is unconnected for instance 'inst' [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/ip/zb_blinky_block3_processing_system7_0_0/synth/zb_blinky_block3_processing_system7_0_0.v:369]
+INFO: [Synth 8-7071] port 'DMA0_RSTN' of module 'processing_system7_v5_5_processing_system7' is unconnected for instance 'inst' [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/ip/zb_blinky_block3_processing_system7_0_0/synth/zb_blinky_block3_processing_system7_0_0.v:369]
+INFO: [Synth 8-7071] port 'DMA1_RSTN' of module 'processing_system7_v5_5_processing_system7' is unconnected for instance 'inst' [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/ip/zb_blinky_block3_processing_system7_0_0/synth/zb_blinky_block3_processing_system7_0_0.v:369]
+INFO: [Synth 8-7071] port 'DMA2_RSTN' of module 'processing_system7_v5_5_processing_system7' is unconnected for instance 'inst' [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/ip/zb_blinky_block3_processing_system7_0_0/synth/zb_blinky_block3_processing_system7_0_0.v:369]
+INFO: [Synth 8-7071] port 'DMA3_RSTN' of module 'processing_system7_v5_5_processing_system7' is unconnected for instance 'inst' [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/ip/zb_blinky_block3_processing_system7_0_0/synth/zb_blinky_block3_processing_system7_0_0.v:369]
+INFO: [Synth 8-7023] instance 'inst' of module 'processing_system7_v5_5_processing_system7' has 685 connections declared, but only 672 given [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/ip/zb_blinky_block3_processing_system7_0_0/synth/zb_blinky_block3_processing_system7_0_0.v:369]
+INFO: [Synth 8-6155] done synthesizing module 'zb_blinky_block3_processing_system7_0_0' (0#1) [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/ip/zb_blinky_block3_processing_system7_0_0/synth/zb_blinky_block3_processing_system7_0_0.v:53]
 INFO: [Synth 8-7129] Port ENET0_GMII_COL in module processing_system7_v5_5_processing_system7 is either unconnected or has no load
 INFO: [Synth 8-7129] Port ENET0_GMII_CRS in module processing_system7_v5_5_processing_system7 is either unconnected or has no load
 INFO: [Synth 8-7129] Port ENET0_GMII_RX_DV in module processing_system7_v5_5_processing_system7 is either unconnected or has no load
@@ -130,54 +131,54 @@ INFO: [Synth 8-7129] Port FTMD_TRACEIN_ATID[2] in module processing_system7_v5_5
 INFO: [Synth 8-7129] Port FTMD_TRACEIN_ATID[1] in module processing_system7_v5_5_processing_system7 is either unconnected or has no load
 INFO: [Synth 8-7129] Port FTMD_TRACEIN_ATID[0] in module processing_system7_v5_5_processing_system7 is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2353.445 ; gain = 569.844 ; free physical = 219 ; free virtual = 3970
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2369.633 ; gain = 576.125 ; free physical = 318 ; free virtual = 4534
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2353.445 ; gain = 569.844 ; free physical = 219 ; free virtual = 3970
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2372.602 ; gain = 579.094 ; free physical = 318 ; free virtual = 4534
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2353.445 ; gain = 569.844 ; free physical = 219 ; free virtual = 3970
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2372.602 ; gain = 579.094 ; free physical = 318 ; free virtual = 4534
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2356.414 ; gain = 0.000 ; free physical = 218 ; free virtual = 3970
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2375.570 ; gain = 0.000 ; free physical = 318 ; free virtual = 4534
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/ip/zb_blinky_block3_processing_system7_0_0/zb_blinky_block3_processing_system7_0_0.xdc] for cell 'inst'
-Finished Parsing XDC File [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/ip/zb_blinky_block3_processing_system7_0_0/zb_blinky_block3_processing_system7_0_0.xdc] for cell 'inst'
-INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/ip/zb_blinky_block3_processing_system7_0_0/zb_blinky_block3_processing_system7_0_0.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/zb_blinky_block3_processing_system7_0_0_propImpl.xdc].
+Parsing XDC File [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/ip/zb_blinky_block3_processing_system7_0_0/zb_blinky_block3_processing_system7_0_0.xdc] for cell 'inst'
+Finished Parsing XDC File [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/ip/zb_blinky_block3_processing_system7_0_0/zb_blinky_block3_processing_system7_0_0.xdc] for cell 'inst'
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.gen/sources_1/bd/zb_blinky_block3/ip/zb_blinky_block3_processing_system7_0_0/zb_blinky_block3_processing_system7_0_0.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/zb_blinky_block3_processing_system7_0_0_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/zb_blinky_block3_processing_system7_0_0_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
-Parsing XDC File [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/zedboard_blinky_test_step3.runs/zb_blinky_block3_processing_system7_0_0_synth_1/dont_touch.xdc]
-Finished Parsing XDC File [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/zedboard_blinky_test_step3.runs/zb_blinky_block3_processing_system7_0_0_synth_1/dont_touch.xdc]
+Parsing XDC File [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.runs/zb_blinky_block3_processing_system7_0_0_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.runs/zb_blinky_block3_processing_system7_0_0_synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2404.066 ; gain = 0.000 ; free physical = 258 ; free virtual = 3974
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2423.223 ; gain = 0.000 ; free physical = 310 ; free virtual = 4526
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.02 . Memory (MB): peak = 2404.102 ; gain = 0.000 ; free physical = 255 ; free virtual = 3972
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.02 . Memory (MB): peak = 2423.258 ; gain = 0.000 ; free physical = 310 ; free virtual = 4526
 INFO: [Designutils 20-5008] Incremental synthesis strategy off
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 2404.102 ; gain = 620.500 ; free physical = 232 ; free virtual = 3950
+Finished Constraint Validation : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 2423.258 ; gain = 629.750 ; free physical = 320 ; free virtual = 4536
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z020clg484-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 2412.070 ; gain = 628.469 ; free physical = 232 ; free virtual = 3950
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 2431.227 ; gain = 637.719 ; free physical = 320 ; free virtual = 4536
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 2412.070 ; gain = 628.469 ; free physical = 232 ; free virtual = 3949
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 2431.227 ; gain = 637.719 ; free physical = 326 ; free virtual = 4542
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 2412.070 ; gain = 628.469 ; free physical = 227 ; free virtual = 3946
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 2431.227 ; gain = 637.719 ; free physical = 326 ; free virtual = 4543
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -221,25 +222,25 @@ INFO: [Synth 8-7129] Port ENET1_GMII_RXD[4] in module processing_system7_v5_5_pr
 INFO: [Synth 8-7129] Port ENET1_GMII_RXD[3] in module processing_system7_v5_5_processing_system7 is either unconnected or has no load
 INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 2412.070 ; gain = 628.469 ; free physical = 217 ; free virtual = 3936
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 2431.227 ; gain = 637.719 ; free physical = 335 ; free virtual = 4552
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 2695.070 ; gain = 911.469 ; free physical = 263 ; free virtual = 3719
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 2705.227 ; gain = 911.719 ; free physical = 281 ; free virtual = 4426
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 2716.078 ; gain = 932.477 ; free physical = 239 ; free virtual = 3695
+Finished Timing Optimization : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 2725.234 ; gain = 931.727 ; free physical = 258 ; free virtual = 4403
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 2724.086 ; gain = 940.484 ; free physical = 231 ; free virtual = 3688
+Finished Technology Mapping : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 2733.242 ; gain = 939.734 ; free physical = 242 ; free virtual = 4387
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -257,37 +258,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 2903.898 ; gain = 1120.297 ; free physical = 155 ; free virtual = 3488
+Finished IO Insertion : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 2914.055 ; gain = 1120.547 ; free physical = 326 ; free virtual = 4233
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 2903.898 ; gain = 1120.297 ; free physical = 155 ; free virtual = 3488
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 2914.055 ; gain = 1120.547 ; free physical = 326 ; free virtual = 4233
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 2903.898 ; gain = 1120.297 ; free physical = 155 ; free virtual = 3488
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 2914.055 ; gain = 1120.547 ; free physical = 326 ; free virtual = 4233
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 2903.898 ; gain = 1120.297 ; free physical = 155 ; free virtual = 3488
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 2914.055 ; gain = 1120.547 ; free physical = 326 ; free virtual = 4233
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 2903.898 ; gain = 1120.297 ; free physical = 155 ; free virtual = 3488
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 2914.055 ; gain = 1120.547 ; free physical = 326 ; free virtual = 4233
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 2903.898 ; gain = 1120.297 ; free physical = 155 ; free virtual = 3488
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 2914.055 ; gain = 1120.547 ; free physical = 326 ; free virtual = 4233
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -309,27 +310,27 @@ Report Cell Usage:
 |4     |PS7   |     1|
 +------+------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 2903.898 ; gain = 1120.297 ; free physical = 155 ; free virtual = 3488
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 2914.055 ; gain = 1120.547 ; free physical = 326 ; free virtual = 4233
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 2903.898 ; gain = 1069.641 ; free physical = 155 ; free virtual = 3488
-Synthesis Optimization Complete : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 2903.906 ; gain = 1120.297 ; free physical = 155 ; free virtual = 3488
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 2914.055 ; gain = 1069.891 ; free physical = 326 ; free virtual = 4233
+Synthesis Optimization Complete : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 2914.062 ; gain = 1120.547 ; free physical = 326 ; free virtual = 4233
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 2903.906 ; gain = 0.000 ; free physical = 155 ; free virtual = 3489
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2914.062 ; gain = 0.000 ; free physical = 362 ; free virtual = 4268
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2903.906 ; gain = 0.000 ; free physical = 317 ; free virtual = 3652
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2914.062 ; gain = 0.000 ; free physical = 490 ; free virtual = 4396
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Synth Design complete | Checksum: bd2419ae
+Synth Design complete | Checksum: d7d5a4fe
 INFO: [Common 17-83] Releasing license: Synthesis
-142 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+143 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:23 ; elapsed = 00:00:21 . Memory (MB): peak = 2903.934 ; gain = 1284.191 ; free physical = 316 ; free virtual = 3651
-INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 2030.152; main = 2030.152; forked = 280.981
-INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 3407.320; main = 2903.902; forked = 995.246
-Write ShapeDB Complete: Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 2927.910 ; gain = 0.000 ; free physical = 315 ; free virtual = 3651
-INFO: [Common 17-1381] The checkpoint '/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/zedboard_blinky_test_step3.runs/zb_blinky_block3_processing_system7_0_0_synth_1/zb_blinky_block3_processing_system7_0_0.dcp' has been generated.
+synth_design: Time (s): cpu = 00:00:21 ; elapsed = 00:00:20 . Memory (MB): peak = 2914.090 ; gain = 1294.348 ; free physical = 490 ; free virtual = 4396
+INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 2016.004; main = 2016.004; forked = 274.198
+INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 3426.477; main = 2914.059; forked = 995.246
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2938.066 ; gain = 0.000 ; free physical = 489 ; free virtual = 4395
+INFO: [Common 17-1381] The checkpoint '/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.runs/zb_blinky_block3_processing_system7_0_0_synth_1/zb_blinky_block3_processing_system7_0_0.dcp' has been generated.
 INFO: [Vivado 12-24828] Executing command : report_utilization -file zb_blinky_block3_processing_system7_0_0_utilization_synth.rpt -pb zb_blinky_block3_processing_system7_0_0_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Wed May 27 00:46:46 2026...
+INFO: [Common 17-206] Exiting Vivado at Wed Jun  3 00:10:19 2026...

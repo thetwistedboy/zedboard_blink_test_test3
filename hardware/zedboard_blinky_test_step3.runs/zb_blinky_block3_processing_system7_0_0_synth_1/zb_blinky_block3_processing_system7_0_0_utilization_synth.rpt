@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2025.2 (lin64) Build 6299465 Fri Nov 14 12:34:56 MST 2025
-| Date         : Wed May 27 00:46:46 2026
+| Date         : Wed Jun  3 00:10:19 2026
 | Host         : jkelleylaptop running 64-bit Linux Mint 22.3
 | Command      : report_utilization -file zb_blinky_block3_processing_system7_0_0_utilization_synth.rpt -pb zb_blinky_block3_processing_system7_0_0_utilization_synth.pb
 | Design       : zb_blinky_block3_processing_system7_0_0

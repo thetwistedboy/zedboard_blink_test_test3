@@ -3,20 +3,51 @@
 #include "xparameters.h"
 #include "xgpio.h"
 #include "xiic.h"
+#include "xscugic.h"
 #include "xil_printf.h"
 #include "xil_types.h"
 #include <xiic_l.h>
+#include <xil_io.h>
 #include <xstatus.h>
 
 #include "sleep.h"
 
-#define CMPS2_ADDR 0x0110000
+#define CMPS2_ADDR 0x30
 
+XScuGic Intc;
 XGpio Gpio_Instance;
 XIic Iic_Instance;
 
 int app_initialize(){
     int status = XST_SUCCESS;
+    
+    // Initialize system interrupts
+    XScuGic_Config *intcConfig;
+    intcConfig = XScuGic_LookupConfig(XPAR_INTC_BASEADDR);
+	if (NULL == intcConfig) {
+		return XST_FAILURE;
+	}
+
+	status = XScuGic_CfgInitialize(&Intc, intcConfig, intcConfig->CpuBaseAddress);
+	if (status != XST_SUCCESS) {
+		return XST_FAILURE;
+	}
+    
+    // Initialize I2C
+    xil_printf("Initializing I2C... ");
+    
+    XIic_Config *iicConfig;
+    iicConfig = XIic_LookupConfig(XPAR_AXI_IIC_0_BASEADDR);
+    if(iicConfig == NULL){
+        return XST_FAILURE;
+    }
+    
+    status = XIic_CfgInitialize(&Iic_Instance, iicConfig, iicConfig->BaseAddress);
+    if(status != XST_SUCCESS){
+        return XST_FAILURE;
+    }
+
+    xil_printf("Success!\r\n");
     
     // Initialize and set GPIO
     xil_printf("Initializing GPIO... ");
@@ -35,25 +66,9 @@ int app_initialize(){
     XGpio_SetDataDirection(&Gpio_Instance, 1, 0xC);
     XGpio_DiscreteWrite(&Gpio_Instance, 1, 0x0);
 
-    xil_printf("GPIO Initialized!\r\n");
+    xil_printf("Success!\r\n");
     
     counter_reset();
-
-    // Initialize I2C
-    xil_printf("Initializing I2C... ");
-    
-    XIic_Config *iicConfig;
-    iicConfig = XIic_LookupConfig(XPAR_AXI_IIC_0_BASEADDR);
-    if(iicConfig == NULL){
-        return XST_FAILURE;
-    }
-    
-    status = XIic_CfgInitialize(&Iic_Instance, iicConfig, iicConfig->BaseAddress);
-    if(status != XST_SUCCESS){
-        return XST_FAILURE;
-    }
-    
-    xil_printf("I2C Initialized!\r\n");
     
     // Initialize the PMOD compass
     xil_printf("Initializing PMOD Compass... ");
@@ -63,11 +78,11 @@ int app_initialize(){
         return XST_FAILURE;
     }
 
-    xil_printf("Compass Initialized!\r\n");
+    xil_printf("Success!\r\n");
     
     // Finished initialization
     
-    xil_printf("Application initialized!\r\n");
+    xil_printf("\r\nApplication initialized!\r\n\r\n");
 
     return status;
 }
@@ -96,14 +111,11 @@ void counter_reset(){
 
 int compass_init(){
     
-    XIic_SetAddress(&Iic_Instance, XII_ADDR_TO_SEND_TYPE, CMPS2_ADDR);
-
-    XIic_Start(&Iic_Instance);
+    //XIic_SetAddress(&Iic_Instance, XII_ADDR_TO_SEND_TYPE, CMPS2_ADDR);
 
     u8 buf[2] = {0x07, 0x02};
-    XIic_MasterSend(&Iic_Instance, buf, 2);
-
-    XIic_Stop(&Iic_Instance);
+    XIic_Send(Iic_Instance.BaseAddress, CMPS2_ADDR, buf, 2, XIIC_STOP);
+    while(XIic_IsIicBusy(&Iic_Instance)){}
 
     return 0;
 }
@@ -116,13 +128,9 @@ void compass_read(){
     u8 buf[6];
 
     for(u8 i = 0; i < 6; i++){
-        XIic_Start(&Iic_Instance);
-        XIic_MasterSend(&Iic_Instance, &i, 1);
+        XIic_Send(Iic_Instance.BaseAddress, CMPS2_ADDR, &i, 1, XIIC_REPEATED_START);
         
-        XIic_Start(&Iic_Instance);
-        XIic_MasterRecv(&Iic_Instance, buf + i, 1);
-
-        XIic_Stop(&Iic_Instance);
+        XIic_Recv(Iic_Instance.BaseAddress, CMPS2_ADDR, buf + i, 1, XIIC_STOP);
     }
 
     X = buf[1];

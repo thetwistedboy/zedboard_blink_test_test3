@@ -3,54 +3,6 @@
 	"modules": {
 		"zb_blinky_block3": {
 			"proto_instances": {
-				"/PmodESP32_0/AXI_LITE_GPIO": {
-					"interface": "xilinx.com:interface:aximm:1.0",
-					"ports": {
-						"ACLK": { "actual": "s_axi_aclk"},
-						"ARADDR": { "actual": "AXI_LITE_GPIO_araddr[8:0]"},
-						"ARESETN": { "actual": "s_axi_aresetn"},
-						"ARREADY": { "actual": "AXI_LITE_GPIO_arready"},
-						"ARVALID": { "actual": "AXI_LITE_GPIO_arvalid"},
-						"AWADDR": { "actual": "AXI_LITE_GPIO_awaddr[8:0]"},
-						"AWREADY": { "actual": "AXI_LITE_GPIO_awready"},
-						"AWVALID": { "actual": "AXI_LITE_GPIO_awvalid"},
-						"BREADY": { "actual": "AXI_LITE_GPIO_bready"},
-						"BRESP": { "actual": "AXI_LITE_GPIO_bresp[1:0]"},
-						"BVALID": { "actual": "AXI_LITE_GPIO_bvalid"},
-						"RDATA": { "actual": "AXI_LITE_GPIO_rdata[31:0]"},
-						"RREADY": { "actual": "AXI_LITE_GPIO_rready"},
-						"RRESP": { "actual": "AXI_LITE_GPIO_rresp[1:0]"},
-						"RVALID": { "actual": "AXI_LITE_GPIO_rvalid"},
-						"WDATA": { "actual": "AXI_LITE_GPIO_wdata[31:0]"},
-						"WREADY": { "actual": "AXI_LITE_GPIO_wready"},
-						"WSTRB": { "actual": "AXI_LITE_GPIO_wstrb[3:0]"},
-						"WVALID": { "actual": "AXI_LITE_GPIO_wvalid"}
-					}
-				},
-				"/PmodESP32_0/AXI_LITE_UART": {
-					"interface": "xilinx.com:interface:aximm:1.0",
-					"ports": {
-						"ACLK": { "actual": "s_axi_aclk"},
-						"ARADDR": { "actual": "AXI_LITE_UART_araddr[3:0]"},
-						"ARESETN": { "actual": "s_axi_aresetn"},
-						"ARREADY": { "actual": "AXI_LITE_UART_arready"},
-						"ARVALID": { "actual": "AXI_LITE_UART_arvalid"},
-						"AWADDR": { "actual": "AXI_LITE_UART_awaddr[3:0]"},
-						"AWREADY": { "actual": "AXI_LITE_UART_awready"},
-						"AWVALID": { "actual": "AXI_LITE_UART_awvalid"},
-						"BREADY": { "actual": "AXI_LITE_UART_bready"},
-						"BRESP": { "actual": "AXI_LITE_UART_bresp[1:0]"},
-						"BVALID": { "actual": "AXI_LITE_UART_bvalid"},
-						"RDATA": { "actual": "AXI_LITE_UART_rdata[31:0]"},
-						"RREADY": { "actual": "AXI_LITE_UART_rready"},
-						"RRESP": { "actual": "AXI_LITE_UART_rresp[1:0]"},
-						"RVALID": { "actual": "AXI_LITE_UART_rvalid"},
-						"WDATA": { "actual": "AXI_LITE_UART_wdata[31:0]"},
-						"WREADY": { "actual": "AXI_LITE_UART_wready"},
-						"WSTRB": { "actual": "AXI_LITE_UART_wstrb[3:0]"},
-						"WVALID": { "actual": "AXI_LITE_UART_wvalid"}
-					}
-				},
 				"/axi_gpio_0/S_AXI": {
 					"interface": "xilinx.com:interface:aximm:1.0",
 					"ports": {
@@ -147,56 +99,6 @@
 						"WREADY": { "actual": "M01_AXI_wready"},
 						"WSTRB": { "actual": "M01_AXI_wstrb[3:0]"},
 						"WVALID": { "actual": "M01_AXI_wvalid"}
-					}
-				},
-				"/axi_smc/M02_AXI": {
-					"interface": "xilinx.com:interface:aximm:1.0",
-					"ports": {
-						"ACLK": { "actual": "aclk"},
-						"ARADDR": { "actual": "M02_AXI_araddr[8:0]"},
-						"ARPROT": { "actual": "M02_AXI_arprot[2:0]"},
-						"ARREADY": { "actual": "M02_AXI_arready"},
-						"ARVALID": { "actual": "M02_AXI_arvalid"},
-						"AWADDR": { "actual": "M02_AXI_awaddr[8:0]"},
-						"AWPROT": { "actual": "M02_AXI_awprot[2:0]"},
-						"AWREADY": { "actual": "M02_AXI_awready"},
-						"AWVALID": { "actual": "M02_AXI_awvalid"},
-						"BREADY": { "actual": "M02_AXI_bready"},
-						"BRESP": { "actual": "M02_AXI_bresp[1:0]"},
-						"BVALID": { "actual": "M02_AXI_bvalid"},
-						"RDATA": { "actual": "M02_AXI_rdata[31:0]"},
-						"RREADY": { "actual": "M02_AXI_rready"},
-						"RRESP": { "actual": "M02_AXI_rresp[1:0]"},
-						"RVALID": { "actual": "M02_AXI_rvalid"},
-						"WDATA": { "actual": "M02_AXI_wdata[31:0]"},
-						"WREADY": { "actual": "M02_AXI_wready"},
-						"WSTRB": { "actual": "M02_AXI_wstrb[3:0]"},
-						"WVALID": { "actual": "M02_AXI_wvalid"}
-					}
-				},
-				"/axi_smc/M03_AXI": {
-					"interface": "xilinx.com:interface:aximm:1.0",
-					"ports": {
-						"ACLK": { "actual": "aclk"},
-						"ARADDR": { "actual": "M03_AXI_araddr[3:0]"},
-						"ARPROT": { "actual": "M03_AXI_arprot[2:0]"},
-						"ARREADY": { "actual": "M03_AXI_arready"},
-						"ARVALID": { "actual": "M03_AXI_arvalid"},
-						"AWADDR": { "actual": "M03_AXI_awaddr[3:0]"},
-						"AWPROT": { "actual": "M03_AXI_awprot[2:0]"},
-						"AWREADY": { "actual": "M03_AXI_awready"},
-						"AWVALID": { "actual": "M03_AXI_awvalid"},
-						"BREADY": { "actual": "M03_AXI_bready"},
-						"BRESP": { "actual": "M03_AXI_bresp[1:0]"},
-						"BVALID": { "actual": "M03_AXI_bvalid"},
-						"RDATA": { "actual": "M03_AXI_rdata[31:0]"},
-						"RREADY": { "actual": "M03_AXI_rready"},
-						"RRESP": { "actual": "M03_AXI_rresp[1:0]"},
-						"RVALID": { "actual": "M03_AXI_rvalid"},
-						"WDATA": { "actual": "M03_AXI_wdata[31:0]"},
-						"WREADY": { "actual": "M03_AXI_wready"},
-						"WSTRB": { "actual": "M03_AXI_wstrb[3:0]"},
-						"WVALID": { "actual": "M03_AXI_wvalid"}
 					}
 				},
 				"/axi_smc/S00_AXI": {

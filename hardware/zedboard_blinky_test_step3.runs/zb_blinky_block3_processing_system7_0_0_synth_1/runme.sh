@@ -21,7 +21,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/zedboard_blinky_test_step3.runs/zb_blinky_block3_processing_system7_0_0_synth_1'
+HD_PWD='/home/jkelley/Documents/Xilinx/zedboard_blinky_test_step3/hardware/zedboard_blinky_test_step3.runs/zb_blinky_block3_processing_system7_0_0_synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log

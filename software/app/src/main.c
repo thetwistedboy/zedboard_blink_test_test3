@@ -8,6 +8,8 @@ int main(void){
 
     xil_printf("Beginning initialization...\n\r");
     
+    
+    
     cli_initialize();
     app_initialize();
     
